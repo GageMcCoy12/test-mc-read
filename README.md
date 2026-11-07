@@ -2,11 +2,9 @@
 
 Bedrock save → Java block models → a browser chunk viewer.
 
-**Live demo (no Python):** https://gagemccoy12.github.io/test-mc-read/
+Upload a `.mcworld` (or a zip of a Bedrock save folder), then rebake any x/z. Worlds stay in the server session — nothing ships a 449MB save in the image.
 
-Look around, drag the moon to set time of day, and flip lighting. The hosted site is a static GitHub Pages snapshot of one pre-baked region. Rebake (pick a new x/z) is local-only.
-
-Minecraft textures in `viewer/generated/atlas.png` are Mojang’s. This demo is for class / educational use, not a redistributable asset pack. The Bedrock world save is not in this repo.
+Minecraft textures written to `viewer/generated/atlas.png` are Mojang’s. Educational / class use only, not a redistributable asset pack.
 
 ## Controls
 
@@ -19,17 +17,42 @@ Minecraft textures in `viewer/generated/atlas.png` are Mojang’s. This demo is 
 
 Time, graphics, and camera position persist in localStorage.
 
-## Local rebake (optional)
-
-Needs Python 3.13, a copy of the world save in `world/`, and the venv:
+## Local
 
 ```
 python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
-.venv/bin/python tools/bake_chunk.py --x 300 --z 73 --radius 4 --min-y 60
 .venv/bin/python tools/serve_viewer.py
 ```
 
-Then open http://127.0.0.1:8765 and rebake from the notebook. Do not use `python -m http.server` if you want the bake API.
+Open http://127.0.0.1:8765, upload a `.mcworld`, hit rebake. If `world/` exists locally it is still used as a fallback so you can bake without uploading.
 
-After changing bake code, restart the server. After a bake, hard-refresh the tab so `atlas.png` / `*.bin` are not stale.
+Do not use `python -m http.server` if you want the bake / upload API.
+
+Optional one-shot bake without the server:
+
+```
+.venv/bin/python tools/bake_chunk.py --x 300 --z 73 --radius 4 --min-y 60
+```
+
+## Cloud Run (full backend, free-tier-ish)
+
+The container does **not** include a world. Each visitor uploads their own `.mcworld` in 4MB chunks (Cloud Run’s request cap is 32MB). Sessions live in `/tmp` and vanish when the instance scales to zero — re-upload after idle.
+
+Needs a GCP project with billing enabled. The always-free Cloud Run allowance is usually enough for a class demo.
+
+```
+gcloud run deploy mcread \
+  --source . \
+  --region us-central1 \
+  --allow-unauthenticated \
+  --memory 4Gi \
+  --cpu 2 \
+  --timeout 300 \
+  --max-instances 1 \
+  --cpu-boost
+```
+
+`--max-instances 1` keeps uploads and bakes on the same instance (sessions are in-memory `/tmp`). `--timeout 300` covers a radius-4 bake.
+
+Export from Minecraft: **Settings → Storage → worlds → export** yields a `.mcworld`.

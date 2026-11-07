@@ -1,0 +1,14 @@
+.venv
+.git
+.github
+.pytest_cache
+__pycache__
+*.pyc
+.DS_Store
+world
+docs
+probes
+reports
+tests
+viewer/generated/debug.obj
+viewer/generated/debug.mtl

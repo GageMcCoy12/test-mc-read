@@ -15,6 +15,8 @@ const lightingNowBtn = document.getElementById("lighting-now");
 const lightingNextBtn = document.getElementById("lighting-next");
 const brightnessInput = document.getElementById("brightness");
 const brightnessValue = document.getElementById("brightness-value");
+const worldFileInput = document.getElementById("world-file");
+const worldNameEl = document.getElementById("world-name");
 
 let lightingMode = "now";
 
@@ -1226,11 +1228,101 @@ async function checkBakeApi() {
   }
 }
 
+function applyWorldHealth(health) {
+  if (!health) {
+    return;
+  }
+  const hasWorld = Boolean(health.has_world);
+  rebakeBtn.disabled = !hasWorld;
+  if (health.world_name) {
+    worldNameEl.textContent = health.world_name;
+  } else if (!hasWorld) {
+    worldNameEl.textContent = "none yet";
+  }
+  if (health.spawn) {
+    if (health.spawn.x != null) inputX.value = health.spawn.x;
+    if (health.spawn.z != null) inputZ.value = health.spawn.z;
+  }
+  if (health.defaults) {
+    if (health.defaults.x != null) inputX.value = health.defaults.x;
+    if (health.defaults.z != null) inputZ.value = health.defaults.z;
+    if (health.defaults.radius != null) inputRadius.value = health.defaults.radius;
+    if (health.defaults.min_y != null) inputMinY.value = health.defaults.min_y;
+  }
+}
+
+async function uploadWorld(file) {
+  const health = await checkBakeApi();
+  if (!health?.can_upload) {
+    setStatus("start tools/serve_viewer.py to upload a world", "error");
+    return;
+  }
+  const maxBytes = health.max_upload_bytes || 512 * 1024 * 1024;
+  if (file.size > maxBytes) {
+    setStatus(`world is too large (${file.size} bytes)`, "error");
+    return;
+  }
+  const chunkBytes = health.chunk_bytes || 4 * 1024 * 1024;
+  rebakeBtn.disabled = true;
+  worldFileInput.disabled = true;
+  setStatus(`uploading ${file.name}…`, "baking");
+  try {
+    const start = await fetch("api/world/start", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name: file.name, size: file.size }),
+    });
+    const startPayload = await start.json();
+    if (!start.ok || !startPayload.ok) {
+      throw new Error(startPayload.error || "could not start upload");
+    }
+    let offset = 0;
+    while (offset < file.size) {
+      const end = Math.min(offset + chunkBytes, file.size);
+      const chunk = file.slice(offset, end);
+      const response = await fetch("api/world/chunk", {
+        method: "POST",
+        headers: { "Content-Type": "application/octet-stream" },
+        body: chunk,
+      });
+      const payload = await response.json();
+      if (!response.ok || !payload.ok) {
+        throw new Error(payload.error || "upload chunk failed");
+      }
+      offset = end;
+      const pct = Math.round((offset / file.size) * 100);
+      setStatus(`uploading ${file.name}… ${pct}%`, "baking");
+    }
+    const finish = await fetch("api/world/finish", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: "{}",
+    });
+    const done = await finish.json();
+    if (!finish.ok || !done.ok) {
+      throw new Error(done.error || "could not unpack world");
+    }
+    applyWorldHealth(done);
+    worldNameEl.textContent = done.world_name || file.name;
+    setStatus("world loaded — baking spawn…", "baking");
+    await rebake(new Event("submit"));
+  } catch (error) {
+    setStatus(String(error.message || error), "error");
+  } finally {
+    worldFileInput.disabled = false;
+    worldFileInput.value = "";
+  }
+}
+
 async function rebake(event) {
   event.preventDefault();
   const health = await checkBakeApi();
   if (!health) {
     setStatus("start tools/serve_viewer.py to rebake from here", "error");
+    return;
+  }
+  if (!health.has_world && !health.can_bake) {
+    setStatus("upload a .mcworld first", "error");
     return;
   }
   const body = {
@@ -1347,6 +1439,12 @@ async function main() {
     setBrightness(Number(brightnessInput.value) / 100);
   });
   resetBtn.addEventListener("click", resetOrbit);
+  worldFileInput.addEventListener("change", () => {
+    const file = worldFileInput.files && worldFileInput.files[0];
+    if (file) {
+      uploadWorld(file);
+    }
+  });
   window.addEventListener("keydown", onKey);
   window.addEventListener("keyup", onKeyUp);
   window.addEventListener("blur", () => walkKeys.clear());
@@ -1358,6 +1456,7 @@ async function main() {
     setStatus("static demo — look around, time of day, and lighting all work here", "idle");
   } else {
     inputRadius.max = String(health.max_radius ?? 4);
+    applyWorldHealth(health);
   }
 
   try {
@@ -1366,7 +1465,9 @@ async function main() {
     await mountScene(sceneInfo, { retarget: !restored });
   } catch (error) {
     const missing = /scene\.json/.test(String(error.message || error));
-    if (health && missing) {
+    if (health && !health.has_world) {
+      setStatus("upload a .mcworld to start", "idle");
+    } else if (health && missing) {
       setStatus("no bake yet — hit rebake", "idle");
     } else {
       setStatus(String(error.message || error), "error");

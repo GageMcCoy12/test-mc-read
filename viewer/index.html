@@ -141,7 +141,8 @@
         font-size: 11px;
         letter-spacing: 0.03em;
       }
-      #notebook input[type="number"] {
+      #notebook input[type="number"],
+      #notebook input[type="file"] {
         width: 100%;
         box-sizing: border-box;
         padding: 5px 7px;
@@ -149,6 +150,9 @@
         background: var(--field);
         border: 1px solid var(--paper-edge);
         font: inherit;
+      }
+      #world-name {
+        margin-top: 4px;
       }
       #notebook button {
         margin-top: 10px;
@@ -309,6 +313,9 @@
       <form id="place" autocomplete="off">
         <h1>place</h1>
         <div class="bake-only">
+          <label for="world-file">world (.mcworld or .zip)</label>
+          <input id="world-file" name="world" type="file" accept=".mcworld,.zip,application/zip" />
+          <div id="world-name" class="hint"></div>
           <label for="center-x">center block x</label>
           <input id="center-x" name="x" type="number" value="300" step="1" />
           <label for="center-z">center block z</label>
