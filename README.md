@@ -41,6 +41,8 @@ The container does **not** include a world. Each visitor uploads their own `.mcw
 
 Needs a GCP project with billing enabled. The always-free Cloud Run allowance is usually enough for a class demo.
 
+The container uses **Python 3.12**. `amulet-leveldb` has no Linux wheels, so Cloud Build compiles it from source (needs `zlib` + Cython). First build can take 10–20 minutes. If pip dies on `amulet-leveldb`, check that the image is `python:3.12-slim-bookworm`, not 3.13.
+
 ```
 gcloud run deploy mcread \
   --source . \

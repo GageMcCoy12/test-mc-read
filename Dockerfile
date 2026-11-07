@@ -1,20 +1,31 @@
-FROM python:3.13-slim
+FROM python:3.12-slim-bookworm
 
+# amulet-leveldb / amulet-nbt ship mac+windows wheels only. Linux must compile
+# the Cython/C++ extensions. Python 3.12 has working numpy 1.26 wheels.
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     CACHE_DIR=/opt/amulet-cache \
     MCREAD_TMP=/tmp/mcread \
     HOST=0.0.0.0 \
-    PORT=8080
+    PORT=8080 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1
 
 WORKDIR /app
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends gcc g++ \
+    && apt-get install -y --no-install-recommends \
+        build-essential \
+        zlib1g-dev \
+        libzstd-dev \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt \
+RUN pip install --no-cache-dir \
+        "setuptools>=70" \
+        wheel \
+        "cython>=3.0.11" \
+        versioneer \
+    && pip install --no-cache-dir --no-build-isolation -r requirements.txt \
     && python -c "from minecraft_model_reader.api.resource_pack.java import download_resources as d; d.get_java_vanilla_latest()"
 
 COPY mcread mcread
