@@ -25,6 +25,7 @@ RUN pip install --no-cache-dir \
         wheel \
         "cython>=3.0.11" \
         versioneer \
+        "numpy==1.26.4" \
     && pip install --no-cache-dir --no-build-isolation -r requirements.txt \
     && python -c "from minecraft_model_reader.api.resource_pack.java import download_resources as d; d.get_java_vanilla_latest()"
 
