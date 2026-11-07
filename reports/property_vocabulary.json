@@ -1,0 +1,6816 @@
+{
+  "probe": "property_vocabulary",
+  "environment": {
+    "amulet_core": "1.9.30",
+    "pymctranslate": "1.2.47",
+    "minecraft_model_reader": "1.4.12",
+    "newest_bedrock_definitions": [
+      26,
+      30,
+      0
+    ],
+    "newest_java_definitions": [
+      26,
+      2,
+      0
+    ]
+  },
+  "scan": {
+    "world": "/tmp/world_audit",
+    "dimension": "minecraft:overworld",
+    "center_chunk": [
+      18,
+      4
+    ],
+    "radius_chunks": 4,
+    "chunks_requested": 81,
+    "chunks_skipped": {},
+    "seconds": 4.54
+  },
+  "summary": {
+    "base_names": 183,
+    "distinct_property_signatures": 66,
+    "base_names_without_spec": 0,
+    "base_names_with_unexpected_properties": 0,
+    "base_names_with_unexpected_values": 0,
+    "fully_covered_base_names": 183
+  },
+  "shape_families": [
+    {
+      "property_signature": [],
+      "base_names": [
+        "amethyst_block",
+        "blue_ice",
+        "brick_block",
+        "brown_mushroom",
+        "budding_amethyst",
+        "calcite",
+        "chiseled_cinnabar",
+        "chiseled_sulfur",
+        "cinnabar",
+        "cinnabar_bricks",
+        "clay",
+        "coal_ore",
+        "coarse_dirt",
+        "cobbled_deepslate",
+        "cobblestone",
+        "copper_ore",
+        "crafting_table",
+        "dark_prismarine",
+        "deepslate_bricks",
+        "deepslate_copper_ore",
+        "deepslate_diamond_ore",
+        "deepslate_gold_ore",
+        "deepslate_iron_ore",
+        "deepslate_lapis_ore",
+        "diamond_ore",
+        "dirt",
+        "emerald_ore",
+        "fletching_table",
+        "gilded_blackstone",
+        "glass",
+        "gold_block",
+        "gold_ore",
+        "grass_path",
+        "gravel",
+        "honeycomb_block",
+        "iron_ore",
+        "lapis_block",
+        "lapis_ore",
+        "lodestone",
+        "moss_block",
+        "mossy_cobblestone",
+        "mud_bricks",
+        "netherrack",
+        "obsidian",
+        "oxidized_copper",
+        "oxidized_cut_copper",
+        "packed_ice",
+        "packed_mud",
+        "polished_cinnabar",
+        "polished_sulfur",
+        "polished_tuff",
+        "prismarine",
+        "prismarine_bricks",
+        "raw_gold_block",
+        "raw_iron_block",
+        "red_mushroom",
+        "red_sand",
+        "redstone_block",
+        "sand",
+        "sculk",
+        "sea_lantern",
+        "seagrass",
+        "shroomlight",
+        "smooth_basalt",
+        "smooth_stone",
+        "snow_block",
+        "soul_sand",
+        "spawner",
+        "stone",
+        "sulfur",
+        "sulfur_bricks",
+        "terracotta",
+        "tuff",
+        "tuff_bricks",
+        "warped_wart_block",
+        "waxed_copper_block",
+        "waxed_cut_copper",
+        "waxed_exposed_copper",
+        "waxed_exposed_copper_grate",
+        "waxed_exposed_cut_copper",
+        "waxed_oxidized_copper",
+        "waxed_oxidized_cut_copper"
+      ]
+    },
+    {
+      "property_signature": [
+        "axis"
+      ],
+      "base_names": [
+        "basalt",
+        "bone_block",
+        "deepslate",
+        "hay_block",
+        "pearlescent_froglight",
+        "quartz_block"
+      ]
+    },
+    {
+      "property_signature": [
+        "color"
+      ],
+      "base_names": [
+        "carpet",
+        "concrete",
+        "concrete_powder",
+        "stained_glass",
+        "stained_terracotta",
+        "wool"
+      ]
+    },
+    {
+      "property_signature": [
+        "facing"
+      ],
+      "base_names": [
+        "amethyst_cluster",
+        "ender_chest",
+        "jack_o_lantern",
+        "ladder",
+        "stonecutter",
+        "torch"
+      ]
+    },
+    {
+      "property_signature": [
+        "age"
+      ],
+      "base_names": [
+        "carrots",
+        "nether_wart",
+        "potatoes",
+        "sweet_berry_bush",
+        "wheat"
+      ]
+    },
+    {
+      "property_signature": [
+        "color",
+        "facing"
+      ],
+      "base_names": [
+        "glazed_terracotta",
+        "shulker_box",
+        "wall_banner"
+      ]
+    },
+    {
+      "property_signature": [
+        "facing",
+        "lit"
+      ],
+      "base_names": [
+        "blast_furnace",
+        "furnace",
+        "redstone_torch"
+      ]
+    },
+    {
+      "property_signature": [
+        "lit"
+      ],
+      "base_names": [
+        "deepslate_redstone_ore",
+        "redstone_lamp",
+        "redstone_ore"
+      ]
+    },
+    {
+      "property_signature": [
+        "polished"
+      ],
+      "base_names": [
+        "andesite",
+        "diorite",
+        "granite"
+      ]
+    },
+    {
+      "property_signature": [
+        "variant"
+      ],
+      "base_names": [
+        "red_sandstone",
+        "sandstone",
+        "stone_bricks"
+      ]
+    },
+    {
+      "property_signature": [
+        "axis",
+        "material",
+        "stripped"
+      ],
+      "base_names": [
+        "log",
+        "wood"
+      ]
+    },
+    {
+      "property_signature": [
+        "east",
+        "material",
+        "north",
+        "south",
+        "west"
+      ],
+      "base_names": [
+        "bars",
+        "fence"
+      ]
+    },
+    {
+      "property_signature": [
+        "extended",
+        "facing"
+      ],
+      "base_names": [
+        "piston",
+        "sticky_piston"
+      ]
+    },
+    {
+      "property_signature": [
+        "facing",
+        "honey_level"
+      ],
+      "base_names": [
+        "bee_nest",
+        "beehive"
+      ]
+    },
+    {
+      "property_signature": [
+        "facing",
+        "material"
+      ],
+      "base_names": [
+        "wall_hanging_sign",
+        "wall_sign"
+      ]
+    },
+    {
+      "property_signature": [
+        "facing",
+        "triggered"
+      ],
+      "base_names": [
+        "dispenser",
+        "dropper"
+      ]
+    },
+    {
+      "property_signature": [
+        "falling",
+        "flowing",
+        "level"
+      ],
+      "base_names": [
+        "lava",
+        "water"
+      ]
+    },
+    {
+      "property_signature": [
+        "attached",
+        "disarmed",
+        "east",
+        "north",
+        "powered",
+        "south",
+        "suspended",
+        "west"
+      ],
+      "base_names": [
+        "tripwire"
+      ]
+    },
+    {
+      "property_signature": [
+        "attachment",
+        "facing",
+        "powered",
+        "toggle"
+      ],
+      "base_names": [
+        "bell"
+      ]
+    },
+    {
+      "property_signature": [
+        "axis",
+        "material"
+      ],
+      "base_names": [
+        "chain"
+      ]
+    },
+    {
+      "property_signature": [
+        "bites"
+      ],
+      "base_names": [
+        "cake"
+      ]
+    },
+    {
+      "property_signature": [
+        "bottom",
+        "distance",
+        "stability_checked"
+      ],
+      "base_names": [
+        "scaffolding"
+      ]
+    },
+    {
+      "property_signature": [
+        "candles",
+        "color",
+        "lit"
+      ],
+      "base_names": [
+        "candle"
+      ]
+    },
+    {
+      "property_signature": [
+        "cauldron_liquid",
+        "level"
+      ],
+      "base_names": [
+        "cauldron"
+      ]
+    },
+    {
+      "property_signature": [
+        "check_decay",
+        "distance",
+        "material",
+        "persistent"
+      ],
+      "base_names": [
+        "leaves"
+      ]
+    },
+    {
+      "property_signature": [
+        "color",
+        "facing",
+        "occupied",
+        "part"
+      ],
+      "base_names": [
+        "bed"
+      ]
+    },
+    {
+      "property_signature": [
+        "color",
+        "rotation"
+      ],
+      "base_names": [
+        "banner"
+      ]
+    },
+    {
+      "property_signature": [
+        "connection",
+        "facing",
+        "material"
+      ],
+      "base_names": [
+        "chest"
+      ]
+    },
+    {
+      "property_signature": [
+        "cracked",
+        "facing"
+      ],
+      "base_names": [
+        "decorated_pot"
+      ]
+    },
+    {
+      "property_signature": [
+        "damage",
+        "facing"
+      ],
+      "base_names": [
+        "anvil"
+      ]
+    },
+    {
+      "property_signature": [
+        "dead",
+        "pickles"
+      ],
+      "base_names": [
+        "sea_pickle"
+      ]
+    },
+    {
+      "property_signature": [
+        "delay",
+        "facing",
+        "locked",
+        "powered"
+      ],
+      "base_names": [
+        "repeater"
+      ]
+    },
+    {
+      "property_signature": [
+        "down",
+        "east",
+        "material",
+        "north",
+        "south",
+        "up",
+        "west"
+      ],
+      "base_names": [
+        "mushroom_stem"
+      ]
+    },
+    {
+      "property_signature": [
+        "down",
+        "east",
+        "north",
+        "south",
+        "up",
+        "west"
+      ],
+      "base_names": [
+        "glow_lichen"
+      ]
+    },
+    {
+      "property_signature": [
+        "east",
+        "material",
+        "north",
+        "south",
+        "up",
+        "west"
+      ],
+      "base_names": [
+        "wall"
+      ]
+    },
+    {
+      "property_signature": [
+        "east",
+        "north",
+        "power",
+        "south",
+        "west"
+      ],
+      "base_names": [
+        "redstone_wire"
+      ]
+    },
+    {
+      "property_signature": [
+        "east",
+        "north",
+        "south",
+        "up",
+        "west"
+      ],
+      "base_names": [
+        "vine"
+      ]
+    },
+    {
+      "property_signature": [
+        "enabled",
+        "facing"
+      ],
+      "base_names": [
+        "hopper"
+      ]
+    },
+    {
+      "property_signature": [
+        "face",
+        "facing"
+      ],
+      "base_names": [
+        "grindstone"
+      ]
+    },
+    {
+      "property_signature": [
+        "face",
+        "facing",
+        "material",
+        "powered"
+      ],
+      "base_names": [
+        "button"
+      ]
+    },
+    {
+      "property_signature": [
+        "face",
+        "facing",
+        "powered"
+      ],
+      "base_names": [
+        "lever"
+      ]
+    },
+    {
+      "property_signature": [
+        "facing",
+        "glowing",
+        "map_item"
+      ],
+      "base_names": [
+        "item_frame_block"
+      ]
+    },
+    {
+      "property_signature": [
+        "facing",
+        "half",
+        "hinge",
+        "material",
+        "open",
+        "powered"
+      ],
+      "base_names": [
+        "door"
+      ]
+    },
+    {
+      "property_signature": [
+        "facing",
+        "half",
+        "material",
+        "open",
+        "powered"
+      ],
+      "base_names": [
+        "trapdoor"
+      ]
+    },
+    {
+      "property_signature": [
+        "facing",
+        "half",
+        "material",
+        "shape"
+      ],
+      "base_names": [
+        "stairs"
+      ]
+    },
+    {
+      "property_signature": [
+        "facing",
+        "in_wall",
+        "material",
+        "open",
+        "powered"
+      ],
+      "base_names": [
+        "fence_gate"
+      ]
+    },
+    {
+      "property_signature": [
+        "facing",
+        "lit",
+        "signal_fire"
+      ],
+      "base_names": [
+        "campfire"
+      ]
+    },
+    {
+      "property_signature": [
+        "facing",
+        "material",
+        "powered",
+        "side_chain"
+      ],
+      "base_names": [
+        "shelf"
+      ]
+    },
+    {
+      "property_signature": [
+        "facing",
+        "mode",
+        "powered"
+      ],
+      "base_names": [
+        "comparator"
+      ]
+    },
+    {
+      "property_signature": [
+        "facing",
+        "open"
+      ],
+      "base_names": [
+        "barrel"
+      ]
+    },
+    {
+      "property_signature": [
+        "facing",
+        "powered"
+      ],
+      "base_names": [
+        "observer"
+      ]
+    },
+    {
+      "property_signature": [
+        "facing",
+        "short"
+      ],
+      "base_names": [
+        "piston_head"
+      ]
+    },
+    {
+      "property_signature": [
+        "half"
+      ],
+      "base_names": [
+        "tall_seagrass"
+      ]
+    },
+    {
+      "property_signature": [
+        "half",
+        "plant_type"
+      ],
+      "base_names": [
+        "double_plant"
+      ]
+    },
+    {
+      "property_signature": [
+        "hanging"
+      ],
+      "base_names": [
+        "soul_lantern"
+      ]
+    },
+    {
+      "property_signature": [
+        "hanging",
+        "material"
+      ],
+      "base_names": [
+        "lantern"
+      ]
+    },
+    {
+      "property_signature": [
+        "infiniburn"
+      ],
+      "base_names": [
+        "bedrock"
+      ]
+    },
+    {
+      "property_signature": [
+        "material"
+      ],
+      "base_names": [
+        "planks"
+      ]
+    },
+    {
+      "property_signature": [
+        "material",
+        "powered"
+      ],
+      "base_names": [
+        "pressure_plate"
+      ]
+    },
+    {
+      "property_signature": [
+        "material",
+        "type"
+      ],
+      "base_names": [
+        "slab"
+      ]
+    },
+    {
+      "property_signature": [
+        "moisture"
+      ],
+      "base_names": [
+        "farmland"
+      ]
+    },
+    {
+      "property_signature": [
+        "plant",
+        "update"
+      ],
+      "base_names": [
+        "flower_pot"
+      ]
+    },
+    {
+      "property_signature": [
+        "plant_type"
+      ],
+      "base_names": [
+        "plant"
+      ]
+    },
+    {
+      "property_signature": [
+        "potent_sulfur_state"
+      ],
+      "base_names": [
+        "potent_sulfur"
+      ]
+    },
+    {
+      "property_signature": [
+        "shape"
+      ],
+      "base_names": [
+        "rail"
+      ]
+    },
+    {
+      "property_signature": [
+        "snowy"
+      ],
+      "base_names": [
+        "grass_block"
+      ]
+    }
+  ],
+  "base_names": [
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "stairs",
+      "blockstate_count": 75,
+      "property_signature": [
+        "facing",
+        "half",
+        "material",
+        "shape"
+      ],
+      "observed_values": {
+        "facing": [
+          "east",
+          "north",
+          "south",
+          "west"
+        ],
+        "half": [
+          "bottom",
+          "top"
+        ],
+        "material": [
+          "andesite",
+          "birch",
+          "brick",
+          "cobbled_deepslate",
+          "cobblestone",
+          "dark_oak",
+          "deepslate_brick",
+          "diorite",
+          "jungle",
+          "mangrove",
+          "mossy_cobblestone",
+          "oak",
+          "pale_oak",
+          "polished_diorite",
+          "sandstone",
+          "smooth_sandstone",
+          "spruce",
+          "stone",
+          "stone_brick",
+          "tuff_brick",
+          "waxed_exposed_cut_copper",
+          "waxed_oxidized_cut_copper"
+        ],
+        "shape": [
+          "straight"
+        ]
+      },
+      "property_types": {
+        "facing": "StringTag",
+        "half": "StringTag",
+        "material": "StringTag",
+        "shape": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "trapdoor",
+      "blockstate_count": 55,
+      "property_signature": [
+        "facing",
+        "half",
+        "material",
+        "open",
+        "powered"
+      ],
+      "observed_values": {
+        "facing": [
+          "east",
+          "north",
+          "south",
+          "west"
+        ],
+        "half": [
+          "bottom",
+          "top"
+        ],
+        "material": [
+          "birch",
+          "dark_oak",
+          "iron",
+          "jungle",
+          "mangrove",
+          "oak",
+          "oxidized_copper",
+          "pale_oak",
+          "spruce"
+        ],
+        "open": [
+          "false",
+          "true"
+        ],
+        "powered": [
+          "false"
+        ]
+      },
+      "property_types": {
+        "facing": "StringTag",
+        "half": "StringTag",
+        "material": "StringTag",
+        "open": "StringTag",
+        "powered": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "slab",
+      "blockstate_count": 31,
+      "property_signature": [
+        "material",
+        "type"
+      ],
+      "observed_values": {
+        "material": [
+          "andesite",
+          "brick",
+          "cobblestone",
+          "dark_oak",
+          "oak",
+          "polished_andesite",
+          "polished_diorite",
+          "sandstone",
+          "spruce",
+          "stone",
+          "stone_brick",
+          "tuff_brick",
+          "warped"
+        ],
+        "type": [
+          "bottom",
+          "double",
+          "top"
+        ]
+      },
+      "property_types": {
+        "material": "StringTag",
+        "type": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "log",
+      "blockstate_count": 26,
+      "property_signature": [
+        "axis",
+        "material",
+        "stripped"
+      ],
+      "observed_values": {
+        "axis": [
+          "x",
+          "y",
+          "z"
+        ],
+        "material": [
+          "birch",
+          "dark_oak",
+          "jungle",
+          "mangrove",
+          "oak",
+          "spruce",
+          "warped"
+        ],
+        "stripped": [
+          "false",
+          "true"
+        ]
+      },
+      "property_types": {
+        "axis": "StringTag",
+        "material": "StringTag",
+        "stripped": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "door",
+      "blockstate_count": 24,
+      "property_signature": [
+        "facing",
+        "half",
+        "hinge",
+        "material",
+        "open",
+        "powered"
+      ],
+      "observed_values": {
+        "facing": [
+          "east",
+          "north",
+          "south"
+        ],
+        "half": [
+          "lower",
+          "upper"
+        ],
+        "hinge": [
+          "left",
+          "right"
+        ],
+        "material": [
+          "birch",
+          "dark_oak",
+          "oak",
+          "spruce",
+          "warped"
+        ],
+        "open": [
+          "false",
+          "true"
+        ],
+        "powered": [
+          "false"
+        ]
+      },
+      "property_types": {
+        "facing": "StringTag",
+        "half": "StringTag",
+        "hinge": "StringTag",
+        "material": "StringTag",
+        "open": "StringTag",
+        "powered": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "water",
+      "blockstate_count": 24,
+      "property_signature": [
+        "falling",
+        "flowing",
+        "level"
+      ],
+      "observed_values": {
+        "falling": [
+          "false",
+          "true"
+        ],
+        "flowing": [
+          "false",
+          "true"
+        ],
+        "level": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7"
+        ]
+      },
+      "property_types": {
+        "falling": "StringTag",
+        "flowing": "StringTag",
+        "level": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "wall",
+      "blockstate_count": 20,
+      "property_signature": [
+        "east",
+        "material",
+        "north",
+        "south",
+        "up",
+        "west"
+      ],
+      "observed_values": {
+        "east": [
+          "low",
+          "none",
+          "tall"
+        ],
+        "material": [
+          "andesite",
+          "brick",
+          "cobblestone",
+          "mud_brick",
+          "sandstone",
+          "stone_brick"
+        ],
+        "north": [
+          "low",
+          "none",
+          "tall"
+        ],
+        "south": [
+          "low",
+          "none",
+          "tall"
+        ],
+        "up": [
+          "false",
+          "true"
+        ],
+        "west": [
+          "low",
+          "none",
+          "tall"
+        ]
+      },
+      "property_types": {
+        "east": "StringTag",
+        "material": "StringTag",
+        "north": "StringTag",
+        "south": "StringTag",
+        "up": "StringTag",
+        "west": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "bars",
+      "blockstate_count": 14,
+      "property_signature": [
+        "east",
+        "material",
+        "north",
+        "south",
+        "west"
+      ],
+      "observed_values": {
+        "east": [
+          "false",
+          "true"
+        ],
+        "material": [
+          "iron"
+        ],
+        "north": [
+          "false",
+          "true"
+        ],
+        "south": [
+          "false",
+          "true"
+        ],
+        "west": [
+          "false",
+          "true"
+        ]
+      },
+      "property_types": {
+        "east": "StringTag",
+        "material": "StringTag",
+        "north": "StringTag",
+        "south": "StringTag",
+        "west": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "lava",
+      "blockstate_count": 14,
+      "property_signature": [
+        "falling",
+        "flowing",
+        "level"
+      ],
+      "observed_values": {
+        "falling": [
+          "false",
+          "true"
+        ],
+        "flowing": [
+          "false",
+          "true"
+        ],
+        "level": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7"
+        ]
+      },
+      "property_types": {
+        "falling": "StringTag",
+        "flowing": "StringTag",
+        "level": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "stained_terracotta",
+      "blockstate_count": 13,
+      "property_signature": [
+        "color"
+      ],
+      "observed_values": {
+        "color": [
+          "black",
+          "blue",
+          "brown",
+          "cyan",
+          "gray",
+          "green",
+          "light_blue",
+          "lime",
+          "orange",
+          "purple",
+          "red",
+          "white",
+          "yellow"
+        ]
+      },
+      "property_types": {
+        "color": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "glow_lichen",
+      "blockstate_count": 12,
+      "property_signature": [
+        "down",
+        "east",
+        "north",
+        "south",
+        "up",
+        "west"
+      ],
+      "observed_values": {
+        "down": [
+          "false",
+          "true"
+        ],
+        "east": [
+          "false",
+          "true"
+        ],
+        "north": [
+          "false",
+          "true"
+        ],
+        "south": [
+          "false",
+          "true"
+        ],
+        "up": [
+          "false",
+          "true"
+        ],
+        "west": [
+          "false",
+          "true"
+        ]
+      },
+      "property_types": {
+        "down": "StringTag",
+        "east": "StringTag",
+        "north": "StringTag",
+        "south": "StringTag",
+        "up": "StringTag",
+        "west": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "chest",
+      "blockstate_count": 11,
+      "property_signature": [
+        "connection",
+        "facing",
+        "material"
+      ],
+      "observed_values": {
+        "connection": [
+          "left",
+          "none",
+          "right"
+        ],
+        "facing": [
+          "east",
+          "north",
+          "south",
+          "west"
+        ],
+        "material": [
+          "wood"
+        ]
+      },
+      "property_types": {
+        "connection": "StringTag",
+        "facing": "StringTag",
+        "material": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "shulker_box",
+      "blockstate_count": 10,
+      "property_signature": [
+        "color",
+        "facing"
+      ],
+      "observed_values": {
+        "color": [
+          "black",
+          "default",
+          "gray",
+          "green",
+          "light_blue",
+          "light_gray",
+          "lime",
+          "pink"
+        ],
+        "facing": [
+          "south",
+          "up",
+          "west"
+        ]
+      },
+      "property_types": {
+        "color": "StringTag",
+        "facing": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "fence_gate",
+      "blockstate_count": 9,
+      "property_signature": [
+        "facing",
+        "in_wall",
+        "material",
+        "open",
+        "powered"
+      ],
+      "observed_values": {
+        "facing": [
+          "east",
+          "north",
+          "south",
+          "west"
+        ],
+        "in_wall": [
+          "false"
+        ],
+        "material": [
+          "dark_oak",
+          "jungle",
+          "spruce"
+        ],
+        "open": [
+          "false",
+          "true"
+        ],
+        "powered": [
+          "false"
+        ]
+      },
+      "property_types": {
+        "facing": "StringTag",
+        "in_wall": "StringTag",
+        "material": "StringTag",
+        "open": "StringTag",
+        "powered": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "redstone_wire",
+      "blockstate_count": 9,
+      "property_signature": [
+        "east",
+        "north",
+        "power",
+        "south",
+        "west"
+      ],
+      "observed_values": {
+        "east": [
+          "none",
+          "side"
+        ],
+        "north": [
+          "none",
+          "side"
+        ],
+        "power": [
+          "0",
+          "1",
+          "15"
+        ],
+        "south": [
+          "none",
+          "side"
+        ],
+        "west": [
+          "none",
+          "side"
+        ]
+      },
+      "property_types": {
+        "east": "StringTag",
+        "north": "StringTag",
+        "power": "StringTag",
+        "south": "StringTag",
+        "west": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "wood",
+      "blockstate_count": 8,
+      "property_signature": [
+        "axis",
+        "material",
+        "stripped"
+      ],
+      "observed_values": {
+        "axis": [
+          "x",
+          "y",
+          "z"
+        ],
+        "material": [
+          "oak",
+          "spruce"
+        ],
+        "stripped": [
+          "false",
+          "true"
+        ]
+      },
+      "property_types": {
+        "axis": "StringTag",
+        "material": "StringTag",
+        "stripped": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "flower_pot",
+      "blockstate_count": 7,
+      "property_signature": [
+        "plant",
+        "update"
+      ],
+      "observed_values": {
+        "plant": [
+          "allium",
+          "cornflower",
+          "fern",
+          "none",
+          "oak_sapling",
+          "oxeye_daisy",
+          "pink_tulip"
+        ],
+        "update": [
+          "false"
+        ]
+      },
+      "property_types": {
+        "plant": "StringTag",
+        "update": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "amethyst_cluster",
+      "blockstate_count": 6,
+      "property_signature": [
+        "facing"
+      ],
+      "observed_values": {
+        "facing": [
+          "down",
+          "east",
+          "north",
+          "south",
+          "up",
+          "west"
+        ]
+      },
+      "property_types": {
+        "facing": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "double_plant",
+      "blockstate_count": 6,
+      "property_signature": [
+        "half",
+        "plant_type"
+      ],
+      "observed_values": {
+        "half": [
+          "lower",
+          "upper"
+        ],
+        "plant_type": [
+          "large_fern",
+          "rose_bush",
+          "sunflower"
+        ]
+      },
+      "property_types": {
+        "half": "StringTag",
+        "plant_type": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "planks",
+      "blockstate_count": 6,
+      "property_signature": [
+        "material"
+      ],
+      "observed_values": {
+        "material": [
+          "birch",
+          "cherry",
+          "mangrove",
+          "oak",
+          "spruce",
+          "warped"
+        ]
+      },
+      "property_types": {
+        "material": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "wool",
+      "blockstate_count": 6,
+      "property_signature": [
+        "color"
+      ],
+      "observed_values": {
+        "color": [
+          "blue",
+          "cyan",
+          "lime",
+          "magenta",
+          "orange",
+          "purple"
+        ]
+      },
+      "property_types": {
+        "color": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "barrel",
+      "blockstate_count": 5,
+      "property_signature": [
+        "facing",
+        "open"
+      ],
+      "observed_values": {
+        "facing": [
+          "east",
+          "north",
+          "south",
+          "up",
+          "west"
+        ],
+        "open": [
+          "false"
+        ]
+      },
+      "property_types": {
+        "facing": "StringTag",
+        "open": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "beehive",
+      "blockstate_count": 5,
+      "property_signature": [
+        "facing",
+        "honey_level"
+      ],
+      "observed_values": {
+        "facing": [
+          "east",
+          "north",
+          "south",
+          "west"
+        ],
+        "honey_level": [
+          "0",
+          "5"
+        ]
+      },
+      "property_types": {
+        "facing": "StringTag",
+        "honey_level": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "carpet",
+      "blockstate_count": 5,
+      "property_signature": [
+        "color"
+      ],
+      "observed_values": {
+        "color": [
+          "green",
+          "magenta",
+          "purple",
+          "red",
+          "white"
+        ]
+      },
+      "property_types": {
+        "color": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "concrete_powder",
+      "blockstate_count": 5,
+      "property_signature": [
+        "color"
+      ],
+      "observed_values": {
+        "color": [
+          "gray",
+          "light_blue",
+          "orange",
+          "pink",
+          "yellow"
+        ]
+      },
+      "property_types": {
+        "color": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "leaves",
+      "blockstate_count": 5,
+      "property_signature": [
+        "check_decay",
+        "distance",
+        "material",
+        "persistent"
+      ],
+      "observed_values": {
+        "check_decay": [
+          "false",
+          "true"
+        ],
+        "distance": [
+          "7"
+        ],
+        "material": [
+          "birch",
+          "flowering_azalea",
+          "oak"
+        ],
+        "persistent": [
+          "true"
+        ]
+      },
+      "property_types": {
+        "check_decay": "StringTag",
+        "distance": "StringTag",
+        "material": "StringTag",
+        "persistent": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "shelf",
+      "blockstate_count": 5,
+      "property_signature": [
+        "facing",
+        "material",
+        "powered",
+        "side_chain"
+      ],
+      "observed_values": {
+        "facing": [
+          "east",
+          "south",
+          "west"
+        ],
+        "material": [
+          "dark_oak",
+          "mangrove",
+          "pale_oak"
+        ],
+        "powered": [
+          "false"
+        ],
+        "side_chain": [
+          "unconnected"
+        ]
+      },
+      "property_types": {
+        "facing": "StringTag",
+        "material": "StringTag",
+        "powered": "StringTag",
+        "side_chain": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "torch",
+      "blockstate_count": 5,
+      "property_signature": [
+        "facing"
+      ],
+      "observed_values": {
+        "facing": [
+          "east",
+          "north",
+          "south",
+          "up",
+          "west"
+        ]
+      },
+      "property_types": {
+        "facing": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "vine",
+      "blockstate_count": 5,
+      "property_signature": [
+        "east",
+        "north",
+        "south",
+        "up",
+        "west"
+      ],
+      "observed_values": {
+        "east": [
+          "false",
+          "true"
+        ],
+        "north": [
+          "false",
+          "true"
+        ],
+        "south": [
+          "false",
+          "true"
+        ],
+        "up": [
+          "false"
+        ],
+        "west": [
+          "false",
+          "true"
+        ]
+      },
+      "property_types": {
+        "east": "StringTag",
+        "north": "StringTag",
+        "south": "StringTag",
+        "up": "StringTag",
+        "west": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "wall_sign",
+      "blockstate_count": 5,
+      "property_signature": [
+        "facing",
+        "material"
+      ],
+      "observed_values": {
+        "facing": [
+          "east",
+          "north",
+          "west"
+        ],
+        "material": [
+          "jungle",
+          "spruce"
+        ]
+      },
+      "property_types": {
+        "facing": "StringTag",
+        "material": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "candle",
+      "blockstate_count": 4,
+      "property_signature": [
+        "candles",
+        "color",
+        "lit"
+      ],
+      "observed_values": {
+        "candles": [
+          "1",
+          "2",
+          "3"
+        ],
+        "color": [
+          "default",
+          "gray"
+        ],
+        "lit": [
+          "false",
+          "true"
+        ]
+      },
+      "property_types": {
+        "candles": "StringTag",
+        "color": "StringTag",
+        "lit": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "cauldron",
+      "blockstate_count": 4,
+      "property_signature": [
+        "cauldron_liquid",
+        "level"
+      ],
+      "observed_values": {
+        "cauldron_liquid": [
+          "water"
+        ],
+        "level": [
+          "0",
+          "1",
+          "2.5",
+          "3"
+        ]
+      },
+      "property_types": {
+        "cauldron_liquid": "StringTag",
+        "level": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "comparator",
+      "blockstate_count": 4,
+      "property_signature": [
+        "facing",
+        "mode",
+        "powered"
+      ],
+      "observed_values": {
+        "facing": [
+          "east",
+          "north",
+          "south",
+          "west"
+        ],
+        "mode": [
+          "compare"
+        ],
+        "powered": [
+          "false",
+          "true"
+        ]
+      },
+      "property_types": {
+        "facing": "StringTag",
+        "mode": "StringTag",
+        "powered": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "concrete",
+      "blockstate_count": 4,
+      "property_signature": [
+        "color"
+      ],
+      "observed_values": {
+        "color": [
+          "black",
+          "light_blue",
+          "red",
+          "yellow"
+        ]
+      },
+      "property_types": {
+        "color": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "decorated_pot",
+      "blockstate_count": 4,
+      "property_signature": [
+        "cracked",
+        "facing"
+      ],
+      "observed_values": {
+        "cracked": [
+          "false"
+        ],
+        "facing": [
+          "east",
+          "north",
+          "south",
+          "west"
+        ]
+      },
+      "property_types": {
+        "cracked": "StringTag",
+        "facing": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "fence",
+      "blockstate_count": 4,
+      "property_signature": [
+        "east",
+        "material",
+        "north",
+        "south",
+        "west"
+      ],
+      "observed_values": {
+        "east": [
+          "false"
+        ],
+        "material": [
+          "jungle",
+          "mangrove",
+          "oak",
+          "spruce"
+        ],
+        "north": [
+          "false"
+        ],
+        "south": [
+          "false"
+        ],
+        "west": [
+          "false"
+        ]
+      },
+      "property_types": {
+        "east": "StringTag",
+        "material": "StringTag",
+        "north": "StringTag",
+        "south": "StringTag",
+        "west": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "glazed_terracotta",
+      "blockstate_count": 4,
+      "property_signature": [
+        "color",
+        "facing"
+      ],
+      "observed_values": {
+        "color": [
+          "blue",
+          "cyan",
+          "light_blue",
+          "yellow"
+        ],
+        "facing": [
+          "north",
+          "south",
+          "west"
+        ]
+      },
+      "property_types": {
+        "color": "StringTag",
+        "facing": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "jack_o_lantern",
+      "blockstate_count": 4,
+      "property_signature": [
+        "facing"
+      ],
+      "observed_values": {
+        "facing": [
+          "east",
+          "north",
+          "south",
+          "west"
+        ]
+      },
+      "property_types": {
+        "facing": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "observer",
+      "blockstate_count": 4,
+      "property_signature": [
+        "facing",
+        "powered"
+      ],
+      "observed_values": {
+        "facing": [
+          "down",
+          "east",
+          "north",
+          "south"
+        ],
+        "powered": [
+          "false"
+        ]
+      },
+      "property_types": {
+        "facing": "StringTag",
+        "powered": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "plant",
+      "blockstate_count": 4,
+      "property_signature": [
+        "plant_type"
+      ],
+      "observed_values": {
+        "plant_type": [
+          "dandelion",
+          "dead_bush",
+          "fern",
+          "grass"
+        ]
+      },
+      "property_types": {
+        "plant_type": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "basalt",
+      "blockstate_count": 3,
+      "property_signature": [
+        "axis"
+      ],
+      "observed_values": {
+        "axis": [
+          "x",
+          "y",
+          "z"
+        ]
+      },
+      "property_types": {
+        "axis": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "campfire",
+      "blockstate_count": 3,
+      "property_signature": [
+        "facing",
+        "lit",
+        "signal_fire"
+      ],
+      "observed_values": {
+        "facing": [
+          "east",
+          "north"
+        ],
+        "lit": [
+          "false",
+          "true"
+        ],
+        "signal_fire": [
+          "false"
+        ]
+      },
+      "property_types": {
+        "facing": "StringTag",
+        "lit": "StringTag",
+        "signal_fire": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "farmland",
+      "blockstate_count": 3,
+      "property_signature": [
+        "moisture"
+      ],
+      "observed_values": {
+        "moisture": [
+          "0",
+          "1",
+          "7"
+        ]
+      },
+      "property_types": {
+        "moisture": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "hopper",
+      "blockstate_count": 3,
+      "property_signature": [
+        "enabled",
+        "facing"
+      ],
+      "observed_values": {
+        "enabled": [
+          "false",
+          "true"
+        ],
+        "facing": [
+          "down",
+          "north",
+          "south"
+        ]
+      },
+      "property_types": {
+        "enabled": "StringTag",
+        "facing": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "lever",
+      "blockstate_count": 3,
+      "property_signature": [
+        "face",
+        "facing",
+        "powered"
+      ],
+      "observed_values": {
+        "face": [
+          "wall"
+        ],
+        "facing": [
+          "north",
+          "south",
+          "west"
+        ],
+        "powered": [
+          "true"
+        ]
+      },
+      "property_types": {
+        "face": "StringTag",
+        "facing": "StringTag",
+        "powered": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "piston",
+      "blockstate_count": 3,
+      "property_signature": [
+        "extended",
+        "facing"
+      ],
+      "observed_values": {
+        "extended": [
+          "false",
+          "true"
+        ],
+        "facing": [
+          "north",
+          "south",
+          "west"
+        ]
+      },
+      "property_types": {
+        "extended": "StringTag",
+        "facing": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "rail",
+      "blockstate_count": 3,
+      "property_signature": [
+        "shape"
+      ],
+      "observed_values": {
+        "shape": [
+          "ascending_north",
+          "ascending_south",
+          "north_south"
+        ]
+      },
+      "property_types": {
+        "shape": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "sandstone",
+      "blockstate_count": 3,
+      "property_signature": [
+        "variant"
+      ],
+      "observed_values": {
+        "variant": [
+          "cut",
+          "normal",
+          "smooth"
+        ]
+      },
+      "property_types": {
+        "variant": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "andesite",
+      "blockstate_count": 2,
+      "property_signature": [
+        "polished"
+      ],
+      "observed_values": {
+        "polished": [
+          "false",
+          "true"
+        ]
+      },
+      "property_types": {
+        "polished": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "bed",
+      "blockstate_count": 2,
+      "property_signature": [
+        "color",
+        "facing",
+        "occupied",
+        "part"
+      ],
+      "observed_values": {
+        "color": [
+          "red"
+        ],
+        "facing": [
+          "west"
+        ],
+        "occupied": [
+          "false"
+        ],
+        "part": [
+          "foot",
+          "head"
+        ]
+      },
+      "property_types": {
+        "color": "StringTag",
+        "facing": "StringTag",
+        "occupied": "StringTag",
+        "part": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "bell",
+      "blockstate_count": 2,
+      "property_signature": [
+        "attachment",
+        "facing",
+        "powered",
+        "toggle"
+      ],
+      "observed_values": {
+        "attachment": [
+          "ceiling",
+          "floor"
+        ],
+        "facing": [
+          "north",
+          "south"
+        ],
+        "powered": [
+          "false"
+        ],
+        "toggle": [
+          "0",
+          "1"
+        ]
+      },
+      "property_types": {
+        "attachment": "StringTag",
+        "facing": "StringTag",
+        "powered": "StringTag",
+        "toggle": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "bone_block",
+      "blockstate_count": 2,
+      "property_signature": [
+        "axis"
+      ],
+      "observed_values": {
+        "axis": [
+          "x",
+          "y"
+        ]
+      },
+      "property_types": {
+        "axis": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "button",
+      "blockstate_count": 2,
+      "property_signature": [
+        "face",
+        "facing",
+        "material",
+        "powered"
+      ],
+      "observed_values": {
+        "face": [
+          "wall"
+        ],
+        "facing": [
+          "east",
+          "north"
+        ],
+        "material": [
+          "spruce"
+        ],
+        "powered": [
+          "false"
+        ]
+      },
+      "property_types": {
+        "face": "StringTag",
+        "facing": "StringTag",
+        "material": "StringTag",
+        "powered": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "chain",
+      "blockstate_count": 2,
+      "property_signature": [
+        "axis",
+        "material"
+      ],
+      "observed_values": {
+        "axis": [
+          "x",
+          "y"
+        ],
+        "material": [
+          "iron"
+        ]
+      },
+      "property_types": {
+        "axis": "StringTag",
+        "material": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "deepslate",
+      "blockstate_count": 2,
+      "property_signature": [
+        "axis"
+      ],
+      "observed_values": {
+        "axis": [
+          "y",
+          "z"
+        ]
+      },
+      "property_types": {
+        "axis": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "diorite",
+      "blockstate_count": 2,
+      "property_signature": [
+        "polished"
+      ],
+      "observed_values": {
+        "polished": [
+          "false",
+          "true"
+        ]
+      },
+      "property_types": {
+        "polished": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "dispenser",
+      "blockstate_count": 2,
+      "property_signature": [
+        "facing",
+        "triggered"
+      ],
+      "observed_values": {
+        "facing": [
+          "up",
+          "west"
+        ],
+        "triggered": [
+          "false"
+        ]
+      },
+      "property_types": {
+        "facing": "StringTag",
+        "triggered": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "dropper",
+      "blockstate_count": 2,
+      "property_signature": [
+        "facing",
+        "triggered"
+      ],
+      "observed_values": {
+        "facing": [
+          "down",
+          "west"
+        ],
+        "triggered": [
+          "false"
+        ]
+      },
+      "property_types": {
+        "facing": "StringTag",
+        "triggered": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "hay_block",
+      "blockstate_count": 2,
+      "property_signature": [
+        "axis"
+      ],
+      "observed_values": {
+        "axis": [
+          "y",
+          "z"
+        ]
+      },
+      "property_types": {
+        "axis": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "item_frame_block",
+      "blockstate_count": 2,
+      "property_signature": [
+        "facing",
+        "glowing",
+        "map_item"
+      ],
+      "observed_values": {
+        "facing": [
+          "south",
+          "west"
+        ],
+        "glowing": [
+          "false"
+        ],
+        "map_item": [
+          "false"
+        ]
+      },
+      "property_types": {
+        "facing": "StringTag",
+        "glowing": "StringTag",
+        "map_item": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "ladder",
+      "blockstate_count": 2,
+      "property_signature": [
+        "facing"
+      ],
+      "observed_values": {
+        "facing": [
+          "north",
+          "west"
+        ]
+      },
+      "property_types": {
+        "facing": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "lantern",
+      "blockstate_count": 2,
+      "property_signature": [
+        "hanging",
+        "material"
+      ],
+      "observed_values": {
+        "hanging": [
+          "false",
+          "true"
+        ],
+        "material": [
+          "iron"
+        ]
+      },
+      "property_types": {
+        "hanging": "StringTag",
+        "material": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "pearlescent_froglight",
+      "blockstate_count": 2,
+      "property_signature": [
+        "axis"
+      ],
+      "observed_values": {
+        "axis": [
+          "x",
+          "y"
+        ]
+      },
+      "property_types": {
+        "axis": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "redstone_torch",
+      "blockstate_count": 2,
+      "property_signature": [
+        "facing",
+        "lit"
+      ],
+      "observed_values": {
+        "facing": [
+          "north",
+          "up"
+        ],
+        "lit": [
+          "false",
+          "true"
+        ]
+      },
+      "property_types": {
+        "facing": "StringTag",
+        "lit": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "repeater",
+      "blockstate_count": 2,
+      "property_signature": [
+        "delay",
+        "facing",
+        "locked",
+        "powered"
+      ],
+      "observed_values": {
+        "delay": [
+          "1",
+          "4"
+        ],
+        "facing": [
+          "north",
+          "west"
+        ],
+        "locked": [
+          "false"
+        ],
+        "powered": [
+          "false",
+          "true"
+        ]
+      },
+      "property_types": {
+        "delay": "StringTag",
+        "facing": "StringTag",
+        "locked": "StringTag",
+        "powered": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "sea_pickle",
+      "blockstate_count": 2,
+      "property_signature": [
+        "dead",
+        "pickles"
+      ],
+      "observed_values": {
+        "dead": [
+          "true"
+        ],
+        "pickles": [
+          "1",
+          "3"
+        ]
+      },
+      "property_types": {
+        "dead": "StringTag",
+        "pickles": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "sticky_piston",
+      "blockstate_count": 2,
+      "property_signature": [
+        "extended",
+        "facing"
+      ],
+      "observed_values": {
+        "extended": [
+          "false"
+        ],
+        "facing": [
+          "south",
+          "up"
+        ]
+      },
+      "property_types": {
+        "extended": "StringTag",
+        "facing": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "sweet_berry_bush",
+      "blockstate_count": 2,
+      "property_signature": [
+        "age"
+      ],
+      "observed_values": {
+        "age": [
+          "3",
+          "5"
+        ]
+      },
+      "property_types": {
+        "age": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "tall_seagrass",
+      "blockstate_count": 2,
+      "property_signature": [
+        "half"
+      ],
+      "observed_values": {
+        "half": [
+          "lower",
+          "upper"
+        ]
+      },
+      "property_types": {
+        "half": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "wall_banner",
+      "blockstate_count": 2,
+      "property_signature": [
+        "color",
+        "facing"
+      ],
+      "observed_values": {
+        "color": [
+          "green",
+          "white"
+        ],
+        "facing": [
+          "north"
+        ]
+      },
+      "property_types": {
+        "color": "StringTag",
+        "facing": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "amethyst_block",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "anvil",
+      "blockstate_count": 1,
+      "property_signature": [
+        "damage",
+        "facing"
+      ],
+      "observed_values": {
+        "damage": [
+          "normal"
+        ],
+        "facing": [
+          "east"
+        ]
+      },
+      "property_types": {
+        "damage": "StringTag",
+        "facing": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "banner",
+      "blockstate_count": 1,
+      "property_signature": [
+        "color",
+        "rotation"
+      ],
+      "observed_values": {
+        "color": [
+          "white"
+        ],
+        "rotation": [
+          "2"
+        ]
+      },
+      "property_types": {
+        "color": "StringTag",
+        "rotation": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "bedrock",
+      "blockstate_count": 1,
+      "property_signature": [
+        "infiniburn"
+      ],
+      "observed_values": {
+        "infiniburn": [
+          "false"
+        ]
+      },
+      "property_types": {
+        "infiniburn": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "bee_nest",
+      "blockstate_count": 1,
+      "property_signature": [
+        "facing",
+        "honey_level"
+      ],
+      "observed_values": {
+        "facing": [
+          "north"
+        ],
+        "honey_level": [
+          "0"
+        ]
+      },
+      "property_types": {
+        "facing": "StringTag",
+        "honey_level": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "blast_furnace",
+      "blockstate_count": 1,
+      "property_signature": [
+        "facing",
+        "lit"
+      ],
+      "observed_values": {
+        "facing": [
+          "north"
+        ],
+        "lit": [
+          "false"
+        ]
+      },
+      "property_types": {
+        "facing": "StringTag",
+        "lit": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "blue_ice",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "brick_block",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "brown_mushroom",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "budding_amethyst",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "cake",
+      "blockstate_count": 1,
+      "property_signature": [
+        "bites"
+      ],
+      "observed_values": {
+        "bites": [
+          "0"
+        ]
+      },
+      "property_types": {
+        "bites": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "calcite",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "carrots",
+      "blockstate_count": 1,
+      "property_signature": [
+        "age"
+      ],
+      "observed_values": {
+        "age": [
+          "7"
+        ]
+      },
+      "property_types": {
+        "age": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "chiseled_cinnabar",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "chiseled_sulfur",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "cinnabar",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "cinnabar_bricks",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "clay",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "coal_ore",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "coarse_dirt",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "cobbled_deepslate",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "cobblestone",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "copper_ore",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "crafting_table",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "dark_prismarine",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "deepslate_bricks",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "deepslate_copper_ore",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "deepslate_diamond_ore",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "deepslate_gold_ore",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "deepslate_iron_ore",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "deepslate_lapis_ore",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "deepslate_redstone_ore",
+      "blockstate_count": 1,
+      "property_signature": [
+        "lit"
+      ],
+      "observed_values": {
+        "lit": [
+          "false"
+        ]
+      },
+      "property_types": {
+        "lit": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "diamond_ore",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "dirt",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "emerald_ore",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "ender_chest",
+      "blockstate_count": 1,
+      "property_signature": [
+        "facing"
+      ],
+      "observed_values": {
+        "facing": [
+          "west"
+        ]
+      },
+      "property_types": {
+        "facing": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "fletching_table",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "furnace",
+      "blockstate_count": 1,
+      "property_signature": [
+        "facing",
+        "lit"
+      ],
+      "observed_values": {
+        "facing": [
+          "south"
+        ],
+        "lit": [
+          "false"
+        ]
+      },
+      "property_types": {
+        "facing": "StringTag",
+        "lit": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "gilded_blackstone",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "glass",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "gold_block",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "gold_ore",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "granite",
+      "blockstate_count": 1,
+      "property_signature": [
+        "polished"
+      ],
+      "observed_values": {
+        "polished": [
+          "false"
+        ]
+      },
+      "property_types": {
+        "polished": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "grass_block",
+      "blockstate_count": 1,
+      "property_signature": [
+        "snowy"
+      ],
+      "observed_values": {
+        "snowy": [
+          "false"
+        ]
+      },
+      "property_types": {
+        "snowy": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "grass_path",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "gravel",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "grindstone",
+      "blockstate_count": 1,
+      "property_signature": [
+        "face",
+        "facing"
+      ],
+      "observed_values": {
+        "face": [
+          "wall"
+        ],
+        "facing": [
+          "north"
+        ]
+      },
+      "property_types": {
+        "face": "StringTag",
+        "facing": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "honeycomb_block",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "iron_ore",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "lapis_block",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "lapis_ore",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "lodestone",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "moss_block",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "mossy_cobblestone",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "mud_bricks",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "mushroom_stem",
+      "blockstate_count": 1,
+      "property_signature": [
+        "down",
+        "east",
+        "material",
+        "north",
+        "south",
+        "up",
+        "west"
+      ],
+      "observed_values": {
+        "down": [
+          "true"
+        ],
+        "east": [
+          "true"
+        ],
+        "material": [
+          "red"
+        ],
+        "north": [
+          "true"
+        ],
+        "south": [
+          "true"
+        ],
+        "up": [
+          "true"
+        ],
+        "west": [
+          "true"
+        ]
+      },
+      "property_types": {
+        "down": "StringTag",
+        "east": "StringTag",
+        "material": "StringTag",
+        "north": "StringTag",
+        "south": "StringTag",
+        "up": "StringTag",
+        "west": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "nether_wart",
+      "blockstate_count": 1,
+      "property_signature": [
+        "age"
+      ],
+      "observed_values": {
+        "age": [
+          "3"
+        ]
+      },
+      "property_types": {
+        "age": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "netherrack",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "obsidian",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "oxidized_copper",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "oxidized_cut_copper",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "packed_ice",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "packed_mud",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "piston_head",
+      "blockstate_count": 1,
+      "property_signature": [
+        "facing",
+        "short"
+      ],
+      "observed_values": {
+        "facing": [
+          "south"
+        ],
+        "short": [
+          "false"
+        ]
+      },
+      "property_types": {
+        "facing": "StringTag",
+        "short": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "polished_cinnabar",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "polished_sulfur",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "polished_tuff",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "potatoes",
+      "blockstate_count": 1,
+      "property_signature": [
+        "age"
+      ],
+      "observed_values": {
+        "age": [
+          "7"
+        ]
+      },
+      "property_types": {
+        "age": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "potent_sulfur",
+      "blockstate_count": 1,
+      "property_signature": [
+        "potent_sulfur_state"
+      ],
+      "observed_values": {
+        "potent_sulfur_state": [
+          "dry"
+        ]
+      },
+      "property_types": {
+        "potent_sulfur_state": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "pressure_plate",
+      "blockstate_count": 1,
+      "property_signature": [
+        "material",
+        "powered"
+      ],
+      "observed_values": {
+        "material": [
+          "spruce"
+        ],
+        "powered": [
+          "false"
+        ]
+      },
+      "property_types": {
+        "material": "StringTag",
+        "powered": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "prismarine",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "prismarine_bricks",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "quartz_block",
+      "blockstate_count": 1,
+      "property_signature": [
+        "axis"
+      ],
+      "observed_values": {
+        "axis": [
+          "y"
+        ]
+      },
+      "property_types": {
+        "axis": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "raw_gold_block",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "raw_iron_block",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "red_mushroom",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "red_sand",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "red_sandstone",
+      "blockstate_count": 1,
+      "property_signature": [
+        "variant"
+      ],
+      "observed_values": {
+        "variant": [
+          "smooth"
+        ]
+      },
+      "property_types": {
+        "variant": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "redstone_block",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "redstone_lamp",
+      "blockstate_count": 1,
+      "property_signature": [
+        "lit"
+      ],
+      "observed_values": {
+        "lit": [
+          "true"
+        ]
+      },
+      "property_types": {
+        "lit": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "redstone_ore",
+      "blockstate_count": 1,
+      "property_signature": [
+        "lit"
+      ],
+      "observed_values": {
+        "lit": [
+          "false"
+        ]
+      },
+      "property_types": {
+        "lit": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "sand",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "scaffolding",
+      "blockstate_count": 1,
+      "property_signature": [
+        "bottom",
+        "distance",
+        "stability_checked"
+      ],
+      "observed_values": {
+        "bottom": [
+          "false"
+        ],
+        "distance": [
+          "0"
+        ],
+        "stability_checked": [
+          "true"
+        ]
+      },
+      "property_types": {
+        "bottom": "StringTag",
+        "distance": "StringTag",
+        "stability_checked": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "sculk",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "sea_lantern",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "seagrass",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "shroomlight",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "smooth_basalt",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "smooth_stone",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "snow_block",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "soul_lantern",
+      "blockstate_count": 1,
+      "property_signature": [
+        "hanging"
+      ],
+      "observed_values": {
+        "hanging": [
+          "true"
+        ]
+      },
+      "property_types": {
+        "hanging": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "soul_sand",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "spawner",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "stained_glass",
+      "blockstate_count": 1,
+      "property_signature": [
+        "color"
+      ],
+      "observed_values": {
+        "color": [
+          "white"
+        ]
+      },
+      "property_types": {
+        "color": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "stone",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "stone_bricks",
+      "blockstate_count": 1,
+      "property_signature": [
+        "variant"
+      ],
+      "observed_values": {
+        "variant": [
+          "normal"
+        ]
+      },
+      "property_types": {
+        "variant": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "stonecutter",
+      "blockstate_count": 1,
+      "property_signature": [
+        "facing"
+      ],
+      "observed_values": {
+        "facing": [
+          "west"
+        ]
+      },
+      "property_types": {
+        "facing": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "sulfur",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "sulfur_bricks",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "terracotta",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "tripwire",
+      "blockstate_count": 1,
+      "property_signature": [
+        "attached",
+        "disarmed",
+        "east",
+        "north",
+        "powered",
+        "south",
+        "suspended",
+        "west"
+      ],
+      "observed_values": {
+        "attached": [
+          "false"
+        ],
+        "disarmed": [
+          "false"
+        ],
+        "east": [
+          "false"
+        ],
+        "north": [
+          "false"
+        ],
+        "powered": [
+          "false"
+        ],
+        "south": [
+          "false"
+        ],
+        "suspended": [
+          "true"
+        ],
+        "west": [
+          "false"
+        ]
+      },
+      "property_types": {
+        "attached": "StringTag",
+        "disarmed": "StringTag",
+        "east": "StringTag",
+        "north": "StringTag",
+        "powered": "StringTag",
+        "south": "StringTag",
+        "suspended": "StringTag",
+        "west": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "tuff",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "tuff_bricks",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "wall_hanging_sign",
+      "blockstate_count": 1,
+      "property_signature": [
+        "facing",
+        "material"
+      ],
+      "observed_values": {
+        "facing": [
+          "north"
+        ],
+        "material": [
+          "spruce"
+        ]
+      },
+      "property_types": {
+        "facing": "StringTag",
+        "material": "StringTag"
+      }
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "warped_wart_block",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "waxed_copper_block",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "waxed_cut_copper",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "waxed_exposed_copper",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "waxed_exposed_copper_grate",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "waxed_exposed_cut_copper",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "waxed_oxidized_copper",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "waxed_oxidized_cut_copper",
+      "blockstate_count": 1,
+      "property_signature": [],
+      "observed_values": {},
+      "property_types": {}
+    },
+    {
+      "namespace": "universal_minecraft",
+      "base_name": "wheat",
+      "blockstate_count": 1,
+      "property_signature": [
+        "age"
+      ],
+      "observed_values": {
+        "age": [
+          "7"
+        ]
+      },
+      "property_types": {
+        "age": "StringTag"
+      }
+    }
+  ],
+  "spec_comparison": [
+    {
+      "base_name": "stairs",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "material": [
+          "acacia",
+          "bamboo",
+          "bamboo_mosaic",
+          "blackstone",
+          "cherry",
+          "cinnabar",
+          "cinnabar_brick",
+          "crimson",
+          "cut_copper",
+          "dark_prismarine",
+          "deepslate_tile",
+          "end_stone_brick",
+          "exposed_cut_copper",
+          "granite",
+          "mossy_stone_brick",
+          "mud_brick",
+          "nether_brick",
+          "oxidized_cut_copper",
+          "polished_andesite",
+          "polished_blackstone",
+          "polished_blackstone_brick",
+          "polished_cinnabar",
+          "polished_deepslate",
+          "polished_granite",
+          "polished_sulfur",
+          "polished_tuff",
+          "prismarine",
+          "prismarine_brick",
+          "purpur",
+          "quartz",
+          "red_nether_brick",
+          "red_sandstone",
+          "resin_brick",
+          "smooth_quartz",
+          "smooth_red_sandstone",
+          "sulfur",
+          "sulfur_brick",
+          "tuff",
+          "warped",
+          "waxed_cut_copper",
+          "waxed_weathered_cut_copper",
+          "weathered_cut_copper"
+        ],
+        "shape": [
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ]
+      }
+    },
+    {
+      "base_name": "trapdoor",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "material": [
+          "acacia",
+          "bamboo",
+          "cherry",
+          "copper",
+          "crimson",
+          "exposed_copper",
+          "warped",
+          "waxed_copper",
+          "waxed_exposed_copper",
+          "waxed_oxidized_copper",
+          "waxed_weathered_copper",
+          "weathered_copper"
+        ],
+        "powered": [
+          "true"
+        ]
+      }
+    },
+    {
+      "base_name": "slab",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "material": [
+          "acacia",
+          "bamboo",
+          "bamboo_mosaic",
+          "birch",
+          "blackstone",
+          "cherry",
+          "cinnabar",
+          "cinnabar_brick",
+          "cobbled_deepslate",
+          "crimson",
+          "cut_copper",
+          "cut_red_sandstone",
+          "cut_sandstone",
+          "dark_prismarine",
+          "deepslate_brick",
+          "deepslate_tile",
+          "diorite",
+          "end_stone_brick",
+          "exposed_cut_copper",
+          "granite",
+          "jungle",
+          "mangrove",
+          "mossy_cobblestone",
+          "mossy_stone_brick",
+          "mud_brick",
+          "nether_brick",
+          "oxidized_cut_copper",
+          "pale_oak",
+          "petrified_oak",
+          "polished_blackstone",
+          "polished_blackstone_brick",
+          "polished_cinnabar",
+          "polished_deepslate",
+          "polished_granite",
+          "polished_sulfur",
+          "polished_tuff",
+          "prismarine",
+          "prismarine_brick",
+          "purpur",
+          "quartz",
+          "red_nether_brick",
+          "red_sandstone",
+          "resin_brick",
+          "smooth_quartz",
+          "smooth_red_sandstone",
+          "smooth_sandstone",
+          "smooth_stone",
+          "sulfur",
+          "sulfur_brick",
+          "tuff",
+          "waxed_cut_copper",
+          "waxed_exposed_cut_copper",
+          "waxed_oxidized_cut_copper",
+          "waxed_weathered_cut_copper",
+          "weathered_cut_copper"
+        ]
+      }
+    },
+    {
+      "base_name": "log",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "material": [
+          "acacia",
+          "bamboo",
+          "cherry",
+          "crimson",
+          "pale_oak"
+        ]
+      }
+    },
+    {
+      "base_name": "door",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "material": [
+          "acacia",
+          "bamboo",
+          "cherry",
+          "copper",
+          "crimson",
+          "exposed_copper",
+          "iron",
+          "jungle",
+          "mangrove",
+          "oxidized_copper",
+          "pale_oak",
+          "waxed_copper",
+          "waxed_exposed_copper",
+          "waxed_oxidized_copper",
+          "waxed_weathered_copper",
+          "weathered_copper"
+        ],
+        "facing": [
+          "west"
+        ],
+        "powered": [
+          "true"
+        ]
+      }
+    },
+    {
+      "base_name": "water",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "wall",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "material": [
+          "blackstone",
+          "cinnabar",
+          "cinnabar_brick",
+          "cobbled_deepslate",
+          "deepslate_brick",
+          "deepslate_tile",
+          "diorite",
+          "end_stone_brick",
+          "granite",
+          "mossy_cobblestone",
+          "mossy_stone_brick",
+          "nether_brick",
+          "polished_blackstone",
+          "polished_blackstone_brick",
+          "polished_cinnabar",
+          "polished_deepslate",
+          "polished_sulfur",
+          "polished_tuff",
+          "prismarine",
+          "red_nether_brick",
+          "red_sandstone",
+          "resin_brick",
+          "sulfur",
+          "sulfur_brick",
+          "tuff",
+          "tuff_brick"
+        ]
+      }
+    },
+    {
+      "base_name": "bars",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "material": [
+          "copper",
+          "exposed_copper",
+          "oxidized_copper",
+          "waxed_copper",
+          "waxed_exposed_copper",
+          "waxed_oxidized_copper",
+          "waxed_weathered_copper",
+          "weathered_copper"
+        ]
+      }
+    },
+    {
+      "base_name": "lava",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "stained_terracotta",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "color": [
+          "light_gray",
+          "magenta",
+          "pink"
+        ]
+      }
+    },
+    {
+      "base_name": "glow_lichen",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "chest",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "material": [
+          "copper",
+          "exposed_copper",
+          "oxidized_copper",
+          "waxed_copper",
+          "waxed_exposed_copper",
+          "waxed_oxidized_copper",
+          "waxed_weathered_copper",
+          "weathered_copper"
+        ]
+      }
+    },
+    {
+      "base_name": "shulker_box",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "color": [
+          "blue",
+          "brown",
+          "cyan",
+          "magenta",
+          "orange",
+          "purple",
+          "red",
+          "white",
+          "yellow"
+        ],
+        "facing": [
+          "down",
+          "east",
+          "north"
+        ]
+      }
+    },
+    {
+      "base_name": "fence_gate",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "material": [
+          "acacia",
+          "bamboo",
+          "birch",
+          "cherry",
+          "crimson",
+          "mangrove",
+          "oak",
+          "pale_oak",
+          "warped"
+        ],
+        "in_wall": [
+          "true"
+        ],
+        "powered": [
+          "true"
+        ]
+      }
+    },
+    {
+      "base_name": "redstone_wire",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "east": [
+          "up"
+        ],
+        "north": [
+          "up"
+        ],
+        "power": [
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ],
+        "south": [
+          "up"
+        ],
+        "west": [
+          "up"
+        ]
+      }
+    },
+    {
+      "base_name": "wood",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "material": [
+          "acacia",
+          "birch",
+          "cherry",
+          "crimson",
+          "dark_oak",
+          "jungle",
+          "mangrove",
+          "pale_oak",
+          "warped"
+        ]
+      }
+    },
+    {
+      "base_name": "flower_pot",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "plant": [
+          "acacia_sapling",
+          "azalea_bush",
+          "azure_bluet",
+          "bamboo",
+          "birch_sapling",
+          "blue_orchid",
+          "brown_mushroom",
+          "cactus",
+          "cherry_sapling",
+          "closed_eyeblossom",
+          "crimson_fungus",
+          "crimson_roots",
+          "dandelion",
+          "dark_oak_sapling",
+          "dead_bush",
+          "flowering_azalea_bush",
+          "golden_dandelion",
+          "jungle_sapling",
+          "lily_of_the_valley",
+          "mangrove_propagule",
+          "open_eyeblossom",
+          "orange_tulip",
+          "pale_oak_sapling",
+          "poppy",
+          "red_mushroom",
+          "red_tulip",
+          "spruce_sapling",
+          "torchflower",
+          "warped_fungus",
+          "warped_roots",
+          "white_tulip",
+          "wither_rose"
+        ],
+        "update": [
+          "true"
+        ]
+      }
+    },
+    {
+      "base_name": "amethyst_cluster",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "double_plant",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "plant_type": [
+          "lilac",
+          "peony",
+          "tall_grass"
+        ]
+      }
+    },
+    {
+      "base_name": "planks",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "material": [
+          "acacia",
+          "bamboo",
+          "crimson",
+          "dark_oak",
+          "jungle",
+          "pale_oak"
+        ]
+      }
+    },
+    {
+      "base_name": "wool",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "color": [
+          "black",
+          "brown",
+          "gray",
+          "green",
+          "light_blue",
+          "light_gray",
+          "pink",
+          "red",
+          "white",
+          "yellow"
+        ]
+      }
+    },
+    {
+      "base_name": "barrel",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "facing": [
+          "down"
+        ],
+        "open": [
+          "true"
+        ]
+      }
+    },
+    {
+      "base_name": "beehive",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "honey_level": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      }
+    },
+    {
+      "base_name": "carpet",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "color": [
+          "black",
+          "blue",
+          "brown",
+          "cyan",
+          "gray",
+          "light_blue",
+          "light_gray",
+          "lime",
+          "orange",
+          "pink",
+          "yellow"
+        ]
+      }
+    },
+    {
+      "base_name": "concrete_powder",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "color": [
+          "black",
+          "blue",
+          "brown",
+          "cyan",
+          "green",
+          "light_gray",
+          "lime",
+          "magenta",
+          "purple",
+          "red",
+          "white"
+        ]
+      }
+    },
+    {
+      "base_name": "leaves",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "material": [
+          "acacia",
+          "azalea",
+          "cherry",
+          "dark_oak",
+          "jungle",
+          "mangrove",
+          "pale_oak",
+          "spruce"
+        ],
+        "distance": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "persistent": [
+          "false"
+        ]
+      }
+    },
+    {
+      "base_name": "shelf",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "material": [
+          "acacia",
+          "bamboo",
+          "birch",
+          "cherry",
+          "crimson",
+          "jungle",
+          "oak",
+          "spruce",
+          "warped"
+        ],
+        "facing": [
+          "north"
+        ],
+        "powered": [
+          "true"
+        ],
+        "side_chain": [
+          "center",
+          "left",
+          "right"
+        ]
+      }
+    },
+    {
+      "base_name": "torch",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "vine",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "up": [
+          "true"
+        ]
+      }
+    },
+    {
+      "base_name": "wall_sign",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "facing": [
+          "south"
+        ],
+        "material": [
+          "acacia",
+          "bamboo",
+          "birch",
+          "cherry",
+          "crimson",
+          "dark_oak",
+          "mangrove",
+          "oak",
+          "pale_oak",
+          "warped"
+        ]
+      }
+    },
+    {
+      "base_name": "candle",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "color": [
+          "black",
+          "blue",
+          "brown",
+          "cyan",
+          "green",
+          "light_blue",
+          "light_gray",
+          "lime",
+          "magenta",
+          "orange",
+          "pink",
+          "purple",
+          "red",
+          "white",
+          "yellow"
+        ],
+        "candles": [
+          "4"
+        ]
+      }
+    },
+    {
+      "base_name": "cauldron",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "cauldron_liquid": [
+          "lava",
+          "powder_snow"
+        ],
+        "level": [
+          "0.5",
+          "1.5",
+          "2"
+        ]
+      }
+    },
+    {
+      "base_name": "comparator",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "mode": [
+          "subtract"
+        ]
+      }
+    },
+    {
+      "base_name": "concrete",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "color": [
+          "blue",
+          "brown",
+          "cyan",
+          "gray",
+          "green",
+          "light_gray",
+          "lime",
+          "magenta",
+          "orange",
+          "pink",
+          "purple",
+          "white"
+        ]
+      }
+    },
+    {
+      "base_name": "decorated_pot",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "cracked": [
+          "true"
+        ]
+      }
+    },
+    {
+      "base_name": "fence",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "material": [
+          "acacia",
+          "bamboo",
+          "birch",
+          "cherry",
+          "crimson",
+          "dark_oak",
+          "nether_brick",
+          "pale_oak",
+          "warped"
+        ],
+        "east": [
+          "true"
+        ],
+        "north": [
+          "true"
+        ],
+        "south": [
+          "true"
+        ],
+        "west": [
+          "true"
+        ]
+      }
+    },
+    {
+      "base_name": "glazed_terracotta",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "color": [
+          "black",
+          "brown",
+          "gray",
+          "green",
+          "light_gray",
+          "lime",
+          "magenta",
+          "orange",
+          "pink",
+          "purple",
+          "red",
+          "white"
+        ],
+        "facing": [
+          "east",
+          "null0",
+          "null1"
+        ]
+      }
+    },
+    {
+      "base_name": "jack_o_lantern",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "observer",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "facing": [
+          "up",
+          "west"
+        ],
+        "powered": [
+          "true"
+        ]
+      }
+    },
+    {
+      "base_name": "plant",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "plant_type": [
+          "allium",
+          "azure_bluet",
+          "blue_orchid",
+          "bush",
+          "cactus_flower",
+          "closed_eyeblossom",
+          "cornflower",
+          "firefly_bush",
+          "golden_dandelion",
+          "lily_of_the_valley",
+          "open_eyeblossom",
+          "orange_tulip",
+          "oxeye_daisy",
+          "pink_tulip",
+          "poppy",
+          "red_tulip",
+          "short_dry_grass",
+          "tall_dry_grass",
+          "white_tulip",
+          "wither_rose"
+        ]
+      }
+    },
+    {
+      "base_name": "basalt",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "campfire",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "facing": [
+          "south",
+          "west"
+        ],
+        "signal_fire": [
+          "true"
+        ]
+      }
+    },
+    {
+      "base_name": "farmland",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "moisture": [
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      }
+    },
+    {
+      "base_name": "hopper",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "facing": [
+          "east",
+          "west"
+        ]
+      }
+    },
+    {
+      "base_name": "lever",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "face": [
+          "ceiling",
+          "floor"
+        ],
+        "facing": [
+          "east"
+        ],
+        "powered": [
+          "false"
+        ]
+      }
+    },
+    {
+      "base_name": "piston",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "facing": [
+          "down",
+          "east",
+          "up"
+        ]
+      }
+    },
+    {
+      "base_name": "rail",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "shape": [
+          "ascending_east",
+          "ascending_west",
+          "east_west",
+          "north_east",
+          "north_west",
+          "south_east",
+          "south_west"
+        ]
+      }
+    },
+    {
+      "base_name": "sandstone",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "variant": [
+          "chiseled"
+        ]
+      }
+    },
+    {
+      "base_name": "andesite",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "bed",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "color": [
+          "black",
+          "blue",
+          "brown",
+          "cyan",
+          "gray",
+          "green",
+          "light_blue",
+          "light_gray",
+          "lime",
+          "magenta",
+          "orange",
+          "pink",
+          "purple",
+          "white",
+          "yellow"
+        ],
+        "facing": [
+          "east",
+          "north",
+          "south"
+        ],
+        "occupied": [
+          "true"
+        ]
+      }
+    },
+    {
+      "base_name": "bell",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "attachment": [
+          "double_wall",
+          "single_wall"
+        ],
+        "facing": [
+          "east",
+          "west"
+        ],
+        "powered": [
+          "true"
+        ]
+      }
+    },
+    {
+      "base_name": "bone_block",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "axis": [
+          "z"
+        ]
+      }
+    },
+    {
+      "base_name": "button",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "material": [
+          "acacia",
+          "bamboo",
+          "birch",
+          "cherry",
+          "crimson",
+          "dark_oak",
+          "jungle",
+          "mangrove",
+          "oak",
+          "pale_oak",
+          "polished_blackstone",
+          "stone",
+          "warped"
+        ],
+        "face": [
+          "ceiling",
+          "floor"
+        ],
+        "facing": [
+          "south",
+          "west"
+        ],
+        "powered": [
+          "true"
+        ]
+      }
+    },
+    {
+      "base_name": "chain",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "material": [
+          "copper",
+          "exposed_copper",
+          "oxidized_copper",
+          "waxed_copper",
+          "waxed_exposed_copper",
+          "waxed_oxidized_copper",
+          "waxed_weathered_copper",
+          "weathered_copper"
+        ],
+        "axis": [
+          "z"
+        ]
+      }
+    },
+    {
+      "base_name": "deepslate",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "axis": [
+          "x"
+        ]
+      }
+    },
+    {
+      "base_name": "diorite",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "dispenser",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "facing": [
+          "down",
+          "east",
+          "north",
+          "south"
+        ],
+        "triggered": [
+          "true"
+        ]
+      }
+    },
+    {
+      "base_name": "dropper",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "facing": [
+          "east",
+          "north",
+          "south",
+          "up"
+        ],
+        "triggered": [
+          "true"
+        ]
+      }
+    },
+    {
+      "base_name": "hay_block",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "axis": [
+          "x"
+        ]
+      }
+    },
+    {
+      "base_name": "item_frame_block",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "facing": [
+          "down",
+          "east",
+          "north",
+          "up"
+        ],
+        "map_item": [
+          "true"
+        ],
+        "glowing": [
+          "true"
+        ]
+      }
+    },
+    {
+      "base_name": "ladder",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "facing": [
+          "east",
+          "south"
+        ]
+      }
+    },
+    {
+      "base_name": "lantern",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "material": [
+          "copper",
+          "exposed_copper",
+          "oxidized_copper",
+          "waxed_copper",
+          "waxed_exposed_copper",
+          "waxed_oxidized_copper",
+          "waxed_weathered_copper",
+          "weathered_copper"
+        ]
+      }
+    },
+    {
+      "base_name": "pearlescent_froglight",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "axis": [
+          "z"
+        ]
+      }
+    },
+    {
+      "base_name": "redstone_torch",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "facing": [
+          "east",
+          "south",
+          "west"
+        ]
+      }
+    },
+    {
+      "base_name": "repeater",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "delay": [
+          "2",
+          "3"
+        ],
+        "facing": [
+          "east",
+          "south"
+        ],
+        "locked": [
+          "true"
+        ]
+      }
+    },
+    {
+      "base_name": "sea_pickle",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "pickles": [
+          "2",
+          "4"
+        ],
+        "dead": [
+          "false"
+        ]
+      }
+    },
+    {
+      "base_name": "sticky_piston",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "extended": [
+          "true"
+        ],
+        "facing": [
+          "down",
+          "east",
+          "north",
+          "west"
+        ]
+      }
+    },
+    {
+      "base_name": "sweet_berry_bush",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "age": [
+          "0",
+          "1",
+          "2",
+          "4",
+          "6",
+          "7"
+        ]
+      }
+    },
+    {
+      "base_name": "tall_seagrass",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "wall_banner",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "color": [
+          "black",
+          "blue",
+          "brown",
+          "cyan",
+          "gray",
+          "light_blue",
+          "light_gray",
+          "lime",
+          "magenta",
+          "orange",
+          "pink",
+          "purple",
+          "red",
+          "yellow"
+        ],
+        "facing": [
+          "east",
+          "south",
+          "west"
+        ]
+      }
+    },
+    {
+      "base_name": "amethyst_block",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "anvil",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "damage": [
+          "broken",
+          "chipped",
+          "damaged"
+        ],
+        "facing": [
+          "north",
+          "south",
+          "west"
+        ]
+      }
+    },
+    {
+      "base_name": "banner",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "color": [
+          "black",
+          "blue",
+          "brown",
+          "cyan",
+          "gray",
+          "green",
+          "light_blue",
+          "light_gray",
+          "lime",
+          "magenta",
+          "orange",
+          "pink",
+          "purple",
+          "red",
+          "yellow"
+        ],
+        "rotation": [
+          "0",
+          "1",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ]
+      }
+    },
+    {
+      "base_name": "bedrock",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "infiniburn": [
+          "true"
+        ]
+      }
+    },
+    {
+      "base_name": "bee_nest",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "facing": [
+          "east",
+          "south",
+          "west"
+        ],
+        "honey_level": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ]
+      }
+    },
+    {
+      "base_name": "blast_furnace",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "facing": [
+          "east",
+          "south",
+          "west"
+        ],
+        "lit": [
+          "true"
+        ]
+      }
+    },
+    {
+      "base_name": "blue_ice",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "brick_block",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "brown_mushroom",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "budding_amethyst",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "cake",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "bites": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      }
+    },
+    {
+      "base_name": "calcite",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "carrots",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "age": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      }
+    },
+    {
+      "base_name": "chiseled_cinnabar",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "chiseled_sulfur",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "cinnabar",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "cinnabar_bricks",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "clay",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "coal_ore",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "coarse_dirt",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "cobbled_deepslate",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "cobblestone",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "copper_ore",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "crafting_table",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "dark_prismarine",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "deepslate_bricks",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "deepslate_copper_ore",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "deepslate_diamond_ore",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "deepslate_gold_ore",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "deepslate_iron_ore",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "deepslate_lapis_ore",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "deepslate_redstone_ore",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "lit": [
+          "true"
+        ]
+      }
+    },
+    {
+      "base_name": "diamond_ore",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "dirt",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "emerald_ore",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "ender_chest",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "facing": [
+          "east",
+          "north",
+          "south"
+        ]
+      }
+    },
+    {
+      "base_name": "fletching_table",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "furnace",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "facing": [
+          "east",
+          "north",
+          "west"
+        ],
+        "lit": [
+          "true"
+        ]
+      }
+    },
+    {
+      "base_name": "gilded_blackstone",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "glass",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "gold_block",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "gold_ore",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "granite",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "polished": [
+          "true"
+        ]
+      }
+    },
+    {
+      "base_name": "grass_block",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "snowy": [
+          "true"
+        ]
+      }
+    },
+    {
+      "base_name": "grass_path",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "gravel",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "grindstone",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "face": [
+          "ceiling",
+          "floor"
+        ],
+        "facing": [
+          "east",
+          "south",
+          "west"
+        ]
+      }
+    },
+    {
+      "base_name": "honeycomb_block",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "iron_ore",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "lapis_block",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "lapis_ore",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "lodestone",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "moss_block",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "mossy_cobblestone",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "mud_bricks",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "mushroom_stem",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "down": [
+          "false"
+        ],
+        "east": [
+          "false"
+        ],
+        "north": [
+          "false"
+        ],
+        "south": [
+          "false"
+        ],
+        "up": [
+          "false"
+        ],
+        "west": [
+          "false"
+        ],
+        "material": [
+          "brown"
+        ]
+      }
+    },
+    {
+      "base_name": "nether_wart",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "age": [
+          "0",
+          "1",
+          "2"
+        ]
+      }
+    },
+    {
+      "base_name": "netherrack",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "obsidian",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "oxidized_copper",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "oxidized_cut_copper",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "packed_ice",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "packed_mud",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "piston_head",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "facing": [
+          "down",
+          "east",
+          "north",
+          "up",
+          "west"
+        ],
+        "short": [
+          "true"
+        ]
+      }
+    },
+    {
+      "base_name": "polished_cinnabar",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "polished_sulfur",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "polished_tuff",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "potatoes",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "age": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      }
+    },
+    {
+      "base_name": "potent_sulfur",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "potent_sulfur_state": [
+          "continuous",
+          "dormant",
+          "erupting",
+          "wet"
+        ]
+      }
+    },
+    {
+      "base_name": "pressure_plate",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "material": [
+          "acacia",
+          "bamboo",
+          "birch",
+          "cherry",
+          "crimson",
+          "dark_oak",
+          "jungle",
+          "mangrove",
+          "oak",
+          "pale_oak",
+          "polished_blackstone",
+          "stone",
+          "warped"
+        ],
+        "powered": [
+          "true"
+        ]
+      }
+    },
+    {
+      "base_name": "prismarine",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "prismarine_bricks",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "quartz_block",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "axis": [
+          "x",
+          "z"
+        ]
+      }
+    },
+    {
+      "base_name": "raw_gold_block",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "raw_iron_block",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "red_mushroom",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "red_sand",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "red_sandstone",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "variant": [
+          "chiseled",
+          "cut",
+          "normal"
+        ]
+      }
+    },
+    {
+      "base_name": "redstone_block",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "redstone_lamp",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "lit": [
+          "false"
+        ]
+      }
+    },
+    {
+      "base_name": "redstone_ore",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "lit": [
+          "true"
+        ]
+      }
+    },
+    {
+      "base_name": "sand",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "scaffolding",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "bottom": [
+          "true"
+        ],
+        "distance": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7"
+        ],
+        "stability_checked": [
+          "false"
+        ]
+      }
+    },
+    {
+      "base_name": "sculk",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "sea_lantern",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "seagrass",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "shroomlight",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "smooth_basalt",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "smooth_stone",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "snow_block",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "soul_lantern",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "hanging": [
+          "false"
+        ]
+      }
+    },
+    {
+      "base_name": "soul_sand",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "spawner",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "stained_glass",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "color": [
+          "black",
+          "blue",
+          "brown",
+          "cyan",
+          "gray",
+          "green",
+          "light_blue",
+          "light_gray",
+          "lime",
+          "magenta",
+          "orange",
+          "pink",
+          "purple",
+          "red",
+          "yellow"
+        ]
+      }
+    },
+    {
+      "base_name": "stone",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "stone_bricks",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "variant": [
+          "chiseled",
+          "cracked",
+          "mossy"
+        ]
+      }
+    },
+    {
+      "base_name": "stonecutter",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "facing": [
+          "down",
+          "east",
+          "north",
+          "south",
+          "up"
+        ]
+      }
+    },
+    {
+      "base_name": "sulfur",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "sulfur_bricks",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "terracotta",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "tripwire",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "attached": [
+          "true"
+        ],
+        "disarmed": [
+          "true"
+        ],
+        "powered": [
+          "true"
+        ],
+        "suspended": [
+          "false"
+        ],
+        "east": [
+          "true"
+        ],
+        "north": [
+          "true"
+        ],
+        "south": [
+          "true"
+        ],
+        "west": [
+          "true"
+        ]
+      }
+    },
+    {
+      "base_name": "tuff",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "tuff_bricks",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "wall_hanging_sign",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "facing": [
+          "east",
+          "south",
+          "west"
+        ],
+        "material": [
+          "acacia",
+          "bamboo",
+          "birch",
+          "cherry",
+          "crimson",
+          "dark_oak",
+          "jungle",
+          "mangrove",
+          "oak",
+          "pale_oak",
+          "warped"
+        ]
+      }
+    },
+    {
+      "base_name": "warped_wart_block",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "waxed_copper_block",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "waxed_cut_copper",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "waxed_exposed_copper",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "waxed_exposed_copper_grate",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "waxed_exposed_cut_copper",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "waxed_oxidized_copper",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "waxed_oxidized_cut_copper",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {}
+    },
+    {
+      "base_name": "wheat",
+      "has_spec": true,
+      "fully_covered": true,
+      "properties_not_in_spec": [],
+      "values_not_in_spec": {},
+      "spec_properties_never_observed": [],
+      "spec_values_never_observed": {
+        "age": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      }
+    }
+  ]
+}

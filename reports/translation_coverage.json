@@ -1,0 +1,5194 @@
+{
+  "probe": "translation_coverage",
+  "environment": {
+    "amulet_core": "1.9.30",
+    "pymctranslate": "1.2.47",
+    "minecraft_model_reader": "1.4.12",
+    "newest_bedrock_definitions": [
+      26,
+      30,
+      0
+    ],
+    "newest_java_definitions": [
+      26,
+      2,
+      0
+    ]
+  },
+  "scan": {
+    "world": "/tmp/world_audit",
+    "dimension": "minecraft:overworld",
+    "center_chunk": [
+      18,
+      4
+    ],
+    "radius_chunks": 4,
+    "chunks_requested": 81,
+    "chunks_skipped": {},
+    "seconds": 3.47
+  },
+  "world_last_opened_with_version": [
+    1,
+    26,
+    44,
+    3,
+    0
+  ],
+  "java_target_version": [
+    26,
+    2,
+    0
+  ],
+  "newest_bedrock_definitions": [
+    26,
+    30,
+    0
+  ],
+  "summary": {
+    "distinct_blockstates": 652,
+    "translated": 650,
+    "coverage_percent": 99.69,
+    "failures": 0,
+    "passed_through_untranslated": 0,
+    "collapsed_to_air": 2,
+    "became_entity": 0,
+    "needs_neighbouring_blocks": 73,
+    "carries_extra_blocks": 5
+  },
+  "failures": [],
+  "passed_through_untranslated": [],
+  "collapsed_to_air": [
+    {
+      "universal": "universal_minecraft:item_frame_block[facing=south,glowing=false,map_item=false]",
+      "count": 2,
+      "java": "minecraft:air",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:item_frame_block[facing=west,glowing=false,map_item=false]",
+      "count": 2,
+      "java": "minecraft:air",
+      "extra_needed": false,
+      "error": null
+    }
+  ],
+  "became_entity": [],
+  "needs_neighbouring_blocks": [
+    {
+      "universal": "universal_minecraft:shulker_box[color=default,facing=up]",
+      "count": 31,
+      "java": "minecraft:shulker_box[facing=up]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:beehive[facing=east,honey_level=0]",
+      "count": 28,
+      "java": "minecraft:beehive[facing=east,honey_level=0]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:chest[connection=left,facing=east,material=wood]",
+      "count": 25,
+      "java": "minecraft:chest[facing=east,type=left]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:chest[connection=right,facing=east,material=wood]",
+      "count": 25,
+      "java": "minecraft:chest[facing=east,type=right]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:beehive[facing=west,honey_level=0]",
+      "count": 15,
+      "java": "minecraft:beehive[facing=west,honey_level=0]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:barrel[facing=up,open=false]",
+      "count": 13,
+      "java": "minecraft:barrel[facing=up,open=false]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:beehive[facing=north,honey_level=0]",
+      "count": 11,
+      "java": "minecraft:beehive[facing=north,honey_level=0]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:decorated_pot[cracked=false,facing=south]",
+      "count": 10,
+      "java": "minecraft:decorated_pot[cracked=false,facing=south]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:chest[connection=right,facing=west,material=wood]",
+      "count": 9,
+      "java": "minecraft:chest[facing=west,type=right]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:chest[connection=left,facing=west,material=wood]",
+      "count": 9,
+      "java": "minecraft:chest[facing=west,type=left]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:beehive[facing=south,honey_level=0]",
+      "count": 8,
+      "java": "minecraft:beehive[facing=south,honey_level=0]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wall_banner[color=green,facing=north]",
+      "count": 8,
+      "java": "minecraft:green_wall_banner[facing=north]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:shulker_box[color=default,facing=west]",
+      "count": 7,
+      "java": "minecraft:shulker_box[facing=west]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wall_banner[color=white,facing=north]",
+      "count": 7,
+      "java": "minecraft:white_wall_banner[facing=north]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:barrel[facing=north,open=false]",
+      "count": 6,
+      "java": "minecraft:barrel[facing=north,open=false]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:barrel[facing=west,open=false]",
+      "count": 6,
+      "java": "minecraft:barrel[facing=west,open=false]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:hopper[enabled=false,facing=down]",
+      "count": 5,
+      "java": "minecraft:hopper[enabled=false,facing=down]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:barrel[facing=south,open=false]",
+      "count": 4,
+      "java": "minecraft:barrel[facing=south,open=false]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:chest[connection=right,facing=south,material=wood]",
+      "count": 4,
+      "java": "minecraft:chest[facing=south,type=right]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:chest[connection=left,facing=south,material=wood]",
+      "count": 4,
+      "java": "minecraft:chest[facing=south,type=left]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:shelf[facing=south,material=dark_oak,powered=false,side_chain=unconnected]",
+      "count": 4,
+      "java": "minecraft:dark_oak_shelf[facing=south,powered=false,side_chain=unconnected]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wall_sign[facing=north,material=spruce]",
+      "count": 4,
+      "java": "minecraft:spruce_wall_sign[facing=north]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wall_sign[facing=west,material=spruce]",
+      "count": 3,
+      "java": "minecraft:spruce_wall_sign[facing=west]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wall_hanging_sign[facing=north,material=spruce]",
+      "count": 3,
+      "java": "minecraft:spruce_wall_hanging_sign[facing=north]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:decorated_pot[cracked=false,facing=west]",
+      "count": 3,
+      "java": "minecraft:decorated_pot[cracked=false,facing=west]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:chest[connection=none,facing=north,material=wood]",
+      "count": 3,
+      "java": "minecraft:chest[facing=north,type=single]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:spawner",
+      "count": 3,
+      "java": "minecraft:spawner",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:chest[connection=left,facing=north,material=wood]",
+      "count": 3,
+      "java": "minecraft:chest[facing=north,type=left]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:chest[connection=right,facing=north,material=wood]",
+      "count": 3,
+      "java": "minecraft:chest[facing=north,type=right]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:dispenser[facing=west,triggered=false]",
+      "count": 3,
+      "java": "minecraft:dispenser[facing=west,triggered=false]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:campfire[facing=east,lit=true,signal_fire=false]",
+      "count": 2,
+      "java": "minecraft:campfire[facing=east,lit=true,signal_fire=false]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:decorated_pot[cracked=false,facing=east]",
+      "count": 2,
+      "java": "minecraft:decorated_pot[cracked=false,facing=east]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:decorated_pot[cracked=false,facing=north]",
+      "count": 2,
+      "java": "minecraft:decorated_pot[cracked=false,facing=north]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:ender_chest[facing=west]",
+      "count": 2,
+      "java": "minecraft:ender_chest[facing=west]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:shelf[facing=west,material=dark_oak,powered=false,side_chain=unconnected]",
+      "count": 2,
+      "java": "minecraft:dark_oak_shelf[facing=west,powered=false,side_chain=unconnected]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:shulker_box[color=default,facing=south]",
+      "count": 2,
+      "java": "minecraft:shulker_box[facing=south]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wall_sign[facing=north,material=jungle]",
+      "count": 2,
+      "java": "minecraft:jungle_wall_sign[facing=north]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:shulker_box[color=lime,facing=up]",
+      "count": 2,
+      "java": "minecraft:lime_shulker_box[facing=up]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:campfire[facing=east,lit=false,signal_fire=false]",
+      "count": 1,
+      "java": "minecraft:campfire[facing=east,lit=false,signal_fire=false]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:bee_nest[facing=north,honey_level=0]",
+      "count": 1,
+      "java": "minecraft:bee_nest[facing=north,honey_level=0]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:chest[connection=none,facing=west,material=wood]",
+      "count": 1,
+      "java": "minecraft:chest[facing=west,type=single]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:chest[connection=none,facing=south,material=wood]",
+      "count": 1,
+      "java": "minecraft:chest[facing=south,type=single]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:shulker_box[color=light_gray,facing=up]",
+      "count": 1,
+      "java": "minecraft:light_gray_shulker_box[facing=up]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:shulker_box[color=gray,facing=up]",
+      "count": 1,
+      "java": "minecraft:gray_shulker_box[facing=up]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:shelf[facing=east,material=pale_oak,powered=false,side_chain=unconnected]",
+      "count": 1,
+      "java": "minecraft:pale_oak_shelf[facing=east,powered=false,side_chain=unconnected]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:shelf[facing=west,material=pale_oak,powered=false,side_chain=unconnected]",
+      "count": 1,
+      "java": "minecraft:pale_oak_shelf[facing=west,powered=false,side_chain=unconnected]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:shelf[facing=south,material=mangrove,powered=false,side_chain=unconnected]",
+      "count": 1,
+      "java": "minecraft:mangrove_shelf[facing=south,powered=false,side_chain=unconnected]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:dispenser[facing=up,triggered=false]",
+      "count": 1,
+      "java": "minecraft:dispenser[facing=up,triggered=false]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:furnace[facing=south,lit=false]",
+      "count": 1,
+      "java": "minecraft:furnace[facing=south,lit=false]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:barrel[facing=east,open=false]",
+      "count": 1,
+      "java": "minecraft:barrel[facing=east,open=false]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:campfire[facing=north,lit=false,signal_fire=false]",
+      "count": 1,
+      "java": "minecraft:campfire[facing=north,lit=false,signal_fire=false]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:blast_furnace[facing=north,lit=false]",
+      "count": 1,
+      "java": "minecraft:blast_furnace[facing=north,lit=false]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:bell[attachment=floor,facing=south,powered=false,toggle=1]",
+      "count": 1,
+      "java": "minecraft:bell[attachment=floor,facing=south,powered=false]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:beehive[facing=north,honey_level=5]",
+      "count": 1,
+      "java": "minecraft:beehive[facing=north,honey_level=5]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:bed[color=red,facing=west,occupied=false,part=foot]",
+      "count": 1,
+      "java": "minecraft:red_bed[facing=west,occupied=false,part=foot]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:bed[color=red,facing=west,occupied=false,part=head]",
+      "count": 1,
+      "java": "minecraft:red_bed[facing=west,occupied=false,part=head]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wall_sign[facing=east,material=jungle]",
+      "count": 1,
+      "java": "minecraft:jungle_wall_sign[facing=east]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wall_sign[facing=west,material=jungle]",
+      "count": 1,
+      "java": "minecraft:jungle_wall_sign[facing=west]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:bell[attachment=ceiling,facing=north,powered=false,toggle=0]",
+      "count": 1,
+      "java": "minecraft:bell[attachment=ceiling,facing=north,powered=false]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:potent_sulfur[potent_sulfur_state=dry]",
+      "count": 1,
+      "java": "minecraft:potent_sulfur[potent_sulfur_state=dry]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:hopper[enabled=true,facing=north]",
+      "count": 1,
+      "java": "minecraft:hopper[enabled=true,facing=north]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:hopper[enabled=true,facing=south]",
+      "count": 1,
+      "java": "minecraft:hopper[enabled=true,facing=south]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:comparator[facing=south,mode=compare,powered=true]",
+      "count": 1,
+      "java": "minecraft:comparator[facing=south,mode=compare,powered=true]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:comparator[facing=north,mode=compare,powered=true]",
+      "count": 1,
+      "java": "minecraft:comparator[facing=north,mode=compare,powered=true]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:comparator[facing=west,mode=compare,powered=false]",
+      "count": 1,
+      "java": "minecraft:comparator[facing=west,mode=compare,powered=false]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:comparator[facing=east,mode=compare,powered=false]",
+      "count": 1,
+      "java": "minecraft:comparator[facing=east,mode=compare,powered=false]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:dropper[facing=west,triggered=false]",
+      "count": 1,
+      "java": "minecraft:dropper[facing=west,triggered=false]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:dropper[facing=down,triggered=false]",
+      "count": 1,
+      "java": "minecraft:dropper[facing=down,triggered=false]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:banner[color=white,rotation=2]",
+      "count": 1,
+      "java": "minecraft:white_banner[rotation=2]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:shulker_box[color=black,facing=south]",
+      "count": 1,
+      "java": "minecraft:black_shulker_box[facing=south]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:shulker_box[color=green,facing=up]",
+      "count": 1,
+      "java": "minecraft:green_shulker_box[facing=up]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:shulker_box[color=pink,facing=up]",
+      "count": 1,
+      "java": "minecraft:pink_shulker_box[facing=up]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:shulker_box[color=light_blue,facing=up]",
+      "count": 1,
+      "java": "minecraft:light_blue_shulker_box[facing=up]",
+      "extra_needed": true,
+      "error": null
+    }
+  ],
+  "carries_extra_blocks": [
+    {
+      "universal": "universal_minecraft:seagrass",
+      "count": 274,
+      "java": "minecraft:seagrass",
+      "extra_needed": false,
+      "error": null,
+      "extra_blocks": [
+        "universal_minecraft:water[falling=false,flowing=false,level=0]"
+      ]
+    },
+    {
+      "universal": "universal_minecraft:tall_seagrass[half=lower]",
+      "count": 58,
+      "java": "minecraft:tall_seagrass[half=lower]",
+      "extra_needed": false,
+      "error": null,
+      "extra_blocks": [
+        "universal_minecraft:water[falling=false,flowing=false,level=0]"
+      ]
+    },
+    {
+      "universal": "universal_minecraft:tall_seagrass[half=upper]",
+      "count": 58,
+      "java": "minecraft:tall_seagrass[half=upper]",
+      "extra_needed": false,
+      "error": null,
+      "extra_blocks": [
+        "universal_minecraft:water[falling=false,flowing=false,level=0]"
+      ]
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=north,half=top,material=oak,open=false,powered=false]",
+      "count": 2,
+      "java": "minecraft:oak_trapdoor[facing=north,half=top,open=false,powered=false]",
+      "extra_needed": false,
+      "error": null,
+      "extra_blocks": [
+        "universal_minecraft:water[falling=false,flowing=false,level=0]"
+      ]
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=west,half=top,material=oak,open=false,powered=false]",
+      "count": 1,
+      "java": "minecraft:oak_trapdoor[facing=west,half=top,open=false,powered=false]",
+      "extra_needed": false,
+      "error": null,
+      "extra_blocks": [
+        "universal_minecraft:water[falling=false,flowing=false,level=0]"
+      ]
+    }
+  ],
+  "translated": [
+    {
+      "universal": "universal_minecraft:deepslate[axis=y]",
+      "count": 1038000,
+      "java": "minecraft:deepslate[axis=y]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stone",
+      "count": 850817,
+      "java": "minecraft:stone",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:dirt",
+      "count": 79547,
+      "java": "minecraft:dirt",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:bedrock[infiniburn=false]",
+      "count": 72470,
+      "java": "minecraft:bedrock",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:gravel",
+      "count": 67523,
+      "java": "minecraft:gravel",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:tuff",
+      "count": 58182,
+      "java": "minecraft:tuff",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:granite[polished=false]",
+      "count": 53208,
+      "java": "minecraft:granite",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:diorite[polished=false]",
+      "count": 52766,
+      "java": "minecraft:diorite",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:andesite[polished=false]",
+      "count": 49314,
+      "java": "minecraft:andesite",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:lava[falling=false,flowing=false,level=0]",
+      "count": 28572,
+      "java": "minecraft:lava[level=0]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:water[falling=false,flowing=false,level=0]",
+      "count": 17077,
+      "java": "minecraft:water[level=0]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:coal_ore",
+      "count": 14838,
+      "java": "minecraft:coal_ore",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:grass_block[snowy=false]",
+      "count": 12616,
+      "java": "minecraft:grass_block[snowy=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:iron_ore",
+      "count": 8089,
+      "java": "minecraft:iron_ore",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:sand",
+      "count": 4578,
+      "java": "minecraft:sand",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:moss_block",
+      "count": 2406,
+      "java": "minecraft:moss_block",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:sandstone[variant=normal]",
+      "count": 1952,
+      "java": "minecraft:sandstone",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:redstone_ore[lit=false]",
+      "count": 1936,
+      "java": "minecraft:redstone_ore[lit=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:deepslate_redstone_ore[lit=false]",
+      "count": 1551,
+      "java": "minecraft:deepslate_redstone_ore[lit=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:obsidian",
+      "count": 1548,
+      "java": "minecraft:obsidian",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:deepslate_iron_ore",
+      "count": 1318,
+      "java": "minecraft:deepslate_iron_ore",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:cobblestone",
+      "count": 1105,
+      "java": "minecraft:cobblestone",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:deepslate_gold_ore",
+      "count": 1085,
+      "java": "minecraft:deepslate_gold_ore",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:smooth_basalt",
+      "count": 1001,
+      "java": "minecraft:smooth_basalt",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:water[falling=false,flowing=false,level=1]",
+      "count": 941,
+      "java": "minecraft:water[level=1]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:plant[plant_type=grass]",
+      "count": 905,
+      "java": "minecraft:short_grass",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:calcite",
+      "count": 892,
+      "java": "minecraft:calcite",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:planks[material=mangrove]",
+      "count": 867,
+      "java": "minecraft:mangrove_planks",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:brick_block",
+      "count": 784,
+      "java": "minecraft:bricks",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:deepslate_diamond_ore",
+      "count": 780,
+      "java": "minecraft:deepslate_diamond_ore",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stained_terracotta[color=light_blue]",
+      "count": 765,
+      "java": "minecraft:light_blue_terracotta",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:gold_ore",
+      "count": 741,
+      "java": "minecraft:gold_ore",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:tuff_bricks",
+      "count": 680,
+      "java": "minecraft:tuff_bricks",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:deepslate_lapis_ore",
+      "count": 632,
+      "java": "minecraft:deepslate_lapis_ore",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:water[falling=false,flowing=false,level=2]",
+      "count": 608,
+      "java": "minecraft:water[level=2]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:water[falling=true,flowing=false,level=1]",
+      "count": 607,
+      "java": "minecraft:water[level=9]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stained_terracotta[color=yellow]",
+      "count": 606,
+      "java": "minecraft:yellow_terracotta",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:amethyst_block",
+      "count": 543,
+      "java": "minecraft:amethyst_block",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stained_terracotta[color=red]",
+      "count": 490,
+      "java": "minecraft:red_terracotta",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:water[falling=false,flowing=false,level=3]",
+      "count": 448,
+      "java": "minecraft:water[level=3]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:sandstone[variant=cut]",
+      "count": 448,
+      "java": "minecraft:cut_sandstone",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stone_bricks[variant=normal]",
+      "count": 410,
+      "java": "minecraft:stone_bricks",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:bone_block[axis=y]",
+      "count": 376,
+      "java": "minecraft:bone_block[axis=y]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:packed_mud",
+      "count": 374,
+      "java": "minecraft:packed_mud",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:water[falling=false,flowing=false,level=4]",
+      "count": 360,
+      "java": "minecraft:water[level=4]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:mossy_cobblestone",
+      "count": 360,
+      "java": "minecraft:mossy_cobblestone",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:double_plant[half=lower,plant_type=large_fern]",
+      "count": 328,
+      "java": "minecraft:large_fern[half=lower]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:double_plant[half=upper,plant_type=large_fern]",
+      "count": 328,
+      "java": "minecraft:large_fern[half=upper]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:water[falling=false,flowing=false,level=5]",
+      "count": 304,
+      "java": "minecraft:water[level=5]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:log[axis=y,material=mangrove,stripped=true]",
+      "count": 278,
+      "java": "minecraft:stripped_mangrove_log[axis=y]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:seagrass",
+      "count": 274,
+      "java": "minecraft:seagrass",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:sulfur",
+      "count": 273,
+      "java": "minecraft:sulfur",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:diamond_ore",
+      "count": 269,
+      "java": "minecraft:diamond_ore",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:lava[falling=true,flowing=false,level=2]",
+      "count": 264,
+      "java": "minecraft:lava[level=10]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:lapis_ore",
+      "count": 256,
+      "java": "minecraft:lapis_ore",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:cobbled_deepslate",
+      "count": 251,
+      "java": "minecraft:cobbled_deepslate",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:log[axis=y,material=spruce,stripped=true]",
+      "count": 235,
+      "java": "minecraft:stripped_spruce_log[axis=y]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:deepslate_copper_ore",
+      "count": 230,
+      "java": "minecraft:deepslate_copper_ore",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:water[falling=false,flowing=false,level=6]",
+      "count": 229,
+      "java": "minecraft:water[level=6]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:planks[material=cherry]",
+      "count": 226,
+      "java": "minecraft:cherry_planks",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stained_terracotta[color=purple]",
+      "count": 222,
+      "java": "minecraft:purple_terracotta",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:lava[falling=false,flowing=false,level=2]",
+      "count": 217,
+      "java": "minecraft:lava[level=2]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stained_terracotta[color=orange]",
+      "count": 205,
+      "java": "minecraft:orange_terracotta",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:clay",
+      "count": 201,
+      "java": "minecraft:clay",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:slab[material=stone_brick,type=top]",
+      "count": 199,
+      "java": "minecraft:stone_brick_slab[type=top]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:water[falling=false,flowing=false,level=7]",
+      "count": 183,
+      "java": "minecraft:water[level=7]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:water[falling=true,flowing=false,level=2]",
+      "count": 182,
+      "java": "minecraft:water[level=10]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:leaves[check_decay=false,distance=7,material=oak,persistent=true]",
+      "count": 163,
+      "java": "minecraft:oak_leaves[distance=7,persistent=true]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:slab[material=spruce,type=top]",
+      "count": 162,
+      "java": "minecraft:spruce_slab[type=top]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stained_terracotta[color=blue]",
+      "count": 157,
+      "java": "minecraft:blue_terracotta",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:grass_path",
+      "count": 153,
+      "java": "minecraft:dirt_path",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stained_glass[color=white]",
+      "count": 140,
+      "java": "minecraft:white_stained_glass",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stained_terracotta[color=brown]",
+      "count": 138,
+      "java": "minecraft:brown_terracotta",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:netherrack",
+      "count": 126,
+      "java": "minecraft:netherrack",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:planks[material=oak]",
+      "count": 125,
+      "java": "minecraft:oak_planks",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:honeycomb_block",
+      "count": 125,
+      "java": "minecraft:honeycomb_block",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:planks[material=spruce]",
+      "count": 124,
+      "java": "minecraft:spruce_planks",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stained_terracotta[color=lime]",
+      "count": 118,
+      "java": "minecraft:lime_terracotta",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:water[falling=true,flowing=false,level=3]",
+      "count": 114,
+      "java": "minecraft:water[level=11]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:lava[falling=false,flowing=false,level=4]",
+      "count": 114,
+      "java": "minecraft:lava[level=4]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:cinnabar",
+      "count": 114,
+      "java": "minecraft:cinnabar",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stained_terracotta[color=black]",
+      "count": 113,
+      "java": "minecraft:black_terracotta",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:leaves[check_decay=true,distance=7,material=oak,persistent=true]",
+      "count": 107,
+      "java": "minecraft:oak_leaves[distance=7,persistent=true]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:concrete_powder[color=orange]",
+      "count": 107,
+      "java": "minecraft:orange_concrete_powder",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:concrete[color=black]",
+      "count": 106,
+      "java": "minecraft:black_concrete",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:slab[material=warped,type=double]",
+      "count": 91,
+      "java": "minecraft:warped_slab[type=double]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:torch[facing=up]",
+      "count": 89,
+      "java": "minecraft:torch",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:deepslate_bricks",
+      "count": 89,
+      "java": "minecraft:deepslate_bricks",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:slab[material=brick,type=bottom]",
+      "count": 88,
+      "java": "minecraft:brick_slab[type=bottom]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stained_terracotta[color=gray]",
+      "count": 84,
+      "java": "minecraft:gray_terracotta",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:diorite[polished=true]",
+      "count": 82,
+      "java": "minecraft:polished_diorite",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:waxed_oxidized_cut_copper",
+      "count": 81,
+      "java": "minecraft:waxed_oxidized_cut_copper",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:coarse_dirt",
+      "count": 80,
+      "java": "minecraft:coarse_dirt",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:jack_o_lantern[facing=west]",
+      "count": 76,
+      "java": "minecraft:jack_o_lantern[facing=west]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:waxed_oxidized_copper",
+      "count": 75,
+      "java": "minecraft:waxed_oxidized_copper",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:red_sandstone[variant=smooth]",
+      "count": 74,
+      "java": "minecraft:smooth_red_sandstone",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:slab[material=warped,type=bottom]",
+      "count": 72,
+      "java": "minecraft:warped_slab[type=bottom]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:mushroom_stem[down=true,east=true,material=red,north=true,south=true,up=true,west=true]",
+      "count": 72,
+      "java": "minecraft:mushroom_stem[down=true,east=true,north=true,south=true,up=true,west=true]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:bars[east=true,material=iron,north=true,south=true,west=true]",
+      "count": 72,
+      "java": "minecraft:iron_bars[east=true,north=true,south=true,west=true]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:planks[material=birch]",
+      "count": 72,
+      "java": "minecraft:birch_planks",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=west,half=bottom,material=brick,shape=straight]",
+      "count": 69,
+      "java": "minecraft:brick_stairs[facing=west,half=bottom,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:slab[material=spruce,type=bottom]",
+      "count": 68,
+      "java": "minecraft:spruce_slab[type=bottom]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:lava[falling=true,flowing=false,level=4]",
+      "count": 67,
+      "java": "minecraft:lava[level=12]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:log[axis=y,material=oak,stripped=true]",
+      "count": 64,
+      "java": "minecraft:stripped_oak_log[axis=y]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stained_terracotta[color=cyan]",
+      "count": 62,
+      "java": "minecraft:cyan_terracotta",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:log[axis=y,material=birch,stripped=false]",
+      "count": 62,
+      "java": "minecraft:birch_log[axis=y]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:polished_tuff",
+      "count": 60,
+      "java": "minecraft:polished_tuff",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:tall_seagrass[half=lower]",
+      "count": 58,
+      "java": "minecraft:tall_seagrass[half=lower]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:tall_seagrass[half=upper]",
+      "count": 58,
+      "java": "minecraft:tall_seagrass[half=upper]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:glass",
+      "count": 58,
+      "java": "minecraft:glass",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:slab[material=brick,type=top]",
+      "count": 58,
+      "java": "minecraft:brick_slab[type=top]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:sandstone[variant=smooth]",
+      "count": 57,
+      "java": "minecraft:smooth_sandstone",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:lava[falling=false,flowing=false,level=6]",
+      "count": 54,
+      "java": "minecraft:lava[level=6]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:budding_amethyst",
+      "count": 54,
+      "java": "minecraft:budding_amethyst",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:water[falling=true,flowing=false,level=5]",
+      "count": 51,
+      "java": "minecraft:water[level=13]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:mud_bricks",
+      "count": 50,
+      "java": "minecraft:mud_bricks",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:slab[material=stone_brick,type=bottom]",
+      "count": 48,
+      "java": "minecraft:stone_brick_slab[type=bottom]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:log[axis=y,material=dark_oak,stripped=true]",
+      "count": 47,
+      "java": "minecraft:stripped_dark_oak_log[axis=y]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:basalt[axis=y]",
+      "count": 46,
+      "java": "minecraft:basalt[axis=y]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:water[falling=true,flowing=false,level=4]",
+      "count": 45,
+      "java": "minecraft:water[level=12]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=west,half=top,material=spruce,shape=straight]",
+      "count": 43,
+      "java": "minecraft:spruce_stairs[facing=west,half=top,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:torch[facing=north]",
+      "count": 43,
+      "java": "minecraft:wall_torch[facing=north]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:leaves[check_decay=false,distance=7,material=birch,persistent=true]",
+      "count": 43,
+      "java": "minecraft:birch_leaves[distance=7,persistent=true]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:scaffolding[bottom=false,distance=0,stability_checked=true]",
+      "count": 43,
+      "java": "minecraft:scaffolding[bottom=false,distance=0]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:log[axis=y,material=oak,stripped=false]",
+      "count": 42,
+      "java": "minecraft:oak_log[axis=y]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:concrete_powder[color=yellow]",
+      "count": 42,
+      "java": "minecraft:yellow_concrete_powder",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:slab[material=warped,type=top]",
+      "count": 41,
+      "java": "minecraft:warped_slab[type=top]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:concrete[color=yellow]",
+      "count": 41,
+      "java": "minecraft:yellow_concrete",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:red_sand",
+      "count": 41,
+      "java": "minecraft:red_sand",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:farmland[moisture=7]",
+      "count": 39,
+      "java": "minecraft:farmland[moisture=7]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:torch[facing=south]",
+      "count": 37,
+      "java": "minecraft:wall_torch[facing=south]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:glow_lichen[down=false,east=false,north=true,south=false,up=false,west=false]",
+      "count": 34,
+      "java": "minecraft:glow_lichen[down=false,east=false,north=true,south=false,up=false,west=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:andesite[polished=true]",
+      "count": 32,
+      "java": "minecraft:polished_andesite",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:slab[material=stone,type=bottom]",
+      "count": 31,
+      "java": "minecraft:stone_slab[type=bottom]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:shulker_box[color=default,facing=up]",
+      "count": 31,
+      "java": "minecraft:shulker_box[facing=up]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:bars[east=false,material=iron,north=true,south=true,west=false]",
+      "count": 31,
+      "java": "minecraft:iron_bars[east=false,north=true,south=true,west=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:torch[facing=east]",
+      "count": 28,
+      "java": "minecraft:wall_torch[facing=east]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wheat[age=7]",
+      "count": 28,
+      "java": "minecraft:wheat[age=7]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=north,half=bottom,material=spruce,open=false,powered=false]",
+      "count": 28,
+      "java": "minecraft:spruce_trapdoor[facing=north,half=bottom,open=false,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:beehive[facing=east,honey_level=0]",
+      "count": 28,
+      "java": "minecraft:beehive[facing=east,honey_level=0]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=south,half=bottom,material=spruce,shape=straight]",
+      "count": 27,
+      "java": "minecraft:spruce_stairs[facing=south,half=bottom,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:glow_lichen[down=false,east=false,north=false,south=false,up=true,west=false]",
+      "count": 25,
+      "java": "minecraft:glow_lichen[down=false,east=false,north=false,south=false,up=true,west=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=north,half=top,material=spruce,open=false,powered=false]",
+      "count": 25,
+      "java": "minecraft:spruce_trapdoor[facing=north,half=top,open=false,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:slab[material=tuff_brick,type=top]",
+      "count": 25,
+      "java": "minecraft:tuff_brick_slab[type=top]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:chest[connection=left,facing=east,material=wood]",
+      "count": 25,
+      "java": "minecraft:chest[facing=east,type=left]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:chest[connection=right,facing=east,material=wood]",
+      "count": 25,
+      "java": "minecraft:chest[facing=east,type=right]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=north,half=top,material=spruce,shape=straight]",
+      "count": 23,
+      "java": "minecraft:spruce_stairs[facing=north,half=top,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:fence[east=false,material=spruce,north=false,south=false,west=false]",
+      "count": 23,
+      "java": "minecraft:spruce_fence[east=false,north=false,south=false,west=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:slab[material=spruce,type=double]",
+      "count": 23,
+      "java": "minecraft:spruce_slab[type=double]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stained_terracotta[color=white]",
+      "count": 23,
+      "java": "minecraft:white_terracotta",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=east,half=bottom,material=spruce,shape=straight]",
+      "count": 22,
+      "java": "minecraft:spruce_stairs[facing=east,half=bottom,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:log[axis=x,material=oak,stripped=true]",
+      "count": 22,
+      "java": "minecraft:stripped_oak_log[axis=x]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:log[axis=x,material=birch,stripped=false]",
+      "count": 21,
+      "java": "minecraft:birch_log[axis=x]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wool[color=orange]",
+      "count": 21,
+      "java": "minecraft:orange_wool",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=north,half=bottom,material=brick,shape=straight]",
+      "count": 21,
+      "java": "minecraft:brick_stairs[facing=north,half=bottom,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:chain[axis=y,material=iron]",
+      "count": 20,
+      "java": "minecraft:iron_chain[axis=y]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:copper_ore",
+      "count": 19,
+      "java": "minecraft:copper_ore",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:glow_lichen[down=false,east=false,north=false,south=true,up=false,west=false]",
+      "count": 19,
+      "java": "minecraft:glow_lichen[down=false,east=false,north=false,south=true,up=false,west=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:brown_mushroom",
+      "count": 19,
+      "java": "minecraft:brown_mushroom",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=south,half=bottom,material=brick,shape=straight]",
+      "count": 19,
+      "java": "minecraft:brick_stairs[facing=south,half=bottom,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:candle[candles=1,color=gray,lit=false]",
+      "count": 19,
+      "java": "minecraft:gray_candle[candles=1,lit=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:plant[plant_type=dandelion]",
+      "count": 18,
+      "java": "minecraft:dandelion",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=north,half=bottom,material=spruce,shape=straight]",
+      "count": 18,
+      "java": "minecraft:spruce_stairs[facing=north,half=bottom,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wall[east=none,material=andesite,north=none,south=none,up=true,west=none]",
+      "count": 18,
+      "java": "minecraft:andesite_wall[east=none,north=none,south=none,up=true,west=none]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:planks[material=warped]",
+      "count": 17,
+      "java": "minecraft:warped_planks",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:leaves[check_decay=true,distance=7,material=birch,persistent=true]",
+      "count": 17,
+      "java": "minecraft:birch_leaves[distance=7,persistent=true]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:water[falling=true,flowing=false,level=7]",
+      "count": 16,
+      "java": "minecraft:water[level=15]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:glow_lichen[down=false,east=false,north=false,south=false,up=false,west=true]",
+      "count": 16,
+      "java": "minecraft:glow_lichen[down=false,east=false,north=false,south=false,up=false,west=true]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=east,half=top,material=spruce,shape=straight]",
+      "count": 16,
+      "java": "minecraft:spruce_stairs[facing=east,half=top,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:log[axis=x,material=spruce,stripped=true]",
+      "count": 16,
+      "java": "minecraft:stripped_spruce_log[axis=x]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stained_terracotta[color=green]",
+      "count": 16,
+      "java": "minecraft:green_terracotta",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=east,half=bottom,material=brick,shape=straight]",
+      "count": 16,
+      "java": "minecraft:brick_stairs[facing=east,half=bottom,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:slab[material=andesite,type=bottom]",
+      "count": 16,
+      "java": "minecraft:andesite_slab[type=bottom]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=west,half=bottom,material=spruce,open=true,powered=false]",
+      "count": 15,
+      "java": "minecraft:spruce_trapdoor[facing=west,half=bottom,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:log[axis=z,material=oak,stripped=false]",
+      "count": 15,
+      "java": "minecraft:oak_log[axis=z]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:water[falling=true,flowing=false,level=6]",
+      "count": 15,
+      "java": "minecraft:water[level=14]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:water[falling=false,flowing=true,level=3]",
+      "count": 15,
+      "java": "minecraft:water[level=3]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:glow_lichen[down=false,east=true,north=false,south=false,up=false,west=false]",
+      "count": 15,
+      "java": "minecraft:glow_lichen[down=false,east=true,north=false,south=false,up=false,west=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:ladder[facing=west]",
+      "count": 15,
+      "java": "minecraft:ladder[facing=west]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:log[axis=z,material=oak,stripped=true]",
+      "count": 15,
+      "java": "minecraft:stripped_oak_log[axis=z]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:beehive[facing=west,honey_level=0]",
+      "count": 15,
+      "java": "minecraft:beehive[facing=west,honey_level=0]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:slab[material=tuff_brick,type=bottom]",
+      "count": 15,
+      "java": "minecraft:tuff_brick_slab[type=bottom]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:bars[east=true,material=iron,north=true,south=true,west=false]",
+      "count": 15,
+      "java": "minecraft:iron_bars[east=true,north=true,south=true,west=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:bars[east=true,material=iron,north=false,south=true,west=false]",
+      "count": 15,
+      "java": "minecraft:iron_bars[east=true,north=false,south=true,west=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=east,half=bottom,material=spruce,open=true,powered=false]",
+      "count": 14,
+      "java": "minecraft:spruce_trapdoor[facing=east,half=bottom,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=west,half=bottom,material=spruce,open=false,powered=false]",
+      "count": 14,
+      "java": "minecraft:spruce_trapdoor[facing=west,half=bottom,open=false,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=north,half=bottom,material=spruce,open=true,powered=false]",
+      "count": 14,
+      "java": "minecraft:spruce_trapdoor[facing=north,half=bottom,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:amethyst_cluster[facing=north]",
+      "count": 14,
+      "java": "minecraft:amethyst_cluster[facing=north]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:log[axis=y,material=jungle,stripped=true]",
+      "count": 14,
+      "java": "minecraft:stripped_jungle_log[axis=y]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=south,half=bottom,material=waxed_oxidized_cut_copper,shape=straight]",
+      "count": 14,
+      "java": "minecraft:waxed_oxidized_cut_copper_stairs[facing=south,half=bottom,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:slab[material=cobblestone,type=top]",
+      "count": 13,
+      "java": "minecraft:cobblestone_slab[type=top]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=south,half=top,material=spruce,shape=straight]",
+      "count": 13,
+      "java": "minecraft:spruce_stairs[facing=south,half=top,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:waxed_cut_copper",
+      "count": 13,
+      "java": "minecraft:waxed_cut_copper",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:barrel[facing=up,open=false]",
+      "count": 13,
+      "java": "minecraft:barrel[facing=up,open=false]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:sweet_berry_bush[age=3]",
+      "count": 13,
+      "java": "minecraft:sweet_berry_bush[age=1]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=west,half=bottom,material=spruce,shape=straight]",
+      "count": 13,
+      "java": "minecraft:spruce_stairs[facing=west,half=bottom,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=west,half=top,material=spruce,open=false,powered=false]",
+      "count": 13,
+      "java": "minecraft:spruce_trapdoor[facing=west,half=top,open=false,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:torch[facing=west]",
+      "count": 13,
+      "java": "minecraft:wall_torch[facing=west]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=south,half=top,material=spruce,open=true,powered=false]",
+      "count": 13,
+      "java": "minecraft:spruce_trapdoor[facing=south,half=top,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:amethyst_cluster[facing=west]",
+      "count": 13,
+      "java": "minecraft:amethyst_cluster[facing=west]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:lever[face=wall,facing=south,powered=true]",
+      "count": 13,
+      "java": "minecraft:lever[face=wall,facing=south,powered=true]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:bars[east=false,material=iron,north=true,south=false,west=true]",
+      "count": 13,
+      "java": "minecraft:iron_bars[east=false,north=true,south=false,west=true]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=east,half=bottom,material=birch,open=true,powered=false]",
+      "count": 13,
+      "java": "minecraft:birch_trapdoor[facing=east,half=bottom,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wool[color=cyan]",
+      "count": 12,
+      "java": "minecraft:cyan_wool",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wood[axis=x,material=oak,stripped=false]",
+      "count": 12,
+      "java": "minecraft:oak_wood[axis=x]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:carrots[age=7]",
+      "count": 12,
+      "java": "minecraft:carrots[age=7]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:jack_o_lantern[facing=south]",
+      "count": 12,
+      "java": "minecraft:jack_o_lantern[facing=south]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:jack_o_lantern[facing=north]",
+      "count": 12,
+      "java": "minecraft:jack_o_lantern[facing=north]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:waxed_exposed_cut_copper",
+      "count": 11,
+      "java": "minecraft:waxed_exposed_cut_copper",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=south,half=bottom,material=stone_brick,shape=straight]",
+      "count": 11,
+      "java": "minecraft:stone_brick_stairs[facing=south,half=bottom,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:beehive[facing=north,honey_level=0]",
+      "count": 11,
+      "java": "minecraft:beehive[facing=north,honey_level=0]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:log[axis=y,material=spruce,stripped=false]",
+      "count": 11,
+      "java": "minecraft:spruce_log[axis=y]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:amethyst_cluster[facing=down]",
+      "count": 11,
+      "java": "minecraft:amethyst_cluster[facing=down]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=east,half=bottom,material=oak,open=true,powered=false]",
+      "count": 11,
+      "java": "minecraft:oak_trapdoor[facing=east,half=bottom,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=south,half=top,material=stone_brick,shape=straight]",
+      "count": 11,
+      "java": "minecraft:stone_brick_stairs[facing=south,half=top,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=east,half=bottom,material=oak,shape=straight]",
+      "count": 11,
+      "java": "minecraft:oak_stairs[facing=east,half=bottom,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=west,half=bottom,material=birch,open=true,powered=false]",
+      "count": 11,
+      "java": "minecraft:birch_trapdoor[facing=west,half=bottom,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:water[falling=false,flowing=true,level=1]",
+      "count": 10,
+      "java": "minecraft:water[level=1]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:lava[falling=false,flowing=true,level=0]",
+      "count": 10,
+      "java": "minecraft:lava[level=0]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=south,half=top,material=spruce,open=false,powered=false]",
+      "count": 10,
+      "java": "minecraft:spruce_trapdoor[facing=south,half=top,open=false,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:lantern[hanging=true,material=iron]",
+      "count": 10,
+      "java": "minecraft:lantern[hanging=true]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:slab[material=oak,type=bottom]",
+      "count": 10,
+      "java": "minecraft:oak_slab[type=bottom]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:hay_block[axis=y]",
+      "count": 10,
+      "java": "minecraft:hay_block[axis=y]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:carpet[color=white]",
+      "count": 10,
+      "java": "minecraft:white_carpet",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=north,half=top,material=oak,open=true,powered=false]",
+      "count": 10,
+      "java": "minecraft:oak_trapdoor[facing=north,half=top,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:amethyst_cluster[facing=south]",
+      "count": 10,
+      "java": "minecraft:amethyst_cluster[facing=south]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:amethyst_cluster[facing=east]",
+      "count": 10,
+      "java": "minecraft:amethyst_cluster[facing=east]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=east,half=top,material=oak,open=true,powered=false]",
+      "count": 10,
+      "java": "minecraft:oak_trapdoor[facing=east,half=top,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=west,half=bottom,material=stone_brick,shape=straight]",
+      "count": 10,
+      "java": "minecraft:stone_brick_stairs[facing=west,half=bottom,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=west,half=bottom,material=cobblestone,shape=straight]",
+      "count": 10,
+      "java": "minecraft:cobblestone_stairs[facing=west,half=bottom,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:decorated_pot[cracked=false,facing=south]",
+      "count": 10,
+      "java": "minecraft:decorated_pot[cracked=false,facing=south]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:snow_block",
+      "count": 10,
+      "java": "minecraft:snow_block",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:log[axis=y,material=dark_oak,stripped=false]",
+      "count": 9,
+      "java": "minecraft:dark_oak_log[axis=y]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:slab[material=dark_oak,type=bottom]",
+      "count": 9,
+      "java": "minecraft:dark_oak_slab[type=bottom]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=east,half=top,material=spruce,open=false,powered=false]",
+      "count": 9,
+      "java": "minecraft:spruce_trapdoor[facing=east,half=top,open=false,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=south,half=bottom,material=spruce,open=true,powered=false]",
+      "count": 9,
+      "java": "minecraft:spruce_trapdoor[facing=south,half=bottom,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:plant[plant_type=fern]",
+      "count": 9,
+      "java": "minecraft:fern",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wood[axis=y,material=oak,stripped=false]",
+      "count": 9,
+      "java": "minecraft:oak_wood[axis=y]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:water[falling=false,flowing=true,level=7]",
+      "count": 9,
+      "java": "minecraft:water[level=7]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=west,half=bottom,material=oak,open=true,powered=false]",
+      "count": 9,
+      "java": "minecraft:oak_trapdoor[facing=west,half=bottom,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:amethyst_cluster[facing=up]",
+      "count": 9,
+      "java": "minecraft:amethyst_cluster[facing=up]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=north,half=top,material=pale_oak,open=true,powered=false]",
+      "count": 9,
+      "java": "minecraft:pale_oak_trapdoor[facing=north,half=top,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:bars[east=true,material=iron,north=true,south=false,west=true]",
+      "count": 9,
+      "java": "minecraft:iron_bars[east=true,north=true,south=false,west=true]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wood[axis=y,material=oak,stripped=true]",
+      "count": 9,
+      "java": "minecraft:stripped_oak_wood[axis=y]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=south,half=bottom,material=oak,open=true,powered=false]",
+      "count": 9,
+      "java": "minecraft:oak_trapdoor[facing=south,half=bottom,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=east,half=bottom,material=pale_oak,open=true,powered=false]",
+      "count": 9,
+      "java": "minecraft:pale_oak_trapdoor[facing=east,half=bottom,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=west,half=bottom,material=pale_oak,open=true,powered=false]",
+      "count": 9,
+      "java": "minecraft:pale_oak_trapdoor[facing=west,half=bottom,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:chest[connection=right,facing=west,material=wood]",
+      "count": 9,
+      "java": "minecraft:chest[facing=west,type=right]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:chest[connection=left,facing=west,material=wood]",
+      "count": 9,
+      "java": "minecraft:chest[facing=west,type=left]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=south,half=top,material=andesite,shape=straight]",
+      "count": 9,
+      "java": "minecraft:andesite_stairs[facing=south,half=top,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:water[falling=false,flowing=true,level=2]",
+      "count": 8,
+      "java": "minecraft:water[level=2]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:log[axis=z,material=spruce,stripped=false]",
+      "count": 8,
+      "java": "minecraft:spruce_log[axis=z]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:log[axis=x,material=oak,stripped=false]",
+      "count": 8,
+      "java": "minecraft:oak_log[axis=x]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=north,half=top,material=spruce,open=true,powered=false]",
+      "count": 8,
+      "java": "minecraft:spruce_trapdoor[facing=north,half=top,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:water[falling=false,flowing=true,level=4]",
+      "count": 8,
+      "java": "minecraft:water[level=4]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:water[falling=false,flowing=true,level=6]",
+      "count": 8,
+      "java": "minecraft:water[level=6]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:lava[falling=true,flowing=false,level=6]",
+      "count": 8,
+      "java": "minecraft:lava[level=14]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=north,half=bottom,material=iron,open=true,powered=false]",
+      "count": 8,
+      "java": "minecraft:iron_trapdoor[facing=north,half=bottom,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wall[east=tall,material=mud_brick,north=tall,south=none,up=true,west=tall]",
+      "count": 8,
+      "java": "minecraft:mud_brick_wall[east=tall,north=tall,south=none,up=true,west=tall]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:bars[east=true,material=iron,north=true,south=false,west=false]",
+      "count": 8,
+      "java": "minecraft:iron_bars[east=true,north=true,south=false,west=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:bars[east=false,material=iron,north=false,south=true,west=true]",
+      "count": 8,
+      "java": "minecraft:iron_bars[east=false,north=false,south=true,west=true]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:beehive[facing=south,honey_level=0]",
+      "count": 8,
+      "java": "minecraft:beehive[facing=south,honey_level=0]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=north,half=bottom,material=oak,shape=straight]",
+      "count": 8,
+      "java": "minecraft:oak_stairs[facing=north,half=bottom,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:slab[material=stone_brick,type=double]",
+      "count": 8,
+      "java": "minecraft:stone_brick_slab[type=double]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:double_plant[half=lower,plant_type=rose_bush]",
+      "count": 8,
+      "java": "minecraft:rose_bush[half=lower]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:double_plant[half=upper,plant_type=rose_bush]",
+      "count": 8,
+      "java": "minecraft:rose_bush[half=upper]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:bars[east=false,material=iron,north=true,south=true,west=true]",
+      "count": 8,
+      "java": "minecraft:iron_bars[east=false,north=true,south=true,west=true]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:sea_lantern",
+      "count": 8,
+      "java": "minecraft:sea_lantern",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=west,half=bottom,material=oak,shape=straight]",
+      "count": 8,
+      "java": "minecraft:oak_stairs[facing=west,half=bottom,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wall_banner[color=green,facing=north]",
+      "count": 8,
+      "java": "minecraft:green_wall_banner[facing=north]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:soul_sand",
+      "count": 7,
+      "java": "minecraft:soul_sand",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:nether_wart[age=3]",
+      "count": 7,
+      "java": "minecraft:nether_wart[age=3]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=west,half=top,material=spruce,open=true,powered=false]",
+      "count": 7,
+      "java": "minecraft:spruce_trapdoor[facing=west,half=top,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=south,half=bottom,material=spruce,open=false,powered=false]",
+      "count": 7,
+      "java": "minecraft:spruce_trapdoor[facing=south,half=bottom,open=false,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:slab[material=andesite,type=top]",
+      "count": 7,
+      "java": "minecraft:andesite_slab[type=top]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:hay_block[axis=z]",
+      "count": 7,
+      "java": "minecraft:hay_block[axis=z]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:shulker_box[color=default,facing=west]",
+      "count": 7,
+      "java": "minecraft:shulker_box[facing=west]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:slab[material=stone,type=top]",
+      "count": 7,
+      "java": "minecraft:stone_slab[type=top]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wool[color=lime]",
+      "count": 7,
+      "java": "minecraft:lime_wool",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=south,half=top,material=oak,open=true,powered=false]",
+      "count": 7,
+      "java": "minecraft:oak_trapdoor[facing=south,half=top,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:bars[east=true,material=iron,north=false,south=true,west=true]",
+      "count": 7,
+      "java": "minecraft:iron_bars[east=true,north=false,south=true,west=true]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:deepslate[axis=z]",
+      "count": 7,
+      "java": "minecraft:deepslate[axis=z]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:anvil[damage=normal,facing=east]",
+      "count": 7,
+      "java": "minecraft:anvil[facing=east]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wall_banner[color=white,facing=north]",
+      "count": 7,
+      "java": "minecraft:white_wall_banner[facing=north]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:slab[material=oak,type=top]",
+      "count": 7,
+      "java": "minecraft:oak_slab[type=top]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:waxed_copper_block",
+      "count": 6,
+      "java": "minecraft:waxed_copper_block",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wood[axis=z,material=oak,stripped=false]",
+      "count": 6,
+      "java": "minecraft:oak_wood[axis=z]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:barrel[facing=north,open=false]",
+      "count": 6,
+      "java": "minecraft:barrel[facing=north,open=false]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:water[falling=false,flowing=true,level=5]",
+      "count": 6,
+      "java": "minecraft:water[level=5]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=north,half=bottom,material=stone_brick,shape=straight]",
+      "count": 6,
+      "java": "minecraft:stone_brick_stairs[facing=north,half=bottom,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:crafting_table",
+      "count": 6,
+      "java": "minecraft:crafting_table",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:barrel[facing=west,open=false]",
+      "count": 6,
+      "java": "minecraft:barrel[facing=west,open=false]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=north,half=top,material=andesite,shape=straight]",
+      "count": 6,
+      "java": "minecraft:andesite_stairs[facing=north,half=top,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:bars[east=true,material=iron,north=false,south=false,west=true]",
+      "count": 6,
+      "java": "minecraft:iron_bars[east=true,north=false,south=false,west=true]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=north,half=bottom,material=oak,open=true,powered=false]",
+      "count": 6,
+      "java": "minecraft:oak_trapdoor[facing=north,half=bottom,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=west,half=top,material=oak,open=true,powered=false]",
+      "count": 6,
+      "java": "minecraft:oak_trapdoor[facing=west,half=top,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:piston[extended=false,facing=north]",
+      "count": 6,
+      "java": "minecraft:piston[extended=false,facing=north]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:vine[east=false,north=false,south=true,up=false,west=false]",
+      "count": 6,
+      "java": "minecraft:vine[east=false,north=false,south=true,up=false,west=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:glow_lichen[down=false,east=false,north=false,south=true,up=false,west=true]",
+      "count": 5,
+      "java": "minecraft:glow_lichen[down=false,east=false,north=false,south=true,up=false,west=true]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:red_mushroom",
+      "count": 5,
+      "java": "minecraft:red_mushroom",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=east,half=bottom,material=spruce,open=false,powered=false]",
+      "count": 5,
+      "java": "minecraft:spruce_trapdoor[facing=east,half=bottom,open=false,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:slab[material=dark_oak,type=top]",
+      "count": 5,
+      "java": "minecraft:dark_oak_slab[type=top]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=east,half=bottom,material=cobbled_deepslate,shape=straight]",
+      "count": 5,
+      "java": "minecraft:cobbled_deepslate_stairs[facing=east,half=bottom,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:bars[east=true,material=iron,north=false,south=false,west=false]",
+      "count": 5,
+      "java": "minecraft:iron_bars[east=true,north=false,south=false,west=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=east,half=bottom,material=sandstone,shape=straight]",
+      "count": 5,
+      "java": "minecraft:sandstone_stairs[facing=east,half=bottom,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=north,half=top,material=stone_brick,shape=straight]",
+      "count": 5,
+      "java": "minecraft:stone_brick_stairs[facing=north,half=top,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=west,half=top,material=stone_brick,shape=straight]",
+      "count": 5,
+      "java": "minecraft:stone_brick_stairs[facing=west,half=top,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:vine[east=false,north=true,south=false,up=false,west=false]",
+      "count": 5,
+      "java": "minecraft:vine[east=false,north=true,south=false,up=false,west=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=west,half=bottom,material=andesite,shape=straight]",
+      "count": 5,
+      "java": "minecraft:andesite_stairs[facing=west,half=bottom,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=west,half=top,material=iron,open=false,powered=false]",
+      "count": 5,
+      "java": "minecraft:iron_trapdoor[facing=west,half=top,open=false,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=west,half=top,material=andesite,shape=straight]",
+      "count": 5,
+      "java": "minecraft:andesite_stairs[facing=west,half=top,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:quartz_block[axis=y]",
+      "count": 5,
+      "java": "minecraft:quartz_block",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:hopper[enabled=false,facing=down]",
+      "count": 5,
+      "java": "minecraft:hopper[enabled=false,facing=down]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:slab[material=stone,type=double]",
+      "count": 4,
+      "java": "minecraft:stone_slab[type=double]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:barrel[facing=south,open=false]",
+      "count": 4,
+      "java": "minecraft:barrel[facing=south,open=false]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=east,half=top,material=spruce,open=true,powered=false]",
+      "count": 4,
+      "java": "minecraft:spruce_trapdoor[facing=east,half=top,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:log[axis=x,material=spruce,stripped=false]",
+      "count": 4,
+      "java": "minecraft:spruce_log[axis=x]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wall[east=tall,material=sandstone,north=tall,south=none,up=true,west=none]",
+      "count": 4,
+      "java": "minecraft:sandstone_wall[east=tall,north=tall,south=none,up=true,west=none]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:slab[material=polished_andesite,type=bottom]",
+      "count": 4,
+      "java": "minecraft:polished_andesite_slab[type=bottom]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:concrete_powder[color=pink]",
+      "count": 4,
+      "java": "minecraft:pink_concrete_powder",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:chest[connection=right,facing=south,material=wood]",
+      "count": 4,
+      "java": "minecraft:chest[facing=south,type=right]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:chest[connection=left,facing=south,material=wood]",
+      "count": 4,
+      "java": "minecraft:chest[facing=south,type=left]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=north,half=top,material=iron,open=true,powered=false]",
+      "count": 4,
+      "java": "minecraft:iron_trapdoor[facing=north,half=top,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:tripwire[attached=false,disarmed=false,east=false,north=false,powered=false,south=false,suspended=true,west=false]",
+      "count": 4,
+      "java": "minecraft:tripwire[attached=false,disarmed=false,east=false,north=false,powered=false,south=false,west=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:bars[east=false,material=iron,north=true,south=false,west=false]",
+      "count": 4,
+      "java": "minecraft:iron_bars[east=false,north=true,south=false,west=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:shelf[facing=south,material=dark_oak,powered=false,side_chain=unconnected]",
+      "count": 4,
+      "java": "minecraft:dark_oak_shelf[facing=south,powered=false,side_chain=unconnected]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=east,half=top,material=sandstone,shape=straight]",
+      "count": 4,
+      "java": "minecraft:sandstone_stairs[facing=east,half=top,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:slab[material=sandstone,type=bottom]",
+      "count": 4,
+      "java": "minecraft:sandstone_slab[type=bottom]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:slab[material=sandstone,type=top]",
+      "count": 4,
+      "java": "minecraft:sandstone_slab[type=top]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:slab[material=tuff_brick,type=double]",
+      "count": 4,
+      "java": "minecraft:tuff_brick_slab[type=double]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=north,half=top,material=diorite,shape=straight]",
+      "count": 4,
+      "java": "minecraft:diorite_stairs[facing=north,half=top,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wall_sign[facing=north,material=spruce]",
+      "count": 4,
+      "java": "minecraft:spruce_wall_sign[facing=north]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:log[axis=x,material=jungle,stripped=true]",
+      "count": 4,
+      "java": "minecraft:stripped_jungle_log[axis=x]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wall[east=low,material=andesite,north=none,south=low,up=true,west=low]",
+      "count": 4,
+      "java": "minecraft:andesite_wall[east=low,north=none,south=low,up=true,west=low]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wall[east=low,material=stone_brick,north=none,south=low,up=true,west=low]",
+      "count": 4,
+      "java": "minecraft:stone_brick_wall[east=low,north=none,south=low,up=true,west=low]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=east,half=bottom,material=jungle,open=true,powered=false]",
+      "count": 4,
+      "java": "minecraft:jungle_trapdoor[facing=east,half=bottom,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=west,half=bottom,material=jungle,open=true,powered=false]",
+      "count": 4,
+      "java": "minecraft:jungle_trapdoor[facing=west,half=bottom,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:redstone_wire[east=side,north=side,power=0,south=none,west=side]",
+      "count": 4,
+      "java": "minecraft:redstone_wire[east=side,north=side,power=0,south=none,west=side]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:redstone_wire[east=none,north=side,power=0,south=side,west=side]",
+      "count": 4,
+      "java": "minecraft:redstone_wire[east=none,north=side,power=0,south=side,west=side]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:rail[shape=north_south]",
+      "count": 3,
+      "java": "minecraft:rail[shape=north_south]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:fence[east=false,material=oak,north=false,south=false,west=false]",
+      "count": 3,
+      "java": "minecraft:oak_fence[east=false,north=false,south=false,west=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:raw_iron_block",
+      "count": 3,
+      "java": "minecraft:raw_iron_block",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:glow_lichen[down=true,east=false,north=false,south=false,up=false,west=false]",
+      "count": 3,
+      "java": "minecraft:glow_lichen[down=true,east=false,north=false,south=false,up=false,west=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:fence_gate[facing=east,in_wall=false,material=spruce,open=false,powered=false]",
+      "count": 3,
+      "java": "minecraft:spruce_fence_gate[facing=east,in_wall=false,open=false,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:oxidized_copper",
+      "count": 3,
+      "java": "minecraft:oxidized_copper",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wall[east=tall,material=sandstone,north=none,south=tall,up=true,west=none]",
+      "count": 3,
+      "java": "minecraft:sandstone_wall[east=tall,north=none,south=tall,up=true,west=none]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:lantern[hanging=false,material=iron]",
+      "count": 3,
+      "java": "minecraft:lantern[hanging=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:fence_gate[facing=north,in_wall=false,material=dark_oak,open=false,powered=false]",
+      "count": 3,
+      "java": "minecraft:dark_oak_fence_gate[facing=north,in_wall=false,open=false,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wall_sign[facing=west,material=spruce]",
+      "count": 3,
+      "java": "minecraft:spruce_wall_sign[facing=west]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wall_hanging_sign[facing=north,material=spruce]",
+      "count": 3,
+      "java": "minecraft:spruce_wall_hanging_sign[facing=north]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:decorated_pot[cracked=false,facing=west]",
+      "count": 3,
+      "java": "minecraft:decorated_pot[cracked=false,facing=west]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:chest[connection=none,facing=north,material=wood]",
+      "count": 3,
+      "java": "minecraft:chest[facing=north,type=single]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:spawner",
+      "count": 3,
+      "java": "minecraft:spawner",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:candle[candles=3,color=default,lit=true]",
+      "count": 3,
+      "java": "minecraft:candle[candles=3,lit=true]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:concrete_powder[color=light_blue]",
+      "count": 3,
+      "java": "minecraft:light_blue_concrete_powder",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:chest[connection=left,facing=north,material=wood]",
+      "count": 3,
+      "java": "minecraft:chest[facing=north,type=left]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:chest[connection=right,facing=north,material=wood]",
+      "count": 3,
+      "java": "minecraft:chest[facing=north,type=right]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:lava[falling=false,flowing=true,level=1]",
+      "count": 3,
+      "java": "minecraft:lava[level=1]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=east,half=bottom,material=deepslate_brick,shape=straight]",
+      "count": 3,
+      "java": "minecraft:deepslate_brick_stairs[facing=east,half=bottom,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:pearlescent_froglight[axis=x]",
+      "count": 3,
+      "java": "minecraft:pearlescent_froglight[axis=x]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:terracotta",
+      "count": 3,
+      "java": "minecraft:terracotta",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wood[axis=z,material=oak,stripped=true]",
+      "count": 3,
+      "java": "minecraft:stripped_oak_wood[axis=z]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=west,half=top,material=polished_diorite,shape=straight]",
+      "count": 3,
+      "java": "minecraft:polished_diorite_stairs[facing=west,half=top,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=south,half=bottom,material=mangrove,open=true,powered=false]",
+      "count": 3,
+      "java": "minecraft:mangrove_trapdoor[facing=south,half=bottom,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wall[east=tall,material=mud_brick,north=none,south=none,up=false,west=tall]",
+      "count": 3,
+      "java": "minecraft:mud_brick_wall[east=tall,north=none,south=none,up=false,west=tall]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:raw_gold_block",
+      "count": 3,
+      "java": "minecraft:raw_gold_block",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=north,half=top,material=polished_diorite,shape=straight]",
+      "count": 3,
+      "java": "minecraft:polished_diorite_stairs[facing=north,half=top,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=west,half=top,material=tuff_brick,shape=straight]",
+      "count": 3,
+      "java": "minecraft:tuff_brick_stairs[facing=west,half=top,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=east,half=top,material=tuff_brick,shape=straight]",
+      "count": 3,
+      "java": "minecraft:tuff_brick_stairs[facing=east,half=top,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:flower_pot[plant=none,update=false]",
+      "count": 3,
+      "java": "minecraft:flower_pot",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=north,half=top,material=tuff_brick,shape=straight]",
+      "count": 3,
+      "java": "minecraft:tuff_brick_stairs[facing=north,half=top,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:slab[material=polished_diorite,type=top]",
+      "count": 3,
+      "java": "minecraft:polished_diorite_slab[type=top]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wood[axis=x,material=oak,stripped=true]",
+      "count": 3,
+      "java": "minecraft:stripped_oak_wood[axis=x]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=west,half=top,material=birch,shape=straight]",
+      "count": 3,
+      "java": "minecraft:birch_stairs[facing=west,half=top,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=east,half=top,material=birch,shape=straight]",
+      "count": 3,
+      "java": "minecraft:birch_stairs[facing=east,half=top,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:chain[axis=x,material=iron]",
+      "count": 3,
+      "java": "minecraft:iron_chain[axis=x]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wall[east=low,material=andesite,north=low,south=low,up=true,west=none]",
+      "count": 3,
+      "java": "minecraft:andesite_wall[east=low,north=low,south=low,up=true,west=none]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wall[east=low,material=stone_brick,north=low,south=low,up=true,west=none]",
+      "count": 3,
+      "java": "minecraft:stone_brick_wall[east=low,north=low,south=low,up=true,west=none]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=west,half=top,material=birch,open=true,powered=false]",
+      "count": 3,
+      "java": "minecraft:birch_trapdoor[facing=west,half=top,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=east,half=top,material=birch,open=true,powered=false]",
+      "count": 3,
+      "java": "minecraft:birch_trapdoor[facing=east,half=top,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:fence[east=false,material=mangrove,north=false,south=false,west=false]",
+      "count": 3,
+      "java": "minecraft:mangrove_fence[east=false,north=false,south=false,west=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=north,half=bottom,material=sandstone,shape=straight]",
+      "count": 3,
+      "java": "minecraft:sandstone_stairs[facing=north,half=bottom,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:bars[east=false,material=iron,north=false,south=false,west=true]",
+      "count": 3,
+      "java": "minecraft:iron_bars[east=false,north=false,south=false,west=true]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:dispenser[facing=west,triggered=false]",
+      "count": 3,
+      "java": "minecraft:dispenser[facing=west,triggered=false]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:vine[east=true,north=false,south=false,up=false,west=false]",
+      "count": 3,
+      "java": "minecraft:vine[east=true,north=false,south=false,up=false,west=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:concrete[color=red]",
+      "count": 3,
+      "java": "minecraft:red_concrete",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:slab[material=cobblestone,type=bottom]",
+      "count": 2,
+      "java": "minecraft:cobblestone_slab[type=bottom]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:rail[shape=ascending_south]",
+      "count": 2,
+      "java": "minecraft:rail[shape=ascending_south]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:rail[shape=ascending_north]",
+      "count": 2,
+      "java": "minecraft:rail[shape=ascending_north]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:oxidized_cut_copper",
+      "count": 2,
+      "java": "minecraft:oxidized_cut_copper",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:farmland[moisture=0]",
+      "count": 2,
+      "java": "minecraft:farmland[moisture=0]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:waxed_exposed_copper",
+      "count": 2,
+      "java": "minecraft:waxed_exposed_copper",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:waxed_exposed_copper_grate",
+      "count": 2,
+      "java": "minecraft:waxed_exposed_copper_grate",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=east,half=bottom,material=cobblestone,shape=straight]",
+      "count": 2,
+      "java": "minecraft:cobblestone_stairs[facing=east,half=bottom,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:fence_gate[facing=east,in_wall=false,material=dark_oak,open=false,powered=false]",
+      "count": 2,
+      "java": "minecraft:dark_oak_fence_gate[facing=east,in_wall=false,open=false,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:sweet_berry_bush[age=5]",
+      "count": 2,
+      "java": "minecraft:sweet_berry_bush[age=2]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:campfire[facing=east,lit=true,signal_fire=false]",
+      "count": 2,
+      "java": "minecraft:campfire[facing=east,lit=true,signal_fire=false]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wall[east=none,material=sandstone,north=none,south=tall,up=true,west=tall]",
+      "count": 2,
+      "java": "minecraft:sandstone_wall[east=none,north=none,south=tall,up=true,west=tall]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wood[axis=x,material=spruce,stripped=false]",
+      "count": 2,
+      "java": "minecraft:spruce_wood[axis=x]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:water[falling=false,flowing=true,level=0]",
+      "count": 2,
+      "java": "minecraft:water[level=0]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=east,half=bottom,material=stone_brick,shape=straight]",
+      "count": 2,
+      "java": "minecraft:stone_brick_stairs[facing=east,half=bottom,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=north,half=top,material=oak,open=false,powered=false]",
+      "count": 2,
+      "java": "minecraft:oak_trapdoor[facing=north,half=top,open=false,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:fence_gate[facing=south,in_wall=false,material=dark_oak,open=true,powered=false]",
+      "count": 2,
+      "java": "minecraft:dark_oak_fence_gate[facing=south,in_wall=false,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:flower_pot[plant=pink_tulip,update=false]",
+      "count": 2,
+      "java": "minecraft:potted_pink_tulip",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:decorated_pot[cracked=false,facing=east]",
+      "count": 2,
+      "java": "minecraft:decorated_pot[cracked=false,facing=east]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:decorated_pot[cracked=false,facing=north]",
+      "count": 2,
+      "java": "minecraft:decorated_pot[cracked=false,facing=north]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:ender_chest[facing=west]",
+      "count": 2,
+      "java": "minecraft:ender_chest[facing=west]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=south,half=top,material=dark_oak,shape=straight]",
+      "count": 2,
+      "java": "minecraft:dark_oak_stairs[facing=south,half=top,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=north,half=bottom,material=pale_oak,shape=straight]",
+      "count": 2,
+      "java": "minecraft:pale_oak_stairs[facing=north,half=bottom,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:carpet[color=purple]",
+      "count": 2,
+      "java": "minecraft:purple_carpet",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wool[color=purple]",
+      "count": 2,
+      "java": "minecraft:purple_wool",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wool[color=magenta]",
+      "count": 2,
+      "java": "minecraft:magenta_wool",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:carpet[color=magenta]",
+      "count": 2,
+      "java": "minecraft:magenta_carpet",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=north,half=bottom,material=deepslate_brick,shape=straight]",
+      "count": 2,
+      "java": "minecraft:deepslate_brick_stairs[facing=north,half=bottom,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:glow_lichen[down=true,east=true,north=false,south=false,up=false,west=false]",
+      "count": 2,
+      "java": "minecraft:glow_lichen[down=true,east=true,north=false,south=false,up=false,west=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:lava[falling=false,flowing=false,level=7]",
+      "count": 2,
+      "java": "minecraft:lava[level=7]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:lava[falling=false,flowing=false,level=5]",
+      "count": 2,
+      "java": "minecraft:lava[level=5]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:shelf[facing=west,material=dark_oak,powered=false,side_chain=unconnected]",
+      "count": 2,
+      "java": "minecraft:dark_oak_shelf[facing=west,powered=false,side_chain=unconnected]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=south,half=bottom,material=andesite,shape=straight]",
+      "count": 2,
+      "java": "minecraft:andesite_stairs[facing=south,half=bottom,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:vine[east=false,north=false,south=false,up=false,west=true]",
+      "count": 2,
+      "java": "minecraft:vine[east=false,north=false,south=false,up=false,west=true]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=east,half=top,material=polished_diorite,shape=straight]",
+      "count": 2,
+      "java": "minecraft:polished_diorite_stairs[facing=east,half=top,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=north,half=top,material=mangrove,shape=straight]",
+      "count": 2,
+      "java": "minecraft:mangrove_stairs[facing=north,half=top,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=north,half=bottom,material=mangrove,shape=straight]",
+      "count": 2,
+      "java": "minecraft:mangrove_stairs[facing=north,half=bottom,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=north,half=bottom,material=polished_diorite,shape=straight]",
+      "count": 2,
+      "java": "minecraft:polished_diorite_stairs[facing=north,half=bottom,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=west,half=bottom,material=polished_diorite,shape=straight]",
+      "count": 2,
+      "java": "minecraft:polished_diorite_stairs[facing=west,half=bottom,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=east,half=bottom,material=polished_diorite,shape=straight]",
+      "count": 2,
+      "java": "minecraft:polished_diorite_stairs[facing=east,half=bottom,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:shulker_box[color=default,facing=south]",
+      "count": 2,
+      "java": "minecraft:shulker_box[facing=south]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:cauldron[cauldron_liquid=water,level=0]",
+      "count": 2,
+      "java": "minecraft:cauldron",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=west,half=bottom,material=stone,shape=straight]",
+      "count": 2,
+      "java": "minecraft:stone_stairs[facing=west,half=bottom,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=south,half=top,material=tuff_brick,shape=straight]",
+      "count": 2,
+      "java": "minecraft:tuff_brick_stairs[facing=south,half=top,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=north,half=bottom,material=andesite,shape=straight]",
+      "count": 2,
+      "java": "minecraft:andesite_stairs[facing=north,half=bottom,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=north,half=bottom,material=dark_oak,open=true,powered=false]",
+      "count": 2,
+      "java": "minecraft:dark_oak_trapdoor[facing=north,half=bottom,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:log[axis=x,material=dark_oak,stripped=true]",
+      "count": 2,
+      "java": "minecraft:stripped_dark_oak_log[axis=x]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:fletching_table",
+      "count": 2,
+      "java": "minecraft:fletching_table",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wall[east=low,material=stone_brick,north=none,south=low,up=true,west=none]",
+      "count": 2,
+      "java": "minecraft:stone_brick_wall[east=low,north=none,south=low,up=true,west=none]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=west,half=top,material=jungle,shape=straight]",
+      "count": 2,
+      "java": "minecraft:jungle_stairs[facing=west,half=top,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=east,half=top,material=jungle,shape=straight]",
+      "count": 2,
+      "java": "minecraft:jungle_stairs[facing=east,half=top,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:redstone_lamp[lit=true]",
+      "count": 2,
+      "java": "minecraft:redstone_lamp[lit=true]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=south,half=bottom,material=oxidized_copper,open=false,powered=false]",
+      "count": 2,
+      "java": "minecraft:oxidized_copper_trapdoor[facing=south,half=bottom,open=false,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=north,half=bottom,material=oxidized_copper,open=false,powered=false]",
+      "count": 2,
+      "java": "minecraft:oxidized_copper_trapdoor[facing=north,half=bottom,open=false,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wall_sign[facing=north,material=jungle]",
+      "count": 2,
+      "java": "minecraft:jungle_wall_sign[facing=north]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=west,half=top,material=oak,shape=straight]",
+      "count": 2,
+      "java": "minecraft:oak_stairs[facing=west,half=top,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=north,half=top,material=birch,open=false,powered=false]",
+      "count": 2,
+      "java": "minecraft:birch_trapdoor[facing=north,half=top,open=false,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=south,half=top,material=birch,open=true,powered=false]",
+      "count": 2,
+      "java": "minecraft:birch_trapdoor[facing=south,half=top,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=east,half=top,material=oak,shape=straight]",
+      "count": 2,
+      "java": "minecraft:oak_stairs[facing=east,half=top,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:cake[bites=0]",
+      "count": 2,
+      "java": "minecraft:cake[bites=0]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=north,half=bottom,material=birch,open=false,powered=false]",
+      "count": 2,
+      "java": "minecraft:birch_trapdoor[facing=north,half=bottom,open=false,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:redstone_torch[facing=north,lit=false]",
+      "count": 2,
+      "java": "minecraft:redstone_wall_torch[facing=north,lit=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:redstone_wire[east=side,north=side,power=0,south=side,west=none]",
+      "count": 2,
+      "java": "minecraft:redstone_wire[east=side,north=side,power=0,south=side,west=none]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=north,half=bottom,material=waxed_oxidized_cut_copper,shape=straight]",
+      "count": 2,
+      "java": "minecraft:waxed_oxidized_cut_copper_stairs[facing=north,half=bottom,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:shulker_box[color=lime,facing=up]",
+      "count": 2,
+      "java": "minecraft:lime_shulker_box[facing=up]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:glow_lichen[down=false,east=false,north=false,south=true,up=true,west=false]",
+      "count": 2,
+      "java": "minecraft:glow_lichen[down=false,east=false,north=false,south=true,up=true,west=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:water[falling=true,flowing=false,level=0]",
+      "count": 2,
+      "java": "minecraft:water[level=8]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:log[axis=y,material=jungle,stripped=false]",
+      "count": 1,
+      "java": "minecraft:jungle_log[axis=y]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:farmland[moisture=1]",
+      "count": 1,
+      "java": "minecraft:farmland[moisture=1]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:jack_o_lantern[facing=east]",
+      "count": 1,
+      "java": "minecraft:jack_o_lantern[facing=east]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=west,half=top,material=waxed_exposed_cut_copper,shape=straight]",
+      "count": 1,
+      "java": "minecraft:waxed_exposed_cut_copper_stairs[facing=west,half=top,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:fence_gate[facing=east,in_wall=false,material=spruce,open=true,powered=false]",
+      "count": 1,
+      "java": "minecraft:spruce_fence_gate[facing=east,in_wall=false,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:plant[plant_type=dead_bush]",
+      "count": 1,
+      "java": "minecraft:dead_bush",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:leaves[check_decay=false,distance=7,material=flowering_azalea,persistent=true]",
+      "count": 1,
+      "java": "minecraft:flowering_azalea_leaves[distance=7,persistent=true]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:redstone_torch[facing=up,lit=true]",
+      "count": 1,
+      "java": "minecraft:redstone_torch[lit=true]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wall[east=low,material=stone_brick,north=none,south=none,up=false,west=low]",
+      "count": 1,
+      "java": "minecraft:stone_brick_wall[east=low,north=none,south=none,up=false,west=low]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:fence_gate[facing=east,in_wall=false,material=dark_oak,open=true,powered=false]",
+      "count": 1,
+      "java": "minecraft:dark_oak_fence_gate[facing=east,in_wall=false,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:pressure_plate[material=spruce,powered=false]",
+      "count": 1,
+      "java": "minecraft:spruce_pressure_plate[powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wall[east=none,material=brick,north=none,south=none,up=true,west=none]",
+      "count": 1,
+      "java": "minecraft:brick_wall[east=none,north=none,south=none,up=true,west=none]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:door[facing=south,half=lower,hinge=left,material=warped,open=false,powered=false]",
+      "count": 1,
+      "java": "minecraft:warped_door[facing=south,half=lower,hinge=left,open=false,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:door[facing=south,half=upper,hinge=left,material=warped,open=false,powered=false]",
+      "count": 1,
+      "java": "minecraft:warped_door[facing=south,half=upper,hinge=left,open=false,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:campfire[facing=east,lit=false,signal_fire=false]",
+      "count": 1,
+      "java": "minecraft:campfire[facing=east,lit=false,signal_fire=false]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:cauldron[cauldron_liquid=water,level=3]",
+      "count": 1,
+      "java": "minecraft:water_cauldron[level=3]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:flower_pot[plant=cornflower,update=false]",
+      "count": 1,
+      "java": "minecraft:potted_cornflower",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:bee_nest[facing=north,honey_level=0]",
+      "count": 1,
+      "java": "minecraft:bee_nest[facing=north,honey_level=0]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:chest[connection=none,facing=west,material=wood]",
+      "count": 1,
+      "java": "minecraft:chest[facing=west,type=single]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wall[east=none,material=stone_brick,north=none,south=none,up=true,west=none]",
+      "count": 1,
+      "java": "minecraft:stone_brick_wall[east=none,north=none,south=none,up=true,west=none]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wall[east=low,material=cobblestone,north=low,south=none,up=true,west=none]",
+      "count": 1,
+      "java": "minecraft:cobblestone_wall[east=low,north=low,south=none,up=true,west=none]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wood[axis=z,material=spruce,stripped=false]",
+      "count": 1,
+      "java": "minecraft:spruce_wood[axis=z]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=west,half=top,material=oak,open=false,powered=false]",
+      "count": 1,
+      "java": "minecraft:oak_trapdoor[facing=west,half=top,open=false,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:potatoes[age=7]",
+      "count": 1,
+      "java": "minecraft:potatoes[age=7]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:fence_gate[facing=west,in_wall=false,material=dark_oak,open=true,powered=false]",
+      "count": 1,
+      "java": "minecraft:dark_oak_fence_gate[facing=west,in_wall=false,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:button[face=wall,facing=north,material=spruce,powered=false]",
+      "count": 1,
+      "java": "minecraft:spruce_button[face=wall,facing=north,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:button[face=wall,facing=east,material=spruce,powered=false]",
+      "count": 1,
+      "java": "minecraft:spruce_button[face=wall,facing=east,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:carpet[color=red]",
+      "count": 1,
+      "java": "minecraft:red_carpet",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:fence_gate[facing=south,in_wall=false,material=spruce,open=true,powered=false]",
+      "count": 1,
+      "java": "minecraft:spruce_fence_gate[facing=south,in_wall=false,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:candle[candles=2,color=default,lit=true]",
+      "count": 1,
+      "java": "minecraft:candle[candles=2,lit=true]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:sea_pickle[dead=true,pickles=1]",
+      "count": 1,
+      "java": "minecraft:sea_pickle[pickles=1]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wall[east=none,material=stone_brick,north=low,south=low,up=false,west=none]",
+      "count": 1,
+      "java": "minecraft:stone_brick_wall[east=none,north=low,south=low,up=false,west=none]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:sea_pickle[dead=true,pickles=3]",
+      "count": 1,
+      "java": "minecraft:sea_pickle[pickles=3]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:door[facing=east,half=lower,hinge=left,material=spruce,open=false,powered=false]",
+      "count": 1,
+      "java": "minecraft:spruce_door[facing=east,half=lower,hinge=left,open=false,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:door[facing=east,half=upper,hinge=left,material=spruce,open=false,powered=false]",
+      "count": 1,
+      "java": "minecraft:spruce_door[facing=east,half=upper,hinge=left,open=false,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:flower_pot[plant=fern,update=false]",
+      "count": 1,
+      "java": "minecraft:potted_fern",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:flower_pot[plant=allium,update=false]",
+      "count": 1,
+      "java": "minecraft:potted_allium",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:flower_pot[plant=oxeye_daisy,update=false]",
+      "count": 1,
+      "java": "minecraft:potted_oxeye_daisy",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:chest[connection=none,facing=south,material=wood]",
+      "count": 1,
+      "java": "minecraft:chest[facing=south,type=single]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:shulker_box[color=light_gray,facing=up]",
+      "count": 1,
+      "java": "minecraft:light_gray_shulker_box[facing=up]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:shulker_box[color=gray,facing=up]",
+      "count": 1,
+      "java": "minecraft:gray_shulker_box[facing=up]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:ladder[facing=north]",
+      "count": 1,
+      "java": "minecraft:ladder[facing=north]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=north,half=top,material=dark_oak,open=true,powered=false]",
+      "count": 1,
+      "java": "minecraft:dark_oak_trapdoor[facing=north,half=top,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=west,half=top,material=pale_oak,open=true,powered=false]",
+      "count": 1,
+      "java": "minecraft:pale_oak_trapdoor[facing=west,half=top,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:basalt[axis=z]",
+      "count": 1,
+      "java": "minecraft:basalt[axis=z]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:pearlescent_froglight[axis=y]",
+      "count": 1,
+      "java": "minecraft:pearlescent_froglight[axis=y]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:lava[falling=false,flowing=false,level=3]",
+      "count": 1,
+      "java": "minecraft:lava[level=3]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:door[facing=north,half=upper,hinge=left,material=dark_oak,open=true,powered=false]",
+      "count": 1,
+      "java": "minecraft:dark_oak_door[facing=north,half=upper,hinge=left,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:shelf[facing=east,material=pale_oak,powered=false,side_chain=unconnected]",
+      "count": 1,
+      "java": "minecraft:pale_oak_shelf[facing=east,powered=false,side_chain=unconnected]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:shelf[facing=west,material=pale_oak,powered=false,side_chain=unconnected]",
+      "count": 1,
+      "java": "minecraft:pale_oak_shelf[facing=west,powered=false,side_chain=unconnected]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:door[facing=south,half=lower,hinge=left,material=dark_oak,open=false,powered=false]",
+      "count": 1,
+      "java": "minecraft:dark_oak_door[facing=south,half=lower,hinge=left,open=false,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:door[facing=south,half=upper,hinge=left,material=dark_oak,open=false,powered=false]",
+      "count": 1,
+      "java": "minecraft:dark_oak_door[facing=south,half=upper,hinge=left,open=false,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:door[facing=north,half=lower,hinge=left,material=dark_oak,open=true,powered=false]",
+      "count": 1,
+      "java": "minecraft:dark_oak_door[facing=north,half=lower,hinge=left,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=north,half=bottom,material=dark_oak,shape=straight]",
+      "count": 1,
+      "java": "minecraft:dark_oak_stairs[facing=north,half=bottom,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:soul_lantern[hanging=true]",
+      "count": 1,
+      "java": "minecraft:soul_lantern[hanging=true]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:basalt[axis=x]",
+      "count": 1,
+      "java": "minecraft:basalt[axis=x]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:slab[material=brick,type=double]",
+      "count": 1,
+      "java": "minecraft:brick_slab[type=double]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=north,half=top,material=stone,shape=straight]",
+      "count": 1,
+      "java": "minecraft:stone_stairs[facing=north,half=top,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:log[axis=x,material=mangrove,stripped=false]",
+      "count": 1,
+      "java": "minecraft:mangrove_log[axis=x]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=north,half=top,material=iron,open=false,powered=false]",
+      "count": 1,
+      "java": "minecraft:iron_trapdoor[facing=north,half=top,open=false,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:carpet[color=green]",
+      "count": 1,
+      "java": "minecraft:green_carpet",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:candle[candles=1,color=default,lit=true]",
+      "count": 1,
+      "java": "minecraft:candle[candles=1,lit=true]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:shelf[facing=south,material=mangrove,powered=false,side_chain=unconnected]",
+      "count": 1,
+      "java": "minecraft:mangrove_shelf[facing=south,powered=false,side_chain=unconnected]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:dispenser[facing=up,triggered=false]",
+      "count": 1,
+      "java": "minecraft:dispenser[facing=up,triggered=false]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:furnace[facing=south,lit=false]",
+      "count": 1,
+      "java": "minecraft:furnace[facing=south,lit=false]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:door[facing=south,half=lower,hinge=right,material=spruce,open=false,powered=false]",
+      "count": 1,
+      "java": "minecraft:spruce_door[facing=south,half=lower,hinge=right,open=false,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:door[facing=south,half=lower,hinge=left,material=spruce,open=false,powered=false]",
+      "count": 1,
+      "java": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:door[facing=south,half=upper,hinge=left,material=spruce,open=false,powered=false]",
+      "count": 1,
+      "java": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:door[facing=south,half=upper,hinge=right,material=spruce,open=false,powered=false]",
+      "count": 1,
+      "java": "minecraft:spruce_door[facing=south,half=upper,hinge=right,open=false,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:barrel[facing=east,open=false]",
+      "count": 1,
+      "java": "minecraft:barrel[facing=east,open=false]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:campfire[facing=north,lit=false,signal_fire=false]",
+      "count": 1,
+      "java": "minecraft:campfire[facing=north,lit=false,signal_fire=false]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=north,half=top,material=smooth_sandstone,shape=straight]",
+      "count": 1,
+      "java": "minecraft:smooth_sandstone_stairs[facing=north,half=top,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=south,half=top,material=smooth_sandstone,shape=straight]",
+      "count": 1,
+      "java": "minecraft:smooth_sandstone_stairs[facing=south,half=top,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=west,half=top,material=birch,open=false,powered=false]",
+      "count": 1,
+      "java": "minecraft:birch_trapdoor[facing=west,half=top,open=false,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=west,half=top,material=smooth_sandstone,shape=straight]",
+      "count": 1,
+      "java": "minecraft:smooth_sandstone_stairs[facing=west,half=top,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=south,half=top,material=birch,open=false,powered=false]",
+      "count": 1,
+      "java": "minecraft:birch_trapdoor[facing=south,half=top,open=false,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=east,half=top,material=smooth_sandstone,shape=straight]",
+      "count": 1,
+      "java": "minecraft:smooth_sandstone_stairs[facing=east,half=top,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:emerald_ore",
+      "count": 1,
+      "java": "minecraft:emerald_ore",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=south,half=top,material=cobblestone,shape=straight]",
+      "count": 1,
+      "java": "minecraft:cobblestone_stairs[facing=south,half=top,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=south,half=top,material=stone,shape=straight]",
+      "count": 1,
+      "java": "minecraft:stone_stairs[facing=south,half=top,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=north,half=top,material=oak,shape=straight]",
+      "count": 1,
+      "java": "minecraft:oak_stairs[facing=north,half=top,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:log[axis=x,material=birch,stripped=true]",
+      "count": 1,
+      "java": "minecraft:stripped_birch_log[axis=x]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:smooth_stone",
+      "count": 1,
+      "java": "minecraft:smooth_stone",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:lever[face=wall,facing=north,powered=true]",
+      "count": 1,
+      "java": "minecraft:lever[face=wall,facing=north,powered=true]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:fence[east=false,material=jungle,north=false,south=false,west=false]",
+      "count": 1,
+      "java": "minecraft:jungle_fence[east=false,north=false,south=false,west=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:double_plant[half=lower,plant_type=sunflower]",
+      "count": 1,
+      "java": "minecraft:sunflower[half=lower]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:double_plant[half=upper,plant_type=sunflower]",
+      "count": 1,
+      "java": "minecraft:sunflower[half=upper]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:slab[material=oak,type=double]",
+      "count": 1,
+      "java": "minecraft:oak_slab[type=double]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=north,half=bottom,material=iron,open=false,powered=false]",
+      "count": 1,
+      "java": "minecraft:iron_trapdoor[facing=north,half=bottom,open=false,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:door[facing=north,half=lower,hinge=left,material=dark_oak,open=false,powered=false]",
+      "count": 1,
+      "java": "minecraft:dark_oak_door[facing=north,half=lower,hinge=left,open=false,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:door[facing=north,half=upper,hinge=left,material=dark_oak,open=false,powered=false]",
+      "count": 1,
+      "java": "minecraft:dark_oak_door[facing=north,half=upper,hinge=left,open=false,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:door[facing=north,half=upper,hinge=right,material=dark_oak,open=true,powered=false]",
+      "count": 1,
+      "java": "minecraft:dark_oak_door[facing=north,half=upper,hinge=right,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:door[facing=north,half=lower,hinge=right,material=dark_oak,open=true,powered=false]",
+      "count": 1,
+      "java": "minecraft:dark_oak_door[facing=north,half=lower,hinge=right,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:blast_furnace[facing=north,lit=false]",
+      "count": 1,
+      "java": "minecraft:blast_furnace[facing=north,lit=false]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:flower_pot[plant=oak_sapling,update=false]",
+      "count": 1,
+      "java": "minecraft:potted_oak_sapling",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:bell[attachment=floor,facing=south,powered=false,toggle=1]",
+      "count": 1,
+      "java": "minecraft:bell[attachment=floor,facing=south,powered=false]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:beehive[facing=north,honey_level=5]",
+      "count": 1,
+      "java": "minecraft:beehive[facing=north,honey_level=5]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:bed[color=red,facing=west,occupied=false,part=foot]",
+      "count": 1,
+      "java": "minecraft:red_bed[facing=west,occupied=false,part=foot]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:bed[color=red,facing=west,occupied=false,part=head]",
+      "count": 1,
+      "java": "minecraft:red_bed[facing=west,occupied=false,part=head]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wall_sign[facing=east,material=jungle]",
+      "count": 1,
+      "java": "minecraft:jungle_wall_sign[facing=east]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wall_sign[facing=west,material=jungle]",
+      "count": 1,
+      "java": "minecraft:jungle_wall_sign[facing=west]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:cauldron[cauldron_liquid=water,level=1]",
+      "count": 1,
+      "java": "minecraft:water_cauldron[level=1]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:cauldron[cauldron_liquid=water,level=2.5]",
+      "count": 1,
+      "java": "minecraft:water_cauldron[level=3]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=north,half=bottom,material=oak,open=false,powered=false]",
+      "count": 1,
+      "java": "minecraft:oak_trapdoor[facing=north,half=bottom,open=false,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:polished_cinnabar",
+      "count": 1,
+      "java": "minecraft:polished_cinnabar",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:log[axis=y,material=birch,stripped=true]",
+      "count": 1,
+      "java": "minecraft:stripped_birch_log[axis=y]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:log[axis=x,material=jungle,stripped=false]",
+      "count": 1,
+      "java": "minecraft:jungle_log[axis=x]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:fence_gate[facing=south,in_wall=false,material=jungle,open=true,powered=false]",
+      "count": 1,
+      "java": "minecraft:jungle_fence_gate[facing=south,in_wall=false,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=east,half=bottom,material=andesite,shape=straight]",
+      "count": 1,
+      "java": "minecraft:andesite_stairs[facing=east,half=bottom,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=east,half=bottom,material=mossy_cobblestone,shape=straight]",
+      "count": 1,
+      "java": "minecraft:mossy_cobblestone_stairs[facing=east,half=bottom,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:log[axis=z,material=jungle,stripped=true]",
+      "count": 1,
+      "java": "minecraft:stripped_jungle_log[axis=z]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=west,half=top,material=mossy_cobblestone,shape=straight]",
+      "count": 1,
+      "java": "minecraft:mossy_cobblestone_stairs[facing=west,half=top,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:chiseled_cinnabar",
+      "count": 1,
+      "java": "minecraft:chiseled_cinnabar",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:cinnabar_bricks",
+      "count": 1,
+      "java": "minecraft:cinnabar_bricks",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:chiseled_sulfur",
+      "count": 1,
+      "java": "minecraft:chiseled_sulfur",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:sulfur_bricks",
+      "count": 1,
+      "java": "minecraft:sulfur_bricks",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:polished_sulfur",
+      "count": 1,
+      "java": "minecraft:polished_sulfur",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:glazed_terracotta[color=yellow,facing=south]",
+      "count": 1,
+      "java": "minecraft:yellow_glazed_terracotta[facing=south]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wall[east=none,material=cobblestone,north=none,south=low,up=true,west=low]",
+      "count": 1,
+      "java": "minecraft:cobblestone_wall[east=none,north=none,south=low,up=true,west=low]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:grindstone[face=wall,facing=north]",
+      "count": 1,
+      "java": "minecraft:grindstone[face=wall,facing=north]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:door[facing=south,half=upper,hinge=left,material=birch,open=true,powered=false]",
+      "count": 1,
+      "java": "minecraft:birch_door[facing=south,half=upper,hinge=left,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:door[facing=south,half=upper,hinge=right,material=birch,open=true,powered=false]",
+      "count": 1,
+      "java": "minecraft:birch_door[facing=south,half=upper,hinge=right,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:door[facing=south,half=lower,hinge=right,material=birch,open=true,powered=false]",
+      "count": 1,
+      "java": "minecraft:birch_door[facing=south,half=lower,hinge=right,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:door[facing=south,half=lower,hinge=left,material=birch,open=true,powered=false]",
+      "count": 1,
+      "java": "minecraft:birch_door[facing=south,half=lower,hinge=left,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:door[facing=south,half=upper,hinge=right,material=oak,open=true,powered=false]",
+      "count": 1,
+      "java": "minecraft:oak_door[facing=south,half=upper,hinge=right,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:door[facing=south,half=upper,hinge=left,material=oak,open=true,powered=false]",
+      "count": 1,
+      "java": "minecraft:oak_door[facing=south,half=upper,hinge=left,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:door[facing=south,half=lower,hinge=right,material=oak,open=true,powered=false]",
+      "count": 1,
+      "java": "minecraft:oak_door[facing=south,half=lower,hinge=right,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:door[facing=south,half=lower,hinge=left,material=oak,open=true,powered=false]",
+      "count": 1,
+      "java": "minecraft:oak_door[facing=south,half=lower,hinge=left,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:bell[attachment=ceiling,facing=north,powered=false,toggle=0]",
+      "count": 1,
+      "java": "minecraft:bell[attachment=ceiling,facing=north,powered=false]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:potent_sulfur[potent_sulfur_state=dry]",
+      "count": 1,
+      "java": "minecraft:potent_sulfur[potent_sulfur_state=dry]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:lodestone",
+      "count": 1,
+      "java": "minecraft:lodestone",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:gold_block",
+      "count": 1,
+      "java": "minecraft:gold_block",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=south,half=top,material=mangrove,shape=straight]",
+      "count": 1,
+      "java": "minecraft:mangrove_stairs[facing=south,half=top,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stairs[facing=south,half=bottom,material=mangrove,shape=straight]",
+      "count": 1,
+      "java": "minecraft:mangrove_stairs[facing=south,half=bottom,shape=straight]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=west,half=top,material=mangrove,open=false,powered=false]",
+      "count": 1,
+      "java": "minecraft:mangrove_trapdoor[facing=west,half=top,open=false,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=west,half=bottom,material=mangrove,open=false,powered=false]",
+      "count": 1,
+      "java": "minecraft:mangrove_trapdoor[facing=west,half=bottom,open=false,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:trapdoor[facing=north,half=bottom,material=mangrove,open=true,powered=false]",
+      "count": 1,
+      "java": "minecraft:mangrove_trapdoor[facing=north,half=bottom,open=true,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:lava[falling=false,flowing=true,level=4]",
+      "count": 1,
+      "java": "minecraft:lava[level=4]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:concrete[color=light_blue]",
+      "count": 1,
+      "java": "minecraft:light_blue_concrete",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:redstone_block",
+      "count": 1,
+      "java": "minecraft:redstone_block",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:lever[face=wall,facing=west,powered=true]",
+      "count": 1,
+      "java": "minecraft:lever[face=wall,facing=west,powered=true]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:piston_head[facing=south,short=false]",
+      "count": 1,
+      "java": "minecraft:piston_head[facing=south,short=false,type=normal]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:repeater[delay=1,facing=west,locked=false,powered=true]",
+      "count": 1,
+      "java": "minecraft:repeater[delay=1,facing=west,locked=false,powered=true]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:repeater[delay=4,facing=north,locked=false,powered=false]",
+      "count": 1,
+      "java": "minecraft:repeater[delay=4,facing=north,locked=false,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:observer[facing=down,powered=false]",
+      "count": 1,
+      "java": "minecraft:observer[facing=down,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:observer[facing=north,powered=false]",
+      "count": 1,
+      "java": "minecraft:observer[facing=north,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:observer[facing=south,powered=false]",
+      "count": 1,
+      "java": "minecraft:observer[facing=south,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:observer[facing=east,powered=false]",
+      "count": 1,
+      "java": "minecraft:observer[facing=east,powered=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wall[east=tall,material=stone_brick,north=none,south=none,up=true,west=none]",
+      "count": 1,
+      "java": "minecraft:stone_brick_wall[east=tall,north=none,south=none,up=true,west=none]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wall[east=none,material=stone_brick,north=none,south=none,up=true,west=tall]",
+      "count": 1,
+      "java": "minecraft:stone_brick_wall[east=none,north=none,south=none,up=true,west=tall]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:redstone_wire[east=side,north=side,power=0,south=none,west=none]",
+      "count": 1,
+      "java": "minecraft:redstone_wire[east=side,north=side,power=0,south=none,west=none]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:redstone_wire[east=none,north=side,power=0,south=side,west=none]",
+      "count": 1,
+      "java": "minecraft:redstone_wire[east=none,north=side,power=0,south=side,west=none]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:redstone_wire[east=none,north=side,power=0,south=none,west=side]",
+      "count": 1,
+      "java": "minecraft:redstone_wire[east=none,north=side,power=0,south=none,west=side]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:piston[extended=true,facing=south]",
+      "count": 1,
+      "java": "minecraft:piston[extended=true,facing=south]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:hopper[enabled=true,facing=north]",
+      "count": 1,
+      "java": "minecraft:hopper[enabled=true,facing=north]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:hopper[enabled=true,facing=south]",
+      "count": 1,
+      "java": "minecraft:hopper[enabled=true,facing=south]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:comparator[facing=south,mode=compare,powered=true]",
+      "count": 1,
+      "java": "minecraft:comparator[facing=south,mode=compare,powered=true]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:redstone_wire[east=side,north=none,power=1,south=side,west=none]",
+      "count": 1,
+      "java": "minecraft:redstone_wire[east=side,north=none,power=1,south=side,west=none]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:redstone_wire[east=side,north=side,power=1,south=none,west=none]",
+      "count": 1,
+      "java": "minecraft:redstone_wire[east=side,north=side,power=1,south=none,west=none]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:comparator[facing=north,mode=compare,powered=true]",
+      "count": 1,
+      "java": "minecraft:comparator[facing=north,mode=compare,powered=true]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:redstone_wire[east=none,north=side,power=15,south=none,west=none]",
+      "count": 1,
+      "java": "minecraft:redstone_wire[east=none,north=side,power=15,south=none,west=none]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:sticky_piston[extended=false,facing=south]",
+      "count": 1,
+      "java": "minecraft:sticky_piston[extended=false,facing=south]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:comparator[facing=west,mode=compare,powered=false]",
+      "count": 1,
+      "java": "minecraft:comparator[facing=west,mode=compare,powered=false]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:comparator[facing=east,mode=compare,powered=false]",
+      "count": 1,
+      "java": "minecraft:comparator[facing=east,mode=compare,powered=false]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:sticky_piston[extended=false,facing=up]",
+      "count": 1,
+      "java": "minecraft:sticky_piston[extended=false,facing=up]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:piston[extended=false,facing=west]",
+      "count": 1,
+      "java": "minecraft:piston[extended=false,facing=west]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:dropper[facing=west,triggered=false]",
+      "count": 1,
+      "java": "minecraft:dropper[facing=west,triggered=false]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:dropper[facing=down,triggered=false]",
+      "count": 1,
+      "java": "minecraft:dropper[facing=down,triggered=false]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:banner[color=white,rotation=2]",
+      "count": 1,
+      "java": "minecraft:white_banner[rotation=2]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:glow_lichen[down=false,east=true,north=false,south=false,up=true,west=false]",
+      "count": 1,
+      "java": "minecraft:glow_lichen[down=false,east=true,north=false,south=false,up=true,west=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:glow_lichen[down=false,east=true,north=true,south=false,up=false,west=false]",
+      "count": 1,
+      "java": "minecraft:glow_lichen[down=false,east=true,north=true,south=false,up=false,west=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wall[east=low,material=andesite,north=low,south=none,up=true,west=none]",
+      "count": 1,
+      "java": "minecraft:andesite_wall[east=low,north=low,south=none,up=true,west=none]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:shulker_box[color=black,facing=south]",
+      "count": 1,
+      "java": "minecraft:black_shulker_box[facing=south]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:concrete_powder[color=gray]",
+      "count": 1,
+      "java": "minecraft:gray_concrete_powder",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:shroomlight",
+      "count": 1,
+      "java": "minecraft:shroomlight",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:shulker_box[color=green,facing=up]",
+      "count": 1,
+      "java": "minecraft:green_shulker_box[facing=up]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:stonecutter[facing=west]",
+      "count": 1,
+      "java": "minecraft:stonecutter[facing=west]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:gilded_blackstone",
+      "count": 1,
+      "java": "minecraft:gilded_blackstone",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:shulker_box[color=pink,facing=up]",
+      "count": 1,
+      "java": "minecraft:pink_shulker_box[facing=up]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:shulker_box[color=light_blue,facing=up]",
+      "count": 1,
+      "java": "minecraft:light_blue_shulker_box[facing=up]",
+      "extra_needed": true,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:vine[east=true,north=false,south=true,up=false,west=false]",
+      "count": 1,
+      "java": "minecraft:vine[east=true,north=false,south=true,up=false,west=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:glow_lichen[down=true,east=false,north=false,south=true,up=false,west=false]",
+      "count": 1,
+      "java": "minecraft:glow_lichen[down=true,east=false,north=false,south=true,up=false,west=false]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:bone_block[axis=x]",
+      "count": 1,
+      "java": "minecraft:bone_block[axis=x]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:wool[color=blue]",
+      "count": 1,
+      "java": "minecraft:blue_wool",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:packed_ice",
+      "count": 1,
+      "java": "minecraft:packed_ice",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:lapis_block",
+      "count": 1,
+      "java": "minecraft:lapis_block",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:warped_wart_block",
+      "count": 1,
+      "java": "minecraft:warped_wart_block",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:sculk",
+      "count": 1,
+      "java": "minecraft:sculk",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:dark_prismarine",
+      "count": 1,
+      "java": "minecraft:dark_prismarine",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:prismarine",
+      "count": 1,
+      "java": "minecraft:prismarine",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:prismarine_bricks",
+      "count": 1,
+      "java": "minecraft:prismarine_bricks",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:glazed_terracotta[color=light_blue,facing=south]",
+      "count": 1,
+      "java": "minecraft:light_blue_glazed_terracotta[facing=south]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:log[axis=z,material=warped,stripped=true]",
+      "count": 1,
+      "java": "minecraft:stripped_warped_stem[axis=z]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:blue_ice",
+      "count": 1,
+      "java": "minecraft:blue_ice",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:glazed_terracotta[color=cyan,facing=north]",
+      "count": 1,
+      "java": "minecraft:cyan_glazed_terracotta[facing=north]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:glazed_terracotta[color=blue,facing=west]",
+      "count": 1,
+      "java": "minecraft:blue_glazed_terracotta[facing=west]",
+      "extra_needed": false,
+      "error": null
+    },
+    {
+      "universal": "universal_minecraft:lava[falling=true,flowing=false,level=0]",
+      "count": 1,
+      "java": "minecraft:lava[level=8]",
+      "extra_needed": false,
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>chunk viewer</title>
+    <style>
+      :root {
+        --paper: #f4efe4;
+        --paper-edge: #d4cbb8;
+        --ink: #2c261c;
+        --mute: #7a7164;
+        --rule: #e2d8c6;
+        --field: #fffdf8;
+        --accent: #c4a06a;
+      }
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        background: #0b0d12;
+        color: var(--ink);
+        font: 12.5px/1.45 "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      }
+      canvas {
+        display: block;
+      }
+      #notebook,
+      #menu,
+      #lighting,
+      #brightness-chip {
+        background: var(--paper);
+        border: 1px solid var(--paper-edge);
+        color: var(--ink);
+        transition:
+          background-color 0.6s ease,
+          border-color 0.6s ease,
+          color 0.6s ease;
+      }
+      #orrery {
+        position: fixed;
+        left: 12px;
+        top: 12px;
+        width: 148px;
+        height: 148px;
+        cursor: grab;
+        touch-action: none;
+        z-index: 2;
+        overflow: visible;
+      }
+      #orrery.dragging {
+        cursor: grabbing;
+      }
+      #orrery-earth {
+        cursor: pointer;
+      }
+      #orrery.playing .cube {
+        stroke: rgba(246, 243, 236, 0.92);
+      }
+      #orrery .orbit {
+        fill: none;
+        stroke: rgba(246, 243, 236, 0.28);
+        stroke-width: 1;
+        vector-effect: non-scaling-stroke;
+      }
+      #orrery .cube {
+        fill: none;
+        stroke: rgba(246, 243, 236, 0.7);
+        stroke-width: 1;
+        stroke-linejoin: miter;
+        vector-effect: non-scaling-stroke;
+      }
+      #orrery .moon {
+        fill: rgba(246, 243, 236, 0.1);
+        stroke: rgba(246, 243, 236, 0.55);
+        stroke-width: 1;
+        stroke-linejoin: round;
+        vector-effect: non-scaling-stroke;
+      }
+      #dock {
+        position: fixed;
+        right: 14px;
+        top: 14px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 8px;
+      }
+      #menu {
+        width: 36px;
+        height: 36px;
+        padding: 0;
+        appearance: none;
+        font: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        cursor: pointer;
+        box-shadow: 0 1px 0 rgba(44, 38, 28, 0.05);
+      }
+      #menu:hover {
+        opacity: 0.86;
+      }
+      #menu span {
+        display: block;
+        width: 16px;
+        height: 1.5px;
+        background: var(--ink);
+        transition: transform 0.2s ease, opacity 0.2s ease;
+      }
+      #dock.open #menu span:nth-child(1) {
+        transform: translateY(6.5px) rotate(45deg);
+      }
+      #dock.open #menu span:nth-child(2) {
+        opacity: 0;
+      }
+      #dock.open #menu span:nth-child(3) {
+        transform: translateY(-6.5px) rotate(-45deg);
+      }
+      #notebook {
+        display: none;
+        width: 248px;
+        padding: 14px 16px 16px;
+        box-shadow: 0 1px 0 rgba(44, 38, 28, 0.05);
+      }
+      #dock.open #notebook {
+        display: block;
+      }
+      #notebook h1 {
+        margin: 0 0 8px;
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: 0.04em;
+      }
+      #notebook label {
+        display: block;
+        margin: 8px 0 3px;
+        color: var(--mute);
+        font-size: 11px;
+        letter-spacing: 0.03em;
+      }
+      #notebook input[type="number"] {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 5px 7px;
+        color: var(--ink);
+        background: var(--field);
+        border: 1px solid var(--paper-edge);
+        font: inherit;
+      }
+      #notebook button {
+        margin-top: 10px;
+        width: 100%;
+        padding: 6px 8px;
+        color: var(--paper);
+        background: var(--ink);
+        border: 0;
+        cursor: pointer;
+        font: inherit;
+        letter-spacing: 0.03em;
+        transition:
+          background-color 0.35s ease,
+          opacity 0.25s ease;
+      }
+      #notebook button:hover {
+        opacity: 0.86;
+      }
+      #notebook button:disabled {
+        opacity: 0.45;
+        cursor: wait;
+      }
+      #reset-orbit {
+        margin-top: 8px;
+        color: var(--ink);
+        background: transparent;
+        border: 1px solid var(--paper-edge);
+      }
+      .hint,
+      #status {
+        margin-top: 8px;
+        color: var(--mute);
+        font-size: 11px;
+      }
+      #status {
+        min-height: 1.3em;
+        transition:
+          color 0.25s ease,
+          opacity 0.25s ease;
+      }
+      #status[data-state="baking"] {
+        color: var(--ink);
+      }
+      #status[data-state="done"] {
+        color: #5a6a48;
+      }
+      #status[data-state="error"] {
+        color: #8a3020;
+      }
+      #place.offline .bake-only {
+        display: none;
+      }
+      .offline-only {
+        display: none;
+      }
+      #place.offline .offline-only {
+        display: block;
+      }
+      #look-dock {
+        position: fixed;
+        left: 14px;
+        bottom: 14px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+      }
+      #brightness-chip {
+        width: 168px;
+        padding: 8px 10px 9px;
+        box-shadow: 0 1px 0 rgba(44, 38, 28, 0.05);
+      }
+      #brightness-chip label {
+        display: block;
+        color: var(--mute);
+        font-size: 11px;
+        letter-spacing: 0.04em;
+      }
+      #brightness-chip input[type="range"] {
+        display: block;
+        width: 100%;
+        margin: 6px 0 4px;
+        accent-color: var(--ink);
+        cursor: pointer;
+      }
+      #brightness-ends {
+        display: flex;
+        justify-content: space-between;
+        color: var(--mute);
+        font-size: 10px;
+        letter-spacing: 0.03em;
+      }
+      #brightness-value {
+        color: var(--ink);
+      }
+      #lighting {
+        display: flex;
+        box-shadow: 0 1px 0 rgba(44, 38, 28, 0.05);
+      }
+      #lighting button {
+        appearance: none;
+        margin: 0;
+        padding: 7px 12px;
+        border: 0;
+        background: transparent;
+        color: var(--mute);
+        font: inherit;
+        font-size: 11px;
+        letter-spacing: 0.04em;
+        cursor: pointer;
+      }
+      #lighting button[aria-pressed="true"] {
+        color: var(--paper);
+        background: var(--ink);
+      }
+      #lighting button:hover:not([aria-pressed="true"]) {
+        opacity: 0.86;
+      }
+    </style>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <svg id="orrery" viewBox="-50 -50 100 100" aria-label="click earth to play the day, drag the moon to set time">
+      <circle class="orbit" r="40" />
+      <g id="orrery-earth"></g>
+      <g id="orrery-moon"></g>
+    </svg>
+    <div id="look-dock">
+      <div id="brightness-chip">
+        <label for="brightness">brightness</label>
+        <input id="brightness" type="range" min="0" max="100" value="50" step="1" />
+        <div id="brightness-ends">
+          <span>moody</span>
+          <span id="brightness-value">50%</span>
+          <span>bright</span>
+        </div>
+      </div>
+      <div id="lighting" role="group" aria-label="lighting">
+        <button id="lighting-now" type="button" aria-pressed="true">now</button>
+        <button id="lighting-next" type="button" aria-pressed="false">next</button>
+      </div>
+    </div>
+    <div id="dock">
+      <button id="menu" type="button" aria-expanded="false" aria-controls="notebook" aria-label="controls">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <aside id="notebook">
+      <form id="place" autocomplete="off">
+        <h1>place</h1>
+        <div class="bake-only">
+          <label for="center-x">center block x</label>
+          <input id="center-x" name="x" type="number" value="300" step="1" />
+          <label for="center-z">center block z</label>
+          <input id="center-z" name="z" type="number" value="73" step="1" />
+          <label for="radius">chunk radius (0 = 1 chunk)</label>
+          <input id="radius" name="radius" type="number" value="0" min="0" max="4" step="1" />
+          <label for="min-y">min y</label>
+          <input id="min-y" name="min_y" type="number" value="60" step="1" />
+          <button id="rebake" type="submit">rebake</button>
+        </div>
+        <button id="reset-orbit" type="button">reset orbit</button>
+        <div class="hint bake-only">x/z is the map. y is height.</div>
+        <div class="hint offline-only">wasd to walk. drag to look. r resets the view.</div>
+        <div id="status" data-state="idle"></div>
+      </form>
+      </aside>
+    </div>
+    <script type="module" src="./viewer.js"></script>
+  </body>
+</html>

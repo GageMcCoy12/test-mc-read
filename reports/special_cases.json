@@ -1,0 +1,1643 @@
+{
+  "probe": "special_cases",
+  "environment": {
+    "amulet_core": "1.9.30",
+    "pymctranslate": "1.2.47",
+    "minecraft_model_reader": "1.4.12",
+    "newest_bedrock_definitions": [
+      26,
+      30,
+      0
+    ],
+    "newest_java_definitions": [
+      26,
+      2,
+      0
+    ]
+  },
+  "scan": {
+    "world": "/tmp/world_audit",
+    "dimension": "minecraft:overworld",
+    "radius_chunks": 4,
+    "chunks_skipped": 0
+  },
+  "category_notes": {
+    "fluid": "engine fluid renderer: level/falling drive geometry, model has no elements",
+    "block_entity_model": "drawn from models/entity assets by a block entity renderer",
+    "no_java_equivalent": "no Java block exists, so no blockstate to look up",
+    "pack_has_geometry_but_we_got_none": "our bug: the pack defines elements we failed to use",
+    "runtime_tinted": "geometry resolves, but at least one face carries tintindex, so its colour comes from a runtime tint source: the biome for foliage, power level for redstone wire, water colour for cauldrons",
+    "needs_neighbours": "final blockstate depends on adjacent blocks"
+  },
+  "summary": {
+    "distinct_blockstates": 652,
+    "rendered_from_block_models": 583,
+    "fluid_blockstates": 38,
+    "block_entity_model_blockstates": 29,
+    "no_java_equivalent_blockstates": 2,
+    "pack_has_geometry_but_we_got_none_blockstates": 0,
+    "runtime_tinted_blockstates": 28,
+    "needs_neighbours_blockstates": 44
+  },
+  "block_instance_totals": {
+    "fluid": 50564,
+    "block_entity_model": 170,
+    "no_java_equivalent": 4,
+    "pack_has_geometry_but_we_got_none": 0,
+    "runtime_tinted": 14554,
+    "needs_neighbours": 148
+  },
+  "categories": {
+    "fluid": [
+      {
+        "universal": "universal_minecraft:lava[falling=false,flowing=false,level=0]",
+        "java": "minecraft:lava[level=0]",
+        "count": 28572,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/lava"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:water[falling=false,flowing=false,level=0]",
+        "java": "minecraft:water[level=0]",
+        "count": 17077,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/water"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:water[falling=false,flowing=false,level=1]",
+        "java": "minecraft:water[level=1]",
+        "count": 941,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/water"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:water[falling=false,flowing=false,level=2]",
+        "java": "minecraft:water[level=2]",
+        "count": 608,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/water"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:water[falling=true,flowing=false,level=1]",
+        "java": "minecraft:water[level=9]",
+        "count": 607,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/water"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:water[falling=false,flowing=false,level=3]",
+        "java": "minecraft:water[level=3]",
+        "count": 448,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/water"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:water[falling=false,flowing=false,level=4]",
+        "java": "minecraft:water[level=4]",
+        "count": 360,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/water"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:water[falling=false,flowing=false,level=5]",
+        "java": "minecraft:water[level=5]",
+        "count": 304,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/water"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:lava[falling=true,flowing=false,level=2]",
+        "java": "minecraft:lava[level=10]",
+        "count": 264,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/lava"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:water[falling=false,flowing=false,level=6]",
+        "java": "minecraft:water[level=6]",
+        "count": 229,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/water"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:lava[falling=false,flowing=false,level=2]",
+        "java": "minecraft:lava[level=2]",
+        "count": 217,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/lava"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:water[falling=false,flowing=false,level=7]",
+        "java": "minecraft:water[level=7]",
+        "count": 183,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/water"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:water[falling=true,flowing=false,level=2]",
+        "java": "minecraft:water[level=10]",
+        "count": 182,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/water"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:water[falling=true,flowing=false,level=3]",
+        "java": "minecraft:water[level=11]",
+        "count": 114,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/water"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:lava[falling=false,flowing=false,level=4]",
+        "java": "minecraft:lava[level=4]",
+        "count": 114,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/lava"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:lava[falling=true,flowing=false,level=4]",
+        "java": "minecraft:lava[level=12]",
+        "count": 67,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/lava"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:lava[falling=false,flowing=false,level=6]",
+        "java": "minecraft:lava[level=6]",
+        "count": 54,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/lava"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:water[falling=true,flowing=false,level=5]",
+        "java": "minecraft:water[level=13]",
+        "count": 51,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/water"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:water[falling=true,flowing=false,level=4]",
+        "java": "minecraft:water[level=12]",
+        "count": 45,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/water"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:water[falling=true,flowing=false,level=7]",
+        "java": "minecraft:water[level=15]",
+        "count": 16,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/water"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:water[falling=true,flowing=false,level=6]",
+        "java": "minecraft:water[level=14]",
+        "count": 15,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/water"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:water[falling=false,flowing=true,level=3]",
+        "java": "minecraft:water[level=3]",
+        "count": 15,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/water"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:water[falling=false,flowing=true,level=1]",
+        "java": "minecraft:water[level=1]",
+        "count": 10,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/water"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:lava[falling=false,flowing=true,level=0]",
+        "java": "minecraft:lava[level=0]",
+        "count": 10,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/lava"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:water[falling=false,flowing=true,level=7]",
+        "java": "minecraft:water[level=7]",
+        "count": 9,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/water"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:water[falling=false,flowing=true,level=2]",
+        "java": "minecraft:water[level=2]",
+        "count": 8,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/water"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:water[falling=false,flowing=true,level=4]",
+        "java": "minecraft:water[level=4]",
+        "count": 8,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/water"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:water[falling=false,flowing=true,level=6]",
+        "java": "minecraft:water[level=6]",
+        "count": 8,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/water"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:lava[falling=true,flowing=false,level=6]",
+        "java": "minecraft:lava[level=14]",
+        "count": 8,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/lava"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:water[falling=false,flowing=true,level=5]",
+        "java": "minecraft:water[level=5]",
+        "count": 6,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/water"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:lava[falling=false,flowing=true,level=1]",
+        "java": "minecraft:lava[level=1]",
+        "count": 3,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/lava"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:water[falling=false,flowing=true,level=0]",
+        "java": "minecraft:water[level=0]",
+        "count": 2,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/water"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:lava[falling=false,flowing=false,level=7]",
+        "java": "minecraft:lava[level=7]",
+        "count": 2,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/lava"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:lava[falling=false,flowing=false,level=5]",
+        "java": "minecraft:lava[level=5]",
+        "count": 2,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/lava"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:water[falling=true,flowing=false,level=0]",
+        "java": "minecraft:water[level=8]",
+        "count": 2,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/water"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:lava[falling=false,flowing=false,level=3]",
+        "java": "minecraft:lava[level=3]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/lava"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:lava[falling=false,flowing=true,level=4]",
+        "java": "minecraft:lava[level=4]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/lava"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:lava[falling=true,flowing=false,level=0]",
+        "java": "minecraft:lava[level=8]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/lava"
+        ],
+        "element_source": null
+      }
+    ],
+    "block_entity_model": [
+      {
+        "universal": "universal_minecraft:shulker_box[color=default,facing=up]",
+        "java": "minecraft:shulker_box[facing=up]",
+        "count": 31,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/shulker_box"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:chest[connection=left,facing=east,material=wood]",
+        "java": "minecraft:chest[facing=east,type=left]",
+        "count": 25,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/chest"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:chest[connection=right,facing=east,material=wood]",
+        "java": "minecraft:chest[facing=east,type=right]",
+        "count": 25,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/chest"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:decorated_pot[cracked=false,facing=south]",
+        "java": "minecraft:decorated_pot[cracked=false,facing=south]",
+        "count": 10,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/decorated_pot"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:chest[connection=right,facing=west,material=wood]",
+        "java": "minecraft:chest[facing=west,type=right]",
+        "count": 9,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/chest"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:chest[connection=left,facing=west,material=wood]",
+        "java": "minecraft:chest[facing=west,type=left]",
+        "count": 9,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/chest"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:wall_banner[color=green,facing=north]",
+        "java": "minecraft:green_wall_banner[facing=north]",
+        "count": 8,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/banner"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:shulker_box[color=default,facing=west]",
+        "java": "minecraft:shulker_box[facing=west]",
+        "count": 7,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/shulker_box"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:wall_banner[color=white,facing=north]",
+        "java": "minecraft:white_wall_banner[facing=north]",
+        "count": 7,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/banner"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:chest[connection=right,facing=south,material=wood]",
+        "java": "minecraft:chest[facing=south,type=right]",
+        "count": 4,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/chest"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:chest[connection=left,facing=south,material=wood]",
+        "java": "minecraft:chest[facing=south,type=left]",
+        "count": 4,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/chest"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:decorated_pot[cracked=false,facing=west]",
+        "java": "minecraft:decorated_pot[cracked=false,facing=west]",
+        "count": 3,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/decorated_pot"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:chest[connection=none,facing=north,material=wood]",
+        "java": "minecraft:chest[facing=north,type=single]",
+        "count": 3,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/chest"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:chest[connection=left,facing=north,material=wood]",
+        "java": "minecraft:chest[facing=north,type=left]",
+        "count": 3,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/chest"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:chest[connection=right,facing=north,material=wood]",
+        "java": "minecraft:chest[facing=north,type=right]",
+        "count": 3,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/chest"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:decorated_pot[cracked=false,facing=east]",
+        "java": "minecraft:decorated_pot[cracked=false,facing=east]",
+        "count": 2,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/decorated_pot"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:decorated_pot[cracked=false,facing=north]",
+        "java": "minecraft:decorated_pot[cracked=false,facing=north]",
+        "count": 2,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/decorated_pot"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:ender_chest[facing=west]",
+        "java": "minecraft:ender_chest[facing=west]",
+        "count": 2,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/ender_chest"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:shulker_box[color=default,facing=south]",
+        "java": "minecraft:shulker_box[facing=south]",
+        "count": 2,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/shulker_box"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:shulker_box[color=lime,facing=up]",
+        "java": "minecraft:lime_shulker_box[facing=up]",
+        "count": 2,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/lime_shulker_box"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:chest[connection=none,facing=west,material=wood]",
+        "java": "minecraft:chest[facing=west,type=single]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/chest"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:chest[connection=none,facing=south,material=wood]",
+        "java": "minecraft:chest[facing=south,type=single]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/chest"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:shulker_box[color=light_gray,facing=up]",
+        "java": "minecraft:light_gray_shulker_box[facing=up]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/light_gray_shulker_box"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:shulker_box[color=gray,facing=up]",
+        "java": "minecraft:gray_shulker_box[facing=up]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/gray_shulker_box"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:banner[color=white,rotation=2]",
+        "java": "minecraft:white_banner[rotation=2]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/banner"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:shulker_box[color=black,facing=south]",
+        "java": "minecraft:black_shulker_box[facing=south]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/black_shulker_box"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:shulker_box[color=green,facing=up]",
+        "java": "minecraft:green_shulker_box[facing=up]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/green_shulker_box"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:shulker_box[color=pink,facing=up]",
+        "java": "minecraft:pink_shulker_box[facing=up]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/pink_shulker_box"
+        ],
+        "element_source": null
+      },
+      {
+        "universal": "universal_minecraft:shulker_box[color=light_blue,facing=up]",
+        "java": "minecraft:light_blue_shulker_box[facing=up]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/light_blue_shulker_box"
+        ],
+        "element_source": null
+      }
+    ],
+    "no_java_equivalent": [
+      {
+        "universal": "universal_minecraft:item_frame_block[facing=south,glowing=false,map_item=false]",
+        "count": 2,
+        "java": "minecraft:air",
+        "reason": "translated to air"
+      },
+      {
+        "universal": "universal_minecraft:item_frame_block[facing=west,glowing=false,map_item=false]",
+        "count": 2,
+        "java": "minecraft:air",
+        "reason": "translated to air"
+      }
+    ],
+    "pack_has_geometry_but_we_got_none": [],
+    "runtime_tinted": [
+      {
+        "universal": "universal_minecraft:grass_block[snowy=false]",
+        "java": "minecraft:grass_block[snowy=false]",
+        "count": 12616,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/grass_block",
+          "minecraft:block/grass_block_snow"
+        ],
+        "element_source": "minecraft:block/grass_block",
+        "mesh_reports_tint": true,
+        "model_json_has_tintindex": true
+      },
+      {
+        "universal": "universal_minecraft:plant[plant_type=grass]",
+        "java": "minecraft:short_grass",
+        "count": 905,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/short_grass"
+        ],
+        "element_source": "minecraft:block/tinted_cross",
+        "mesh_reports_tint": true,
+        "model_json_has_tintindex": true
+      },
+      {
+        "universal": "universal_minecraft:double_plant[half=lower,plant_type=large_fern]",
+        "java": "minecraft:large_fern[half=lower]",
+        "count": 328,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/large_fern_bottom",
+          "minecraft:block/large_fern_top"
+        ],
+        "element_source": "minecraft:block/tinted_cross",
+        "mesh_reports_tint": true,
+        "model_json_has_tintindex": true
+      },
+      {
+        "universal": "universal_minecraft:double_plant[half=upper,plant_type=large_fern]",
+        "java": "minecraft:large_fern[half=upper]",
+        "count": 328,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/large_fern_bottom",
+          "minecraft:block/large_fern_top"
+        ],
+        "element_source": "minecraft:block/tinted_cross",
+        "mesh_reports_tint": true,
+        "model_json_has_tintindex": true
+      },
+      {
+        "universal": "universal_minecraft:leaves[check_decay=false,distance=7,material=oak,persistent=true]",
+        "java": "minecraft:oak_leaves[distance=7,persistent=true]",
+        "count": 163,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/oak_leaves"
+        ],
+        "element_source": "minecraft:block/leaves",
+        "mesh_reports_tint": true,
+        "model_json_has_tintindex": true
+      },
+      {
+        "universal": "universal_minecraft:leaves[check_decay=true,distance=7,material=oak,persistent=true]",
+        "java": "minecraft:oak_leaves[distance=7,persistent=true]",
+        "count": 107,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/oak_leaves"
+        ],
+        "element_source": "minecraft:block/leaves",
+        "mesh_reports_tint": true,
+        "model_json_has_tintindex": true
+      },
+      {
+        "universal": "universal_minecraft:leaves[check_decay=false,distance=7,material=birch,persistent=true]",
+        "java": "minecraft:birch_leaves[distance=7,persistent=true]",
+        "count": 43,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/birch_leaves"
+        ],
+        "element_source": "minecraft:block/leaves",
+        "mesh_reports_tint": true,
+        "model_json_has_tintindex": true
+      },
+      {
+        "universal": "universal_minecraft:leaves[check_decay=true,distance=7,material=birch,persistent=true]",
+        "java": "minecraft:birch_leaves[distance=7,persistent=true]",
+        "count": 17,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/birch_leaves"
+        ],
+        "element_source": "minecraft:block/leaves",
+        "mesh_reports_tint": true,
+        "model_json_has_tintindex": true
+      },
+      {
+        "universal": "universal_minecraft:plant[plant_type=fern]",
+        "java": "minecraft:fern",
+        "count": 9,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/fern"
+        ],
+        "element_source": "minecraft:block/tinted_cross",
+        "mesh_reports_tint": true,
+        "model_json_has_tintindex": true
+      },
+      {
+        "universal": "universal_minecraft:vine[east=false,north=false,south=true,up=false,west=false]",
+        "java": "minecraft:vine[east=false,north=false,south=true,up=false,west=false]",
+        "count": 6,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/vine"
+        ],
+        "element_source": "minecraft:block/vine",
+        "mesh_reports_tint": true,
+        "model_json_has_tintindex": true
+      },
+      {
+        "universal": "universal_minecraft:vine[east=false,north=true,south=false,up=false,west=false]",
+        "java": "minecraft:vine[east=false,north=true,south=false,up=false,west=false]",
+        "count": 5,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/vine"
+        ],
+        "element_source": "minecraft:block/vine",
+        "mesh_reports_tint": true,
+        "model_json_has_tintindex": true
+      },
+      {
+        "universal": "universal_minecraft:redstone_wire[east=side,north=side,power=0,south=none,west=side]",
+        "java": "minecraft:redstone_wire[east=side,north=side,power=0,south=none,west=side]",
+        "count": 4,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/redstone_dust_dot",
+          "minecraft:block/redstone_dust_side0",
+          "minecraft:block/redstone_dust_side_alt0",
+          "minecraft:block/redstone_dust_side_alt1",
+          "minecraft:block/redstone_dust_side1",
+          "minecraft:block/redstone_dust_up"
+        ],
+        "element_source": "minecraft:block/redstone_dust_dot",
+        "mesh_reports_tint": true,
+        "model_json_has_tintindex": true
+      },
+      {
+        "universal": "universal_minecraft:redstone_wire[east=none,north=side,power=0,south=side,west=side]",
+        "java": "minecraft:redstone_wire[east=none,north=side,power=0,south=side,west=side]",
+        "count": 4,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/redstone_dust_dot",
+          "minecraft:block/redstone_dust_side0",
+          "minecraft:block/redstone_dust_side_alt0",
+          "minecraft:block/redstone_dust_side_alt1",
+          "minecraft:block/redstone_dust_side1",
+          "minecraft:block/redstone_dust_up"
+        ],
+        "element_source": "minecraft:block/redstone_dust_dot",
+        "mesh_reports_tint": true,
+        "model_json_has_tintindex": true
+      },
+      {
+        "universal": "universal_minecraft:vine[east=true,north=false,south=false,up=false,west=false]",
+        "java": "minecraft:vine[east=true,north=false,south=false,up=false,west=false]",
+        "count": 3,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/vine"
+        ],
+        "element_source": "minecraft:block/vine",
+        "mesh_reports_tint": true,
+        "model_json_has_tintindex": true
+      },
+      {
+        "universal": "universal_minecraft:vine[east=false,north=false,south=false,up=false,west=true]",
+        "java": "minecraft:vine[east=false,north=false,south=false,up=false,west=true]",
+        "count": 2,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/vine"
+        ],
+        "element_source": "minecraft:block/vine",
+        "mesh_reports_tint": true,
+        "model_json_has_tintindex": true
+      },
+      {
+        "universal": "universal_minecraft:redstone_wire[east=side,north=side,power=0,south=side,west=none]",
+        "java": "minecraft:redstone_wire[east=side,north=side,power=0,south=side,west=none]",
+        "count": 2,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/redstone_dust_dot",
+          "minecraft:block/redstone_dust_side0",
+          "minecraft:block/redstone_dust_side_alt0",
+          "minecraft:block/redstone_dust_side_alt1",
+          "minecraft:block/redstone_dust_side1",
+          "minecraft:block/redstone_dust_up"
+        ],
+        "element_source": "minecraft:block/redstone_dust_dot",
+        "mesh_reports_tint": true,
+        "model_json_has_tintindex": true
+      },
+      {
+        "universal": "universal_minecraft:cauldron[cauldron_liquid=water,level=3]",
+        "java": "minecraft:water_cauldron[level=3]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/water_cauldron_level1",
+          "minecraft:block/water_cauldron_level2",
+          "minecraft:block/water_cauldron_full"
+        ],
+        "element_source": "minecraft:block/template_cauldron_level1",
+        "mesh_reports_tint": true,
+        "model_json_has_tintindex": true
+      },
+      {
+        "universal": "universal_minecraft:flower_pot[plant=fern,update=false]",
+        "java": "minecraft:potted_fern",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/potted_fern"
+        ],
+        "element_source": "minecraft:block/tinted_flower_pot_cross",
+        "mesh_reports_tint": true,
+        "model_json_has_tintindex": true
+      },
+      {
+        "universal": "universal_minecraft:cauldron[cauldron_liquid=water,level=1]",
+        "java": "minecraft:water_cauldron[level=1]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/water_cauldron_level1",
+          "minecraft:block/water_cauldron_level2",
+          "minecraft:block/water_cauldron_full"
+        ],
+        "element_source": "minecraft:block/template_cauldron_level1",
+        "mesh_reports_tint": true,
+        "model_json_has_tintindex": true
+      },
+      {
+        "universal": "universal_minecraft:cauldron[cauldron_liquid=water,level=2.5]",
+        "java": "minecraft:water_cauldron[level=3]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/water_cauldron_level1",
+          "minecraft:block/water_cauldron_level2",
+          "minecraft:block/water_cauldron_full"
+        ],
+        "element_source": "minecraft:block/template_cauldron_level1",
+        "mesh_reports_tint": true,
+        "model_json_has_tintindex": true
+      },
+      {
+        "universal": "universal_minecraft:redstone_wire[east=side,north=side,power=0,south=none,west=none]",
+        "java": "minecraft:redstone_wire[east=side,north=side,power=0,south=none,west=none]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/redstone_dust_dot",
+          "minecraft:block/redstone_dust_side0",
+          "minecraft:block/redstone_dust_side_alt0",
+          "minecraft:block/redstone_dust_side_alt1",
+          "minecraft:block/redstone_dust_side1",
+          "minecraft:block/redstone_dust_up"
+        ],
+        "element_source": "minecraft:block/redstone_dust_dot",
+        "mesh_reports_tint": true,
+        "model_json_has_tintindex": true
+      },
+      {
+        "universal": "universal_minecraft:redstone_wire[east=none,north=side,power=0,south=side,west=none]",
+        "java": "minecraft:redstone_wire[east=none,north=side,power=0,south=side,west=none]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/redstone_dust_dot",
+          "minecraft:block/redstone_dust_side0",
+          "minecraft:block/redstone_dust_side_alt0",
+          "minecraft:block/redstone_dust_side_alt1",
+          "minecraft:block/redstone_dust_side1",
+          "minecraft:block/redstone_dust_up"
+        ],
+        "element_source": "minecraft:block/redstone_dust_dot",
+        "mesh_reports_tint": true,
+        "model_json_has_tintindex": true
+      },
+      {
+        "universal": "universal_minecraft:redstone_wire[east=none,north=side,power=0,south=none,west=side]",
+        "java": "minecraft:redstone_wire[east=none,north=side,power=0,south=none,west=side]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/redstone_dust_dot",
+          "minecraft:block/redstone_dust_side0",
+          "minecraft:block/redstone_dust_side_alt0",
+          "minecraft:block/redstone_dust_side_alt1",
+          "minecraft:block/redstone_dust_side1",
+          "minecraft:block/redstone_dust_up"
+        ],
+        "element_source": "minecraft:block/redstone_dust_dot",
+        "mesh_reports_tint": true,
+        "model_json_has_tintindex": true
+      },
+      {
+        "universal": "universal_minecraft:redstone_wire[east=side,north=none,power=1,south=side,west=none]",
+        "java": "minecraft:redstone_wire[east=side,north=none,power=1,south=side,west=none]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/redstone_dust_dot",
+          "minecraft:block/redstone_dust_side0",
+          "minecraft:block/redstone_dust_side_alt0",
+          "minecraft:block/redstone_dust_side_alt1",
+          "minecraft:block/redstone_dust_side1",
+          "minecraft:block/redstone_dust_up"
+        ],
+        "element_source": "minecraft:block/redstone_dust_dot",
+        "mesh_reports_tint": true,
+        "model_json_has_tintindex": true
+      },
+      {
+        "universal": "universal_minecraft:redstone_wire[east=side,north=side,power=1,south=none,west=none]",
+        "java": "minecraft:redstone_wire[east=side,north=side,power=1,south=none,west=none]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/redstone_dust_dot",
+          "minecraft:block/redstone_dust_side0",
+          "minecraft:block/redstone_dust_side_alt0",
+          "minecraft:block/redstone_dust_side_alt1",
+          "minecraft:block/redstone_dust_side1",
+          "minecraft:block/redstone_dust_up"
+        ],
+        "element_source": "minecraft:block/redstone_dust_dot",
+        "mesh_reports_tint": true,
+        "model_json_has_tintindex": true
+      },
+      {
+        "universal": "universal_minecraft:redstone_wire[east=none,north=side,power=15,south=none,west=none]",
+        "java": "minecraft:redstone_wire[east=none,north=side,power=15,south=none,west=none]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/redstone_dust_dot",
+          "minecraft:block/redstone_dust_side0",
+          "minecraft:block/redstone_dust_side_alt0",
+          "minecraft:block/redstone_dust_side_alt1",
+          "minecraft:block/redstone_dust_side1",
+          "minecraft:block/redstone_dust_up"
+        ],
+        "element_source": "minecraft:block/redstone_dust_dot",
+        "mesh_reports_tint": true,
+        "model_json_has_tintindex": true
+      },
+      {
+        "universal": "universal_minecraft:stonecutter[facing=west]",
+        "java": "minecraft:stonecutter[facing=west]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/stonecutter"
+        ],
+        "element_source": "minecraft:block/stonecutter",
+        "mesh_reports_tint": false,
+        "model_json_has_tintindex": true
+      },
+      {
+        "universal": "universal_minecraft:vine[east=true,north=false,south=true,up=false,west=false]",
+        "java": "minecraft:vine[east=true,north=false,south=true,up=false,west=false]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/vine"
+        ],
+        "element_source": "minecraft:block/vine",
+        "mesh_reports_tint": true,
+        "model_json_has_tintindex": true
+      }
+    ],
+    "needs_neighbours": [
+      {
+        "universal": "universal_minecraft:beehive[facing=east,honey_level=0]",
+        "java": "minecraft:beehive[facing=east,honey_level=0]",
+        "count": 28,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/beehive_empty",
+          "minecraft:block/beehive_honey"
+        ],
+        "element_source": "block/cube"
+      },
+      {
+        "universal": "universal_minecraft:beehive[facing=west,honey_level=0]",
+        "java": "minecraft:beehive[facing=west,honey_level=0]",
+        "count": 15,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/beehive_empty",
+          "minecraft:block/beehive_honey"
+        ],
+        "element_source": "block/cube"
+      },
+      {
+        "universal": "universal_minecraft:barrel[facing=up,open=false]",
+        "java": "minecraft:barrel[facing=up,open=false]",
+        "count": 13,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/barrel",
+          "minecraft:block/barrel_open"
+        ],
+        "element_source": "block/cube"
+      },
+      {
+        "universal": "universal_minecraft:beehive[facing=north,honey_level=0]",
+        "java": "minecraft:beehive[facing=north,honey_level=0]",
+        "count": 11,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/beehive_empty",
+          "minecraft:block/beehive_honey"
+        ],
+        "element_source": "block/cube"
+      },
+      {
+        "universal": "universal_minecraft:beehive[facing=south,honey_level=0]",
+        "java": "minecraft:beehive[facing=south,honey_level=0]",
+        "count": 8,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/beehive_empty",
+          "minecraft:block/beehive_honey"
+        ],
+        "element_source": "block/cube"
+      },
+      {
+        "universal": "universal_minecraft:barrel[facing=north,open=false]",
+        "java": "minecraft:barrel[facing=north,open=false]",
+        "count": 6,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/barrel",
+          "minecraft:block/barrel_open"
+        ],
+        "element_source": "block/cube"
+      },
+      {
+        "universal": "universal_minecraft:barrel[facing=west,open=false]",
+        "java": "minecraft:barrel[facing=west,open=false]",
+        "count": 6,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/barrel",
+          "minecraft:block/barrel_open"
+        ],
+        "element_source": "block/cube"
+      },
+      {
+        "universal": "universal_minecraft:hopper[enabled=false,facing=down]",
+        "java": "minecraft:hopper[enabled=false,facing=down]",
+        "count": 5,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/hopper",
+          "minecraft:block/hopper_side"
+        ],
+        "element_source": "minecraft:block/hopper"
+      },
+      {
+        "universal": "universal_minecraft:barrel[facing=south,open=false]",
+        "java": "minecraft:barrel[facing=south,open=false]",
+        "count": 4,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/barrel",
+          "minecraft:block/barrel_open"
+        ],
+        "element_source": "block/cube"
+      },
+      {
+        "universal": "universal_minecraft:shelf[facing=south,material=dark_oak,powered=false,side_chain=unconnected]",
+        "java": "minecraft:dark_oak_shelf[facing=south,powered=false,side_chain=unconnected]",
+        "count": 4,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/dark_oak_shelf",
+          "minecraft:block/dark_oak_shelf_unpowered",
+          "minecraft:block/dark_oak_shelf_unconnected",
+          "minecraft:block/dark_oak_shelf_left",
+          "minecraft:block/dark_oak_shelf_center",
+          "minecraft:block/dark_oak_shelf_right"
+        ],
+        "element_source": "minecraft:block/template_shelf_body"
+      },
+      {
+        "universal": "universal_minecraft:wall_sign[facing=north,material=spruce]",
+        "java": "minecraft:spruce_wall_sign[facing=north]",
+        "count": 4,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/spruce_wall_sign"
+        ],
+        "element_source": "minecraft:block/template_wall_sign"
+      },
+      {
+        "universal": "universal_minecraft:wall_sign[facing=west,material=spruce]",
+        "java": "minecraft:spruce_wall_sign[facing=west]",
+        "count": 3,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/spruce_wall_sign"
+        ],
+        "element_source": "minecraft:block/template_wall_sign"
+      },
+      {
+        "universal": "universal_minecraft:wall_hanging_sign[facing=north,material=spruce]",
+        "java": "minecraft:spruce_wall_hanging_sign[facing=north]",
+        "count": 3,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/spruce_wall_hanging_sign"
+        ],
+        "element_source": "minecraft:block/template_wall_hanging_sign"
+      },
+      {
+        "universal": "universal_minecraft:spawner",
+        "java": "minecraft:spawner",
+        "count": 3,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/spawner"
+        ],
+        "element_source": "minecraft:block/cube_all_inner_faces"
+      },
+      {
+        "universal": "universal_minecraft:dispenser[facing=west,triggered=false]",
+        "java": "minecraft:dispenser[facing=west,triggered=false]",
+        "count": 3,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/dispenser_vertical",
+          "minecraft:block/dispenser"
+        ],
+        "element_source": "block/cube"
+      },
+      {
+        "universal": "universal_minecraft:campfire[facing=east,lit=true,signal_fire=false]",
+        "java": "minecraft:campfire[facing=east,lit=true,signal_fire=false]",
+        "count": 2,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/campfire_off",
+          "minecraft:block/campfire"
+        ],
+        "element_source": "minecraft:block/campfire_off"
+      },
+      {
+        "universal": "universal_minecraft:shelf[facing=west,material=dark_oak,powered=false,side_chain=unconnected]",
+        "java": "minecraft:dark_oak_shelf[facing=west,powered=false,side_chain=unconnected]",
+        "count": 2,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/dark_oak_shelf",
+          "minecraft:block/dark_oak_shelf_unpowered",
+          "minecraft:block/dark_oak_shelf_unconnected",
+          "minecraft:block/dark_oak_shelf_left",
+          "minecraft:block/dark_oak_shelf_center",
+          "minecraft:block/dark_oak_shelf_right"
+        ],
+        "element_source": "minecraft:block/template_shelf_body"
+      },
+      {
+        "universal": "universal_minecraft:wall_sign[facing=north,material=jungle]",
+        "java": "minecraft:jungle_wall_sign[facing=north]",
+        "count": 2,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/jungle_wall_sign"
+        ],
+        "element_source": "minecraft:block/template_wall_sign"
+      },
+      {
+        "universal": "universal_minecraft:campfire[facing=east,lit=false,signal_fire=false]",
+        "java": "minecraft:campfire[facing=east,lit=false,signal_fire=false]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/campfire_off",
+          "minecraft:block/campfire"
+        ],
+        "element_source": "minecraft:block/campfire_off"
+      },
+      {
+        "universal": "universal_minecraft:bee_nest[facing=north,honey_level=0]",
+        "java": "minecraft:bee_nest[facing=north,honey_level=0]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/bee_nest_empty",
+          "minecraft:block/bee_nest_honey"
+        ],
+        "element_source": "block/cube"
+      },
+      {
+        "universal": "universal_minecraft:shelf[facing=east,material=pale_oak,powered=false,side_chain=unconnected]",
+        "java": "minecraft:pale_oak_shelf[facing=east,powered=false,side_chain=unconnected]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/pale_oak_shelf",
+          "minecraft:block/pale_oak_shelf_unpowered",
+          "minecraft:block/pale_oak_shelf_unconnected",
+          "minecraft:block/pale_oak_shelf_left",
+          "minecraft:block/pale_oak_shelf_center",
+          "minecraft:block/pale_oak_shelf_right"
+        ],
+        "element_source": "minecraft:block/template_shelf_body"
+      },
+      {
+        "universal": "universal_minecraft:shelf[facing=west,material=pale_oak,powered=false,side_chain=unconnected]",
+        "java": "minecraft:pale_oak_shelf[facing=west,powered=false,side_chain=unconnected]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/pale_oak_shelf",
+          "minecraft:block/pale_oak_shelf_unpowered",
+          "minecraft:block/pale_oak_shelf_unconnected",
+          "minecraft:block/pale_oak_shelf_left",
+          "minecraft:block/pale_oak_shelf_center",
+          "minecraft:block/pale_oak_shelf_right"
+        ],
+        "element_source": "minecraft:block/template_shelf_body"
+      },
+      {
+        "universal": "universal_minecraft:shelf[facing=south,material=mangrove,powered=false,side_chain=unconnected]",
+        "java": "minecraft:mangrove_shelf[facing=south,powered=false,side_chain=unconnected]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/mangrove_shelf",
+          "minecraft:block/mangrove_shelf_unpowered",
+          "minecraft:block/mangrove_shelf_unconnected",
+          "minecraft:block/mangrove_shelf_left",
+          "minecraft:block/mangrove_shelf_center",
+          "minecraft:block/mangrove_shelf_right"
+        ],
+        "element_source": "minecraft:block/template_shelf_body"
+      },
+      {
+        "universal": "universal_minecraft:dispenser[facing=up,triggered=false]",
+        "java": "minecraft:dispenser[facing=up,triggered=false]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/dispenser_vertical",
+          "minecraft:block/dispenser"
+        ],
+        "element_source": "block/cube"
+      },
+      {
+        "universal": "universal_minecraft:furnace[facing=south,lit=false]",
+        "java": "minecraft:furnace[facing=south,lit=false]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/furnace",
+          "minecraft:block/furnace_on"
+        ],
+        "element_source": "block/cube"
+      },
+      {
+        "universal": "universal_minecraft:barrel[facing=east,open=false]",
+        "java": "minecraft:barrel[facing=east,open=false]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/barrel",
+          "minecraft:block/barrel_open"
+        ],
+        "element_source": "block/cube"
+      },
+      {
+        "universal": "universal_minecraft:campfire[facing=north,lit=false,signal_fire=false]",
+        "java": "minecraft:campfire[facing=north,lit=false,signal_fire=false]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/campfire_off",
+          "minecraft:block/campfire"
+        ],
+        "element_source": "minecraft:block/campfire_off"
+      },
+      {
+        "universal": "universal_minecraft:blast_furnace[facing=north,lit=false]",
+        "java": "minecraft:blast_furnace[facing=north,lit=false]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/blast_furnace",
+          "minecraft:block/blast_furnace_on"
+        ],
+        "element_source": "block/cube"
+      },
+      {
+        "universal": "universal_minecraft:bell[attachment=floor,facing=south,powered=false,toggle=1]",
+        "java": "minecraft:bell[attachment=floor,facing=south,powered=false]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/bell_ceiling",
+          "minecraft:block/bell_between_walls",
+          "minecraft:block/bell_floor",
+          "minecraft:block/bell_wall"
+        ],
+        "element_source": "minecraft:block/bell_ceiling"
+      },
+      {
+        "universal": "universal_minecraft:beehive[facing=north,honey_level=5]",
+        "java": "minecraft:beehive[facing=north,honey_level=5]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/beehive_empty",
+          "minecraft:block/beehive_honey"
+        ],
+        "element_source": "block/cube"
+      },
+      {
+        "universal": "universal_minecraft:bed[color=red,facing=west,occupied=false,part=foot]",
+        "java": "minecraft:red_bed[facing=west,occupied=false,part=foot]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/red_bed_foot",
+          "minecraft:block/red_bed_head"
+        ],
+        "element_source": "minecraft:block/template_bed_foot"
+      },
+      {
+        "universal": "universal_minecraft:bed[color=red,facing=west,occupied=false,part=head]",
+        "java": "minecraft:red_bed[facing=west,occupied=false,part=head]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/red_bed_foot",
+          "minecraft:block/red_bed_head"
+        ],
+        "element_source": "minecraft:block/template_bed_foot"
+      },
+      {
+        "universal": "universal_minecraft:wall_sign[facing=east,material=jungle]",
+        "java": "minecraft:jungle_wall_sign[facing=east]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/jungle_wall_sign"
+        ],
+        "element_source": "minecraft:block/template_wall_sign"
+      },
+      {
+        "universal": "universal_minecraft:wall_sign[facing=west,material=jungle]",
+        "java": "minecraft:jungle_wall_sign[facing=west]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/jungle_wall_sign"
+        ],
+        "element_source": "minecraft:block/template_wall_sign"
+      },
+      {
+        "universal": "universal_minecraft:bell[attachment=ceiling,facing=north,powered=false,toggle=0]",
+        "java": "minecraft:bell[attachment=ceiling,facing=north,powered=false]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/bell_ceiling",
+          "minecraft:block/bell_between_walls",
+          "minecraft:block/bell_floor",
+          "minecraft:block/bell_wall"
+        ],
+        "element_source": "minecraft:block/bell_ceiling"
+      },
+      {
+        "universal": "universal_minecraft:potent_sulfur[potent_sulfur_state=dry]",
+        "java": "minecraft:potent_sulfur[potent_sulfur_state=dry]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/potent_sulfur"
+        ],
+        "element_source": "block/cube"
+      },
+      {
+        "universal": "universal_minecraft:hopper[enabled=true,facing=north]",
+        "java": "minecraft:hopper[enabled=true,facing=north]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/hopper",
+          "minecraft:block/hopper_side"
+        ],
+        "element_source": "minecraft:block/hopper"
+      },
+      {
+        "universal": "universal_minecraft:hopper[enabled=true,facing=south]",
+        "java": "minecraft:hopper[enabled=true,facing=south]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/hopper",
+          "minecraft:block/hopper_side"
+        ],
+        "element_source": "minecraft:block/hopper"
+      },
+      {
+        "universal": "universal_minecraft:comparator[facing=south,mode=compare,powered=true]",
+        "java": "minecraft:comparator[facing=south,mode=compare,powered=true]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/comparator",
+          "minecraft:block/comparator_on",
+          "minecraft:block/comparator_subtract",
+          "minecraft:block/comparator_on_subtract"
+        ],
+        "element_source": "minecraft:block/comparator"
+      },
+      {
+        "universal": "universal_minecraft:comparator[facing=north,mode=compare,powered=true]",
+        "java": "minecraft:comparator[facing=north,mode=compare,powered=true]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/comparator",
+          "minecraft:block/comparator_on",
+          "minecraft:block/comparator_subtract",
+          "minecraft:block/comparator_on_subtract"
+        ],
+        "element_source": "minecraft:block/comparator"
+      },
+      {
+        "universal": "universal_minecraft:comparator[facing=west,mode=compare,powered=false]",
+        "java": "minecraft:comparator[facing=west,mode=compare,powered=false]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/comparator",
+          "minecraft:block/comparator_on",
+          "minecraft:block/comparator_subtract",
+          "minecraft:block/comparator_on_subtract"
+        ],
+        "element_source": "minecraft:block/comparator"
+      },
+      {
+        "universal": "universal_minecraft:comparator[facing=east,mode=compare,powered=false]",
+        "java": "minecraft:comparator[facing=east,mode=compare,powered=false]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/comparator",
+          "minecraft:block/comparator_on",
+          "minecraft:block/comparator_subtract",
+          "minecraft:block/comparator_on_subtract"
+        ],
+        "element_source": "minecraft:block/comparator"
+      },
+      {
+        "universal": "universal_minecraft:dropper[facing=west,triggered=false]",
+        "java": "minecraft:dropper[facing=west,triggered=false]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/dropper_vertical",
+          "minecraft:block/dropper"
+        ],
+        "element_source": "block/cube"
+      },
+      {
+        "universal": "universal_minecraft:dropper[facing=down,triggered=false]",
+        "java": "minecraft:dropper[facing=down,triggered=false]",
+        "count": 1,
+        "blockstate_json_found": true,
+        "models_referenced": [
+          "minecraft:block/dropper_vertical",
+          "minecraft:block/dropper"
+        ],
+        "element_source": "block/cube"
+      }
+    ]
+  }
+}

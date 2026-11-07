@@ -1,0 +1,1129 @@
+{
+  "probe": "nonblock_inventory",
+  "environment": {
+    "amulet_core": "1.9.30",
+    "pymctranslate": "1.2.47",
+    "minecraft_model_reader": "1.4.12",
+    "newest_bedrock_definitions": [
+      26,
+      30,
+      0
+    ],
+    "newest_java_definitions": [
+      26,
+      2,
+      0
+    ]
+  },
+  "scan": {
+    "world": "/tmp/world_audit",
+    "dimension": "minecraft:overworld",
+    "center_chunk": [
+      18,
+      4
+    ],
+    "radius_chunks": 4
+  },
+  "dimension_coverage": {
+    "minecraft:overworld": {
+      "chunks_with_data": 81,
+      "chunks_missing": 0
+    }
+  },
+  "inventory": {
+    "chunks_scanned": 81,
+    "world_y_extent": [
+      -64,
+      111
+    ],
+    "sub_chunk_ids": {
+      "-4": 81,
+      "-3": 81,
+      "-2": 81,
+      "-1": 81,
+      "0": 81,
+      "1": 81,
+      "2": 81,
+      "3": 81,
+      "4": 79,
+      "5": 35,
+      "6": 5
+    },
+    "block_entities": {
+      "total": 348,
+      "distinct_types": 27,
+      "counts": {
+        "universal_minecraft:chest": 87,
+        "universal_minecraft:beehive": 64,
+        "universal_minecraft:shulker_box": 48,
+        "universal_minecraft:barrel": 30,
+        "universal_minecraft:decorated_pot": 17,
+        "universal_minecraft:banner": 16,
+        "universal_minecraft:sign": 11,
+        "universal_minecraft:flower_pot": 10,
+        "universal_minecraft:shelf": 9,
+        "universal_minecraft:piston": 8,
+        "universal_minecraft:hopper": 7,
+        "universal_minecraft:cauldron": 5,
+        "universal_minecraft:campfire": 4,
+        "universal_minecraft:dispenser": 4,
+        "universal_minecraft:item_frame": 4,
+        "universal_minecraft:comparator": 4,
+        "universal_minecraft:hanging_sign": 3,
+        "universal_minecraft:spawner": 3,
+        "universal_minecraft:ender_chest": 2,
+        "universal_minecraft:bell": 2,
+        "universal_minecraft:bed": 2,
+        "universal_minecraft:sticky_piston": 2,
+        "universal_minecraft:dropper": 2,
+        "universal_minecraft:furnace": 1,
+        "universal_minecraft:blast_furnace": 1,
+        "universal_minecraft:potent_sulfur": 1,
+        "universal_minecraft:lodestone": 1
+      },
+      "nbt_shapes": {
+        "universal_minecraft:barrel": {
+          "utags": {
+            "isMovable": "ByteTag",
+            "Findable": "ByteTag",
+            "Items": [
+              "CompoundTag[...]",
+              "x2"
+            ]
+          },
+          "BlockEntityVersion": "IntTag"
+        },
+        "universal_minecraft:shulker_box": {
+          "utags": {
+            "isMovable": "ByteTag",
+            "Findable": "ByteTag",
+            "Items": [
+              "CompoundTag[...]",
+              "x24"
+            ]
+          },
+          "BlockEntityVersion": "IntTag"
+        },
+        "universal_minecraft:sign": {
+          "utags": {
+            "back_text": {
+              "IgnoreLighting": "ByteTag",
+              "PersistFormatting": "ByteTag",
+              "SignTextColor": "IntTag",
+              "TextOwner": "StringTag",
+              "bedrock_string": "StringTag"
+            },
+            "front_text": {
+              "IgnoreLighting": "ByteTag",
+              "PersistFormatting": "ByteTag",
+              "SignTextColor": "IntTag",
+              "TextOwner": "StringTag",
+              "bedrock_string": "StringTag"
+            },
+            "is_waxed": "ByteTag"
+          },
+          "BlockEntityVersion": "IntTag"
+        },
+        "universal_minecraft:campfire": {
+          "utags": {
+            "isMovable": "ByteTag",
+            "Items": "ListTag[empty]",
+            "CookingTimes": "IntArrayTag",
+            "CookingTotalTimes": "IntArrayTag",
+            "ItemTime1": "IntTag",
+            "ItemTime2": "IntTag",
+            "ItemTime3": "IntTag",
+            "ItemTime4": "IntTag"
+          },
+          "BlockEntityVersion": "IntTag"
+        },
+        "universal_minecraft:cauldron": {
+          "utags": {
+            "isMovable": "ByteTag",
+            "Items": "ListTag[empty]",
+            "PotionId": "ShortTag",
+            "PotionType": "ShortTag"
+          },
+          "BlockEntityVersion": "IntTag"
+        },
+        "universal_minecraft:hanging_sign": {
+          "utags": {
+            "back_text": {
+              "IgnoreLighting": "ByteTag",
+              "PersistFormatting": "ByteTag",
+              "SignTextColor": "IntTag",
+              "TextOwner": "StringTag",
+              "bedrock_string": "StringTag"
+            },
+            "front_text": {
+              "IgnoreLighting": "ByteTag",
+              "PersistFormatting": "ByteTag",
+              "SignTextColor": "IntTag",
+              "TextOwner": "StringTag",
+              "bedrock_string": "StringTag"
+            },
+            "is_waxed": "ByteTag"
+          },
+          "BlockEntityVersion": "IntTag"
+        },
+        "universal_minecraft:decorated_pot": {
+          "utags": {
+            "isMovable": "ByteTag"
+          },
+          "BlockEntityVersion": "IntTag",
+          "animation": "ByteTag",
+          "item": {
+            "Count": "ByteTag",
+            "Damage": "ShortTag",
+            "Name": "StringTag",
+            "WasPickedUp": "ByteTag"
+          }
+        },
+        "universal_minecraft:flower_pot": {
+          "utags": {
+            "isMovable": "ByteTag"
+          },
+          "BlockEntityVersion": "IntTag"
+        },
+        "universal_minecraft:beehive": {
+          "utags": {
+            "isMovable": "ByteTag",
+            "ShouldSpawnBees": "ByteTag"
+          },
+          "BlockEntityVersion": "IntTag"
+        },
+        "universal_minecraft:chest": {
+          "utags": {
+            "isMovable": "ByteTag",
+            "Findable": "ByteTag",
+            "Items": "ListTag[empty]"
+          },
+          "BlockEntityVersion": "IntTag",
+          "LootTable": "StringTag",
+          "LootTableSeed": "IntTag"
+        },
+        "universal_minecraft:spawner": {
+          "utags": {
+            "isMovable": "ByteTag",
+            "MaxNearbyEntities": "ShortTag",
+            "RequiredPlayerRange": "ShortTag",
+            "SpawnCount": "ShortTag",
+            "SpawnData": {
+              "id": "StringTag"
+            },
+            "EntityIdentifier": "StringTag",
+            "MaxSpawnDelay": "ShortTag",
+            "Delay": "ShortTag",
+            "SpawnRange": "ShortTag",
+            "MinSpawnDelay": "ShortTag",
+            "DisplayEntityHeight": "FloatTag",
+            "DisplayEntityScale": "FloatTag",
+            "DisplayEntityWidth": "FloatTag"
+          },
+          "BlockEntityVersion": "IntTag"
+        },
+        "universal_minecraft:ender_chest": {
+          "utags": {
+            "isMovable": "ByteTag",
+            "Findable": "ByteTag"
+          },
+          "BlockEntityVersion": "IntTag",
+          "Items": "ListTag[empty]"
+        },
+        "universal_minecraft:shelf": {
+          "utags": {
+            "isMovable": "ByteTag",
+            "components": {},
+            "align_items_to_bottom": "ByteTag",
+            "Items": "ListTag[empty]"
+          },
+          "BlockEntityVersion": "IntTag"
+        },
+        "universal_minecraft:dispenser": {
+          "utags": {
+            "isMovable": "ByteTag",
+            "Items": [
+              "CompoundTag[...]",
+              "x6"
+            ],
+            "Lock": "StringTag"
+          },
+          "BlockEntityVersion": "IntTag"
+        },
+        "universal_minecraft:item_frame": {
+          "utags": {
+            "isMovable": "ByteTag",
+            "Item": {
+              "Count": "ByteTag",
+              "Damage": "ShortTag",
+              "Name": "StringTag",
+              "WasPickedUp": "ByteTag"
+            },
+            "ItemDropChance": "FloatTag",
+            "ItemRotation": "FloatTag"
+          },
+          "BlockEntityVersion": "IntTag"
+        },
+        "universal_minecraft:furnace": {
+          "utags": {
+            "isMovable": "ByteTag",
+            "BurnTime": "ShortTag",
+            "CookTime": "ShortTag",
+            "CookTimeTotal": "ShortTag",
+            "StoredXPInt": "IntTag",
+            "RecipesUsedSize": "ShortTag",
+            "Items": "ListTag[empty]"
+          },
+          "BlockEntityVersion": "IntTag"
+        },
+        "universal_minecraft:blast_furnace": {
+          "utags": {
+            "isMovable": "ByteTag",
+            "BurnTime": "ShortTag",
+            "CookTime": "ShortTag",
+            "CookTimeTotal": "ShortTag",
+            "StoredXPInt": "IntTag",
+            "RecipesUsedSize": "ShortTag",
+            "Items": "ListTag[empty]"
+          },
+          "BlockEntityVersion": "IntTag"
+        },
+        "universal_minecraft:bell": {
+          "utags": {
+            "isMovable": "ByteTag",
+            "Direction": "IntTag",
+            "Ringing": "ByteTag",
+            "Ticks": "IntTag"
+          },
+          "BlockEntityVersion": "IntTag"
+        },
+        "universal_minecraft:banner": {
+          "utags": {
+            "isMovable": "ByteTag",
+            "Base": "IntTag",
+            "Type": "IntTag",
+            "Patterns": [
+              "CompoundTag[...]",
+              "x4"
+            ]
+          },
+          "BlockEntityVersion": "IntTag"
+        },
+        "universal_minecraft:bed": {
+          "utags": {
+            "isMovable": "ByteTag"
+          },
+          "BlockEntityVersion": "IntTag"
+        },
+        "universal_minecraft:potent_sulfur": {
+          "utags": {
+            "countdown": "IntTag"
+          },
+          "BlockEntityVersion": "IntTag"
+        },
+        "universal_minecraft:lodestone": {
+          "utags": {
+            "isMovable": "ByteTag"
+          },
+          "BlockEntityVersion": "IntTag"
+        },
+        "universal_minecraft:piston": {
+          "utags": {
+            "isMovable": "ByteTag",
+            "AttachedBlocks": "ListTag[empty]",
+            "BreakBlocks": "ListTag[empty]",
+            "LastProgress": "FloatTag",
+            "NewState": "ByteTag",
+            "Progress": "FloatTag",
+            "State": "ByteTag"
+          },
+          "BlockEntityVersion": "IntTag"
+        },
+        "universal_minecraft:hopper": {
+          "utags": {
+            "isMovable": "ByteTag",
+            "Items": [
+              "CompoundTag[...]",
+              "x1"
+            ],
+            "TransferCooldown": "IntTag"
+          },
+          "BlockEntityVersion": "IntTag"
+        },
+        "universal_minecraft:comparator": {
+          "utags": {
+            "isMovable": "ByteTag",
+            "OutputSignal": "IntTag"
+          },
+          "BlockEntityVersion": "IntTag"
+        },
+        "universal_minecraft:sticky_piston": {
+          "utags": {
+            "isMovable": "ByteTag",
+            "AttachedBlocks": "ListTag[empty]",
+            "BreakBlocks": "ListTag[empty]",
+            "LastProgress": "FloatTag",
+            "NewState": "ByteTag",
+            "Progress": "FloatTag",
+            "State": "ByteTag"
+          },
+          "BlockEntityVersion": "IntTag"
+        },
+        "universal_minecraft:dropper": {
+          "utags": {
+            "isMovable": "ByteTag",
+            "Items": [
+              "CompoundTag[...]",
+              "x1"
+            ],
+            "Lock": "StringTag"
+          },
+          "BlockEntityVersion": "IntTag"
+        }
+      },
+      "example_locations": {
+        "universal_minecraft:banner": [
+          [
+            295,
+            85,
+            75
+          ],
+          [
+            296,
+            85,
+            75
+          ],
+          [
+            297,
+            85,
+            75
+          ]
+        ],
+        "universal_minecraft:barrel": [
+          [
+            227,
+            68,
+            11
+          ],
+          [
+            230,
+            68,
+            11
+          ],
+          [
+            236,
+            65,
+            0
+          ]
+        ],
+        "universal_minecraft:bed": [
+          [
+            302,
+            75,
+            77
+          ],
+          [
+            301,
+            75,
+            77
+          ]
+        ],
+        "universal_minecraft:beehive": [
+          [
+            236,
+            71,
+            31
+          ],
+          [
+            235,
+            72,
+            31
+          ],
+          [
+            320,
+            68,
+            31
+          ]
+        ],
+        "universal_minecraft:bell": [
+          [
+            302,
+            77,
+            74
+          ],
+          [
+            304,
+            77,
+            73
+          ]
+        ],
+        "universal_minecraft:blast_furnace": [
+          [
+            296,
+            79,
+            75
+          ]
+        ],
+        "universal_minecraft:campfire": [
+          [
+            234,
+            78,
+            30
+          ],
+          [
+            232,
+            81,
+            22
+          ],
+          [
+            233,
+            69,
+            25
+          ]
+        ],
+        "universal_minecraft:cauldron": [
+          [
+            230,
+            68,
+            26
+          ],
+          [
+            295,
+            72,
+            52
+          ],
+          [
+            294,
+            94,
+            78
+          ]
+        ],
+        "universal_minecraft:chest": [
+          [
+            310,
+            -5,
+            29
+          ],
+          [
+            309,
+            -5,
+            31
+          ],
+          [
+            285,
+            34,
+            41
+          ]
+        ],
+        "universal_minecraft:comparator": [
+          [
+            244,
+            71,
+            91
+          ],
+          [
+            244,
+            71,
+            94
+          ],
+          [
+            245,
+            71,
+            87
+          ]
+        ],
+        "universal_minecraft:decorated_pot": [
+          [
+            234,
+            71,
+            31
+          ],
+          [
+            227,
+            68,
+            41
+          ],
+          [
+            237,
+            70,
+            35
+          ]
+        ],
+        "universal_minecraft:dispenser": [
+          [
+            297,
+            71,
+            55
+          ],
+          [
+            244,
+            74,
+            89
+          ],
+          [
+            246,
+            74,
+            87
+          ]
+        ],
+        "universal_minecraft:dropper": [
+          [
+            245,
+            74,
+            89
+          ],
+          [
+            245,
+            75,
+            89
+          ]
+        ],
+        "universal_minecraft:ender_chest": [
+          [
+            284,
+            68,
+            44
+          ],
+          [
+            321,
+            70,
+            85
+          ]
+        ],
+        "universal_minecraft:flower_pot": [
+          [
+            234,
+            71,
+            29
+          ],
+          [
+            227,
+            72,
+            37
+          ],
+          [
+            232,
+            68,
+            36
+          ]
+        ],
+        "universal_minecraft:furnace": [
+          [
+            295,
+            72,
+            53
+          ]
+        ],
+        "universal_minecraft:hanging_sign": [
+          [
+            237,
+            70,
+            31
+          ],
+          [
+            238,
+            70,
+            31
+          ],
+          [
+            239,
+            70,
+            31
+          ]
+        ],
+        "universal_minecraft:hopper": [
+          [
+            244,
+            71,
+            93
+          ],
+          [
+            244,
+            71,
+            92
+          ],
+          [
+            241,
+            71,
+            88
+          ]
+        ],
+        "universal_minecraft:item_frame": [
+          [
+            292,
+            74,
+            51
+          ],
+          [
+            294,
+            74,
+            51
+          ],
+          [
+            224,
+            78,
+            67
+          ]
+        ],
+        "universal_minecraft:lodestone": [
+          [
+            304,
+            83,
+            73
+          ]
+        ],
+        "universal_minecraft:piston": [
+          [
+            243,
+            71,
+            94
+          ],
+          [
+            241,
+            73,
+            94
+          ],
+          [
+            242,
+            73,
+            94
+          ]
+        ],
+        "universal_minecraft:potent_sulfur": [
+          [
+            311,
+            71,
+            72
+          ]
+        ],
+        "universal_minecraft:shelf": [
+          [
+            298,
+            68,
+            39
+          ],
+          [
+            295,
+            68,
+            39
+          ],
+          [
+            300,
+            69,
+            39
+          ]
+        ],
+        "universal_minecraft:shulker_box": [
+          [
+            225,
+            67,
+            0
+          ],
+          [
+            227,
+            68,
+            14
+          ],
+          [
+            229,
+            68,
+            17
+          ]
+        ],
+        "universal_minecraft:sign": [
+          [
+            231,
+            68,
+            30
+          ],
+          [
+            232,
+            71,
+            29
+          ],
+          [
+            232,
+            71,
+            31
+          ]
+        ],
+        "universal_minecraft:spawner": [
+          [
+            308,
+            -5,
+            29
+          ],
+          [
+            284,
+            34,
+            43
+          ],
+          [
+            298,
+            -16,
+            125
+          ]
+        ],
+        "universal_minecraft:sticky_piston": [
+          [
+            246,
+            72,
+            93
+          ],
+          [
+            246,
+            73,
+            89
+          ]
+        ]
+      }
+    },
+    "entities": {
+      "total": 0,
+      "counts": {}
+    },
+    "biomes": {
+      "storage_classes": {
+        "Biomes": 81
+      },
+      "distinct": 5,
+      "counts": {
+        "universal_minecraft:taiga": 43664,
+        "universal_minecraft:beach": 2724,
+        "universal_minecraft:river": 2424,
+        "universal_minecraft:ocean": 144,
+        "universal_minecraft:lukewarm_ocean": 132
+      }
+    },
+    "misc_keys": {
+      "bedrock_chunk_data": 81,
+      "height": 81
+    },
+    "chunk_y_extents": {
+      "14,0": [
+        -64,
+        95
+      ],
+      "15,0": [
+        -64,
+        79
+      ],
+      "16,0": [
+        -64,
+        79
+      ],
+      "17,0": [
+        -64,
+        79
+      ],
+      "18,0": [
+        -64,
+        79
+      ],
+      "19,0": [
+        -64,
+        79
+      ],
+      "20,0": [
+        -64,
+        79
+      ],
+      "21,0": [
+        -64,
+        79
+      ],
+      "22,0": [
+        -64,
+        79
+      ],
+      "14,1": [
+        -64,
+        95
+      ],
+      "15,1": [
+        -64,
+        95
+      ],
+      "16,1": [
+        -64,
+        79
+      ],
+      "17,1": [
+        -64,
+        95
+      ],
+      "18,1": [
+        -64,
+        95
+      ],
+      "19,1": [
+        -64,
+        95
+      ],
+      "20,1": [
+        -64,
+        95
+      ],
+      "21,1": [
+        -64,
+        79
+      ],
+      "22,1": [
+        -64,
+        79
+      ],
+      "14,2": [
+        -64,
+        95
+      ],
+      "15,2": [
+        -64,
+        95
+      ],
+      "16,2": [
+        -64,
+        79
+      ],
+      "17,2": [
+        -64,
+        95
+      ],
+      "18,2": [
+        -64,
+        95
+      ],
+      "19,2": [
+        -64,
+        95
+      ],
+      "20,2": [
+        -64,
+        95
+      ],
+      "21,2": [
+        -64,
+        95
+      ],
+      "22,2": [
+        -64,
+        63
+      ],
+      "14,3": [
+        -64,
+        111
+      ],
+      "15,3": [
+        -64,
+        79
+      ],
+      "16,3": [
+        -64,
+        79
+      ],
+      "17,3": [
+        -64,
+        95
+      ],
+      "18,3": [
+        -64,
+        95
+      ],
+      "19,3": [
+        -64,
+        95
+      ],
+      "20,3": [
+        -64,
+        95
+      ],
+      "21,3": [
+        -64,
+        95
+      ],
+      "22,3": [
+        -64,
+        79
+      ],
+      "14,4": [
+        -64,
+        111
+      ],
+      "15,4": [
+        -64,
+        79
+      ],
+      "16,4": [
+        -64,
+        79
+      ],
+      "17,4": [
+        -64,
+        95
+      ],
+      "18,4": [
+        -64,
+        95
+      ],
+      "19,4": [
+        -64,
+        111
+      ],
+      "20,4": [
+        -64,
+        95
+      ],
+      "21,4": [
+        -64,
+        79
+      ],
+      "22,4": [
+        -64,
+        79
+      ],
+      "14,5": [
+        -64,
+        111
+      ],
+      "15,5": [
+        -64,
+        111
+      ],
+      "16,5": [
+        -64,
+        95
+      ],
+      "17,5": [
+        -64,
+        95
+      ],
+      "18,5": [
+        -64,
+        95
+      ],
+      "19,5": [
+        -64,
+        95
+      ],
+      "20,5": [
+        -64,
+        95
+      ],
+      "21,5": [
+        -64,
+        79
+      ],
+      "22,5": [
+        -64,
+        79
+      ],
+      "14,6": [
+        -64,
+        79
+      ],
+      "15,6": [
+        -64,
+        79
+      ],
+      "16,6": [
+        -64,
+        79
+      ],
+      "17,6": [
+        -64,
+        79
+      ],
+      "18,6": [
+        -64,
+        79
+      ],
+      "19,6": [
+        -64,
+        79
+      ],
+      "20,6": [
+        -64,
+        79
+      ],
+      "21,6": [
+        -64,
+        79
+      ],
+      "22,6": [
+        -64,
+        79
+      ],
+      "14,7": [
+        -64,
+        79
+      ],
+      "15,7": [
+        -64,
+        95
+      ],
+      "16,7": [
+        -64,
+        79
+      ],
+      "17,7": [
+        -64,
+        79
+      ],
+      "18,7": [
+        -64,
+        79
+      ],
+      "19,7": [
+        -64,
+        79
+      ],
+      "20,7": [
+        -64,
+        79
+      ],
+      "21,7": [
+        -64,
+        79
+      ],
+      "22,7": [
+        -64,
+        79
+      ],
+      "14,8": [
+        -64,
+        95
+      ],
+      "15,8": [
+        -64,
+        95
+      ],
+      "16,8": [
+        -64,
+        79
+      ],
+      "17,8": [
+        -64,
+        79
+      ],
+      "18,8": [
+        -64,
+        79
+      ],
+      "19,8": [
+        -64,
+        79
+      ],
+      "20,8": [
+        -64,
+        79
+      ],
+      "21,8": [
+        -64,
+        63
+      ],
+      "22,8": [
+        -64,
+        79
+      ]
+    }
+  }
+}
