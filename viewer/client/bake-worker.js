@@ -23,7 +23,7 @@ self.onmessage = async (event) => {
       if (!world) {
         throw new Error("pick a .mcworld first");
       }
-      const payload = await bakeWorld(world.db, data, progress);
+      const payload = await bakeWorld(world.db, { ...data, spawn: world.spawn }, progress);
       const atlasBuffer = await payload.atlas.arrayBuffer();
       self.postMessage(
         {

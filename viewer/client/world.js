@@ -27,8 +27,75 @@ function zipDirname(name) {
   return index === -1 ? "" : normalized.slice(0, index + 1);
 }
 
+function isTableFile(fileName) {
+  return fileName.endsWith(".ldb") || fileName.endsWith(".sst");
+}
+
 function isInternalLevelDbFile(fileName) {
-  return fileName.startsWith("MANIFEST") || fileName.endsWith(".ldb") || fileName.endsWith(".log");
+  return (
+    fileName.startsWith("MANIFEST") ||
+    fileName === "CURRENT" ||
+    isTableFile(fileName) ||
+    fileName.endsWith(".log")
+  );
+}
+
+function looksLikeJavaSave(names) {
+  return names.some((name) => {
+    const normalized = name.replace(/\\/g, "/").toLowerCase();
+    return /(?:^|\/)region\/r\.-?\d+\.-?\d+\.mca$/.test(normalized);
+  });
+}
+
+function manifestNumber(name) {
+  const match = zipBasename(name).match(/^MANIFEST-(\d+)$/i);
+  return match ? Number(match[1]) : -1;
+}
+
+function readCurrentManifestName(bytes) {
+  if (!bytes || !bytes.length) {
+    return null;
+  }
+  const text = new TextDecoder("utf-8", { fatal: false }).decode(bytes).replace(/\0/g, "").trim();
+  const base = zipBasename(text.replace(/\\/g, "/"));
+  return base.startsWith("MANIFEST") ? base : null;
+}
+
+function pickDbRoot(names, unzipped) {
+  const byDir = new Map();
+  for (const name of names) {
+    const normalized = name.replace(/\\/g, "/");
+    const base = zipBasename(normalized);
+    if (!isInternalLevelDbFile(base)) {
+      continue;
+    }
+    const dir = zipDirname(normalized);
+    const bucket = byDir.get(dir) || { current: null, manifests: [], tables: 0 };
+    if (base === "CURRENT") {
+      bucket.current = normalized;
+    } else if (base.startsWith("MANIFEST")) {
+      bucket.manifests.push(normalized);
+    } else if (isTableFile(base) || base.endsWith(".log")) {
+      bucket.tables += 1;
+    }
+    byDir.set(dir, bucket);
+  }
+  const roots = [...byDir.entries()].filter(([, info]) => info.tables || info.manifests.length);
+  roots.sort((a, b) => b[1].tables - a[1].tables);
+  const chosen = roots.find(([, info]) => info.current) || roots[0];
+  if (!chosen) {
+    return { dbRoot: null, manifestName: null };
+  }
+  const [dbRoot, info] = chosen;
+  let manifestName = info.current ? readCurrentManifestName(unzipped[info.current]) : null;
+  if (manifestName && !info.manifests.some((path) => zipBasename(path) === manifestName)) {
+    manifestName = null;
+  }
+  if (!manifestName && info.manifests.length) {
+    const ordered = info.manifests.slice().sort((a, b) => manifestNumber(a) - manifestNumber(b));
+    manifestName = zipBasename(ordered[ordered.length - 1]);
+  }
+  return { dbRoot, manifestName };
 }
 
 function keepZipEntry(name) {
@@ -49,8 +116,8 @@ function wrapDbFile(name, bytes) {
     fullPath: name,
     isContentLoaded: true,
     unload() {
-      this.content = null;
-      this.isContentLoaded = false;
+      // in-memory zip entries cannot be reloaded from disk, so keep the bytes
+      this.isContentLoaded = true;
     },
   };
 }
@@ -62,7 +129,7 @@ function openLevelDb(files, logger) {
   for (const file of files) {
     if (file.name.startsWith("MANIFEST")) {
       manifestFileArr.push(file);
-    } else if (file.name.endsWith(".ldb")) {
+    } else if (file.name.endsWith(".ldb") || file.name.endsWith(".sst")) {
       ldbFileArr.push(file);
     } else if (file.name.endsWith(".log")) {
       logFileArr.push(file);
@@ -74,10 +141,17 @@ function openLevelDb(files, logger) {
 export async function openWorldFile(blob, onProgress) {
   onProgress?.("unzipping world");
   const zipBytes = new Uint8Array(await blob.arrayBuffer());
-  const unzipped = unzipSync(zipBytes, { filter: (file) => keepZipEntry(file.name) });
+  let sawJava = false;
+  const unzipped = unzipSync(zipBytes, {
+    filter: (file) => {
+      if (looksLikeJavaSave([file.name])) {
+        sawJava = true;
+      }
+      return keepZipEntry(file.name);
+    },
+  });
   const names = Object.keys(unzipped);
-  const currentPath = names.find((name) => zipBasename(name) === "CURRENT");
-  const dbRoot = currentPath ? zipDirname(currentPath) : null;
+  const { dbRoot, manifestName } = pickDbRoot(names, unzipped);
   const dbFiles = [];
   let levelDat = null;
   let levelName = blob.name || "world";
@@ -88,11 +162,12 @@ export async function openWorldFile(blob, onProgress) {
     if (!bytes || !bytes.length) {
       continue;
     }
-    const inDb =
-      dbRoot != null
-        ? normalized.startsWith(dbRoot) && isInternalLevelDbFile(base)
-        : normalized.split("/").includes("db") && isInternalLevelDbFile(base);
-    if (inDb) {
+    const inChosenDb = dbRoot != null ? zipDirname(normalized) === dbRoot : normalized.split("/").includes("db");
+    if (inChosenDb && isTableFile(base)) {
+      dbFiles.push(wrapDbFile(base, bytes));
+    } else if (inChosenDb && base.endsWith(".log")) {
+      dbFiles.push(wrapDbFile(base, bytes));
+    } else if (inChosenDb && base.startsWith("MANIFEST") && (!manifestName || base === manifestName)) {
       dbFiles.push(wrapDbFile(base, bytes));
     } else if (base === "level.dat" && !levelDat) {
       levelDat = bytes;
@@ -104,11 +179,14 @@ export async function openWorldFile(blob, onProgress) {
     }
   }
   if (!dbFiles.length) {
+    if (sawJava) {
+      throw new Error("that's a java save — this viewer reads bedrock .mcworld files (need a db/ folder)");
+    }
     throw new Error("not a bedrock save — need a db/ folder inside the zip");
   }
   onProgress?.("opening leveldb");
   const db = openLevelDb(dbFiles, SILENT);
-  await db.initLazy({ maxKeysInMemory: 80000 });
+  await db.initLazy({ maxKeysInMemory: 2_000_000 });
   const spawn = { x: 0, z: 0 };
   if (levelDat) {
     try {
@@ -140,7 +218,7 @@ async function getValue(db, key) {
   return entry.value || null;
 }
 
-export async function loadChunk(db, cx, cz, dimension = null) {
+async function loadChunkAt(db, cx, cz, dimension) {
   const version =
     (await getValue(db, versionKey(cx, cz, dimension))) ||
     (await getValue(db, versionKeyNew(cx, cz, dimension)));
@@ -177,6 +255,13 @@ export async function loadChunk(db, cx, cz, dimension = null) {
     subchunks,
     biomes,
   };
+}
+
+export async function loadChunk(db, cx, cz, dimension = undefined) {
+  if (dimension !== undefined) {
+    return loadChunkAt(db, cx, cz, dimension);
+  }
+  return (await loadChunkAt(db, cx, cz, null)) || loadChunkAt(db, cx, cz, 0);
 }
 
 export async function loadRegion(db, cx, cz, radius, halo = 1, onProgress) {

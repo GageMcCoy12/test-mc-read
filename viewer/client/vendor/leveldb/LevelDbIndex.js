@@ -121,8 +121,7 @@ export default class LevelDbIndex {
         for (const ldbIdx of this.ldbFileIndexes) {
             const hasRange = ldbIdx.smallestKey !== undefined && ldbIdx.largestKey !== undefined;
             if (hasRange) {
-                // Check if key falls within the file's key range
-                if (key >= ldbIdx.smallestKey && key <= ldbIdx.largestKey) {
+                if (keyInFileRange(key, ldbIdx.smallestKey, ldbIdx.largestKey)) {
                     result.push(ldbIdx);
                 }
             }
@@ -133,4 +132,26 @@ export default class LevelDbIndex {
         }
         return result;
     }
+}
+/** MANIFEST NewFile bounds are LevelDB internal keys (user key + 8-byte trailer). */
+function userKey(internal) {
+    if (typeof internal !== "string" || internal.length < 8) {
+        return internal || "";
+    }
+    return internal.slice(0, -8);
+}
+function compareKeys(a, b) {
+    const left = a || "";
+    const right = b || "";
+    const n = Math.min(left.length, right.length);
+    for (let i = 0; i < n; i += 1) {
+        const delta = left.charCodeAt(i) - right.charCodeAt(i);
+        if (delta) {
+            return delta;
+        }
+    }
+    return left.length - right.length;
+}
+function keyInFileRange(key, smallest, largest) {
+    return compareKeys(key, userKey(smallest)) >= 0 && compareKeys(key, userKey(largest)) <= 0;
 }

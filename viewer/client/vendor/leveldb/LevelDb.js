@@ -423,24 +423,45 @@ export default class LevelDb {
      * Evict old keys to stay under the memory limit.
      * Uses LRU (least recently used) eviction.
      */
+    #dropKey(key) {
+        const keyValue = this.keys.get(key);
+        if (keyValue && typeof keyValue !== "boolean") {
+            keyValue.clearAllData();
+        }
+        this.keys.delete(key);
+        this.#loadedKeys.delete(key);
+    }
+    #markFilesUnloaded() {
+        if (!this.#index) {
+            return;
+        }
+        for (const fileIdx of this.#index.ldbFileIndexes) {
+            fileIdx.isLoaded = false;
+        }
+        for (const fileIdx of this.#index.logFileIndexes) {
+            fileIdx.isLoaded = false;
+        }
+    }
     #evictKeysIfNeeded() {
         if (!this.#isLazyMode || this.keys.size <= this.#maxKeysInMemory) {
             return;
         }
-        // Evict oldest keys until we're under the limit
-        const keysToEvict = this.keys.size - Math.floor(this.#maxKeysInMemory * 0.8); // Evict to 80%
-        for (let i = 0; i < keysToEvict && this.#keyAccessOrder.length > 0; i++) {
-            const oldestKey = this.#keyAccessOrder.shift();
-            if (oldestKey && this.#loadedKeys.has(oldestKey)) {
-                const keyValue = this.keys.get(oldestKey);
-                // keyValue can be LevelKeyValue, false, or undefined
-                if (keyValue && typeof keyValue !== "boolean") {
-                    keyValue.clearAllData();
-                }
-                this.keys.delete(oldestKey);
-                this.#loadedKeys.delete(oldestKey);
+        const keep = Math.max(1, Math.floor(this.#maxKeysInMemory * 0.8));
+        // Never evict the key we just touched — the old loop would drain the
+        // whole LRU and delete the current lookup once bulk SST keys filled the map.
+        while (this.keys.size > keep && this.#keyAccessOrder.length > 1) {
+            this.#dropKey(this.#keyAccessOrder.shift());
+        }
+        if (this.keys.size <= this.#maxKeysInMemory) {
+            return;
+        }
+        const retain = new Set(this.#keyAccessOrder);
+        for (const key of [...this.keys.keys()]) {
+            if (!retain.has(key)) {
+                this.#dropKey(key);
             }
         }
+        this.#markFilesUnloaded();
     }
     /**
      * Track key access for LRU eviction.
@@ -473,21 +494,41 @@ export default class LevelDb {
         // Check if already in memory
         if (this.keys.has(key)) {
             this.#trackKeyAccess(key);
-            return this.keys.get(key);
+            const cached = this.keys.get(key);
+            if (cached !== undefined) {
+                return cached;
+            }
         }
         // In non-lazy mode, if not in keys, it doesn't exist
         if (!this.#isLazyMode || !this.#index) {
             return undefined;
         }
-        // Lazy mode: find and load files that might contain this key
+        // Lazy mode: find and load files that might contain this key.
+        // Already-loaded files can still miss after LRU eviction, so re-read those.
+        const take = () => {
+            this.#trackKeyAccess(key);
+            return this.keys.get(key);
+        };
         const potentialFiles = this.#index.findPotentialFilesForKey(key);
+        const stale = potentialFiles.filter((fileIdx) => fileIdx.isLoaded);
         for (const fileIdx of potentialFiles) {
             if (!fileIdx.isLoaded) {
                 await this.loadFile(fileIdx);
-                // Check if key is now available
-                if (this.keys.has(key)) {
-                    this.#trackKeyAccess(key);
-                    return this.keys.get(key);
+            }
+            if (this.keys.has(key)) {
+                const entry = take();
+                if (entry !== undefined) {
+                    return entry;
+                }
+            }
+        }
+        for (const fileIdx of stale) {
+            fileIdx.isLoaded = false;
+            await this.loadFile(fileIdx);
+            if (this.keys.has(key)) {
+                const entry = take();
+                if (entry !== undefined) {
+                    return entry;
                 }
             }
         }
@@ -576,14 +617,12 @@ export default class LevelDb {
                     indexByteIndex += blockOffset.byteLength;
                     const blockSize = new Varint(indexBytes, indexByteIndex);
                     indexByteIndex += blockSize.byteLength;
-                    if (blockOffset.value < 0 || blockOffset.value + blockSize.value >= content.length) {
+                    if (blockOffset.value < 0 || blockOffset.value + blockSize.value > content.length) {
                         this.#pushError("Block offset does not appear correct", context);
                         return;
                     }
-                    if (indexByteIndex !== indexBytes.length) {
-                        this.#pushError("Index byte index is not correct", context);
-                        return;
-                    }
+                    // Newer Bedrock tables pad BlockHandles with extra checksum bytes.
+                    // Older worlds have an exact varint pair; leftover here is fine.
                     const blockContentCompressed = content.subarray(blockOffset.value, blockOffset.value + blockSize.value);
                     let blockContent;
                     blockContent = this.#tryInflate(blockContentCompressed, true);

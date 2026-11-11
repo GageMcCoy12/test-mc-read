@@ -1291,8 +1291,12 @@ async function openWorld(file) {
       spawn: ready.spawn || null,
     };
     worldNameEl.textContent = clientWorld.name;
+    if (clientWorld.spawn) {
+      if (clientWorld.spawn.x != null) inputX.value = clientWorld.spawn.x;
+      if (clientWorld.spawn.z != null) inputZ.value = clientWorld.spawn.z;
+    }
     inputRadius.value = "0";
-    setStatus(`world loaded — baking ${inputX.value}, ${inputZ.value}…`, "baking");
+    setStatus(`world loaded — baking spawn ${inputX.value}, ${inputZ.value}…`, "baking");
     await rebake(new Event("submit"));
   } catch (error) {
     clientWorld = null;

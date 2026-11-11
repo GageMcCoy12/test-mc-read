@@ -43,13 +43,23 @@ export async function bakeWorld(db, options, onProgress) {
   const maxY = options.maxY == null ? null : Number(options.maxY);
   const [cx, cz] = blockToChunk(blockX, blockZ);
 
+  if (typeof db.clearLoadedKeys === "function") {
+    db.clearLoadedKeys();
+  }
+
   onProgress?.("loading translation tables");
   await Promise.all([loadTranslateTables(), loadBiomeTints()]);
 
   const chunks = await loadRegion(db, cx, cz, radius, LIGHT_HALO, onProgress);
   const center = chunks.get(`${cx},${cz}`);
   if (!center) {
-    throw new Error(`chunk (${cx}, ${cz}) does not exist in this world`);
+    const spawnX = options.spawn?.x;
+    const spawnZ = options.spawn?.z;
+    const hint =
+      Number.isFinite(Number(spawnX)) && Number.isFinite(Number(spawnZ))
+        ? ` this world's spawn is ${spawnX}, ${spawnZ} — try those coords if you left the defaults.`
+        : "";
+    throw new Error(`chunk (${cx}, ${cz}) does not exist in this world.${hint}`);
   }
 
   const unique = [];
