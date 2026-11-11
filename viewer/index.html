@@ -202,9 +202,6 @@
       #status[data-state="error"] {
         color: #8a3020;
       }
-      #place.offline .bake-only {
-        display: none;
-      }
       .offline-only {
         display: none;
       }
@@ -319,7 +316,7 @@
           <label for="center-x">center block x</label>
           <input id="center-x" name="x" type="number" value="300" step="1" />
           <label for="center-z">center block z</label>
-          <input id="center-z" name="z" type="number" value="73" step="1" />
+          <input id="center-z" name="z" type="number" value="50" step="1" />
           <label for="radius">chunk radius (0 = 1 chunk)</label>
           <input id="radius" name="radius" type="number" value="0" min="0" max="4" step="1" />
           <label for="min-y">min y</label>
@@ -327,8 +324,8 @@
           <button id="rebake" type="submit">rebake</button>
         </div>
         <button id="reset-orbit" type="button">reset orbit</button>
-        <div class="hint bake-only">x/z is the map. y is height.</div>
-        <div class="hint offline-only">wasd to walk. drag to look. r resets the view.</div>
+        <div class="hint bake-only">bakes in this tab. the file never leaves your machine.</div>
+        <div class="hint">wasd to walk. drag to look. r resets the view.</div>
         <div id="status" data-state="idle"></div>
       </form>
       </aside>

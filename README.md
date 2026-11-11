@@ -2,9 +2,9 @@
 
 Bedrock save → Java block models → a browser chunk viewer.
 
-Upload a `.mcworld` (or a zip of a Bedrock save folder), then rebake any x/z. Worlds stay in the server session — nothing ships a 449MB save in the image.
+Pick a `.mcworld` (or a zip of a Bedrock save folder). Bake runs in a web worker in this tab — the file never uploads. First bake fetches Java models/textures from [mcmeta](https://github.com/misode/mcmeta) via jsDelivr, then caches them.
 
-Minecraft textures written to `viewer/generated/atlas.png` are Mojang’s. Educational / class use only, not a redistributable asset pack.
+Minecraft textures are Mojang’s. Educational / class use only, not a redistributable asset pack. The Python baker is still the reference implementation.
 
 ## Controls
 
@@ -19,42 +19,36 @@ Time, graphics, and camera position persist in localStorage.
 
 ## Local
 
+Bake is client-side, so a static server is enough:
+
+```
+python3 -m http.server --directory viewer 8765
+```
+
+Open http://127.0.0.1:8765, pick a `.mcworld`, hit rebake. The file never leaves the tab. First bake fetches Java models from the public mcmeta CDNs.
+
+Python is only for the reference baker and table dumps:
+
 ```
 python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
-.venv/bin/python tools/serve_viewer.py
+.venv/bin/python tools/export_client_tables.py
+.venv/bin/python tools/export_biome_tints.py
+.venv/bin/python tools/bake_chunk.py --x 300 --z 50 --radius 4 --min-y 60
 ```
 
-Open http://127.0.0.1:8765, upload a `.mcworld`, hit rebake. If `world/` exists locally it is still used as a fallback so you can bake without uploading.
+## Cloud Run (static host)
 
-Do not use `python -m http.server` if you want the bake / upload API.
-
-Optional one-shot bake without the server:
-
-```
-.venv/bin/python tools/bake_chunk.py --x 300 --z 73 --radius 4 --min-y 60
-```
-
-## Cloud Run (full backend, free-tier-ish)
-
-The container does **not** include a world. Each visitor uploads their own `.mcworld` in 4MB chunks (Cloud Run’s request cap is 32MB). Sessions live in `/tmp` and vanish when the instance scales to zero — re-upload after idle.
-
-Needs a GCP project with billing enabled. The always-free Cloud Run allowance is usually enough for a class demo.
-
-The container uses **Python 3.12**. `amulet-leveldb` has no Linux wheels, so Cloud Build compiles it from source (needs `zlib` + Cython). First build can take 10–20 minutes. If pip dies on `amulet-leveldb`, check that the image is `python:3.12-slim-bookworm`, not 3.13.
+The container is just `viewer/`. Visitors pick a `.mcworld` in the browser; nothing uploads, and the world is not in the image. Needs a GCP project with billing enabled. The always-free Cloud Run allowance is plenty.
 
 ```
 gcloud run deploy mcread \
   --source . \
   --region us-central1 \
   --allow-unauthenticated \
-  --memory 4Gi \
-  --cpu 2 \
-  --timeout 300 \
-  --max-instances 1 \
-  --cpu-boost
+  --memory 256Mi \
+  --cpu 1 \
+  --timeout 30
 ```
-
-`--max-instances 1` keeps uploads and bakes on the same instance (sessions are in-memory `/tmp`). `--timeout 300` covers a radius-4 bake.
 
 Export from Minecraft: **Settings → Storage → worlds → export** yields a `.mcworld`.

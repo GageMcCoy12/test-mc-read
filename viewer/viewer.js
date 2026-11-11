@@ -993,38 +993,25 @@ async function loadBin(name, info, bust) {
   return parsePass(await response.arrayBuffer(), info);
 }
 
-function clearMeshes() {
-  for (const mesh of world.meshes) {
-    world.scene.remove(mesh);
-    mesh.geometry.dispose();
-    mesh.material.dispose();
-  }
-  world.meshes = [];
-  if (world.texture) {
-    world.texture.dispose();
-    world.texture = null;
+async function mountBakedBuffers(payload, { retarget } = { retarget: true }) {
+  const sceneInfo = payload.scene;
+  const opaquePass = sceneInfo.opaque.vertex_count
+    ? parsePass(payload.opaque, sceneInfo.opaque)
+    : null;
+  const translucentPass = sceneInfo.translucent.vertex_count
+    ? parsePass(payload.translucent, sceneInfo.translucent)
+    : null;
+  const atlasUrl = URL.createObjectURL(new Blob([payload.atlas], { type: "image/png" }));
+  try {
+    await mountParsedScene(sceneInfo, opaquePass, translucentPass, atlasUrl, { retarget });
+  } finally {
+    URL.revokeObjectURL(atlasUrl);
   }
 }
 
-function applyView(sceneInfo) {
-  const view = sceneInfo.view || {};
-  if (view.block_x != null) inputX.value = view.block_x;
-  if (view.block_z != null) inputZ.value = view.block_z;
-  if (view.radius != null) inputRadius.value = view.radius;
-  if (view.min_y != null) inputMinY.value = view.min_y;
-}
-
-async function mountScene(sceneInfo, { retarget } = { retarget: true }) {
-  const bust = Date.now();
-  const [opaquePass, translucentPass] = await Promise.all([
-    loadBin(sceneInfo.opaque.file, sceneInfo.opaque, bust),
-    loadBin(sceneInfo.translucent.file, sceneInfo.translucent, bust),
-  ]);
-
+async function mountParsedScene(sceneInfo, opaquePass, translucentPass, atlasUrl, { retarget } = { retarget: true }) {
   clearMeshes();
-  const texture = await new THREE.TextureLoader().loadAsync(
-    `generated/${sceneInfo.atlas.file}?t=${bust}`
-  );
+  const texture = await new THREE.TextureLoader().loadAsync(atlasUrl);
   texture.magFilter = THREE.NearestFilter;
   texture.minFilter = THREE.NearestFilter;
   texture.generateMipmaps = false;
@@ -1066,6 +1053,45 @@ async function mountScene(sceneInfo, { retarget } = { retarget: true }) {
   }
   applyView(sceneInfo);
   applyLook();
+}
+
+function clearMeshes() {
+  for (const mesh of world.meshes) {
+    world.scene.remove(mesh);
+    mesh.geometry.dispose();
+    mesh.material.dispose();
+  }
+  world.meshes = [];
+  if (world.texture) {
+    world.texture.dispose();
+    world.texture = null;
+  }
+}
+
+function applyView(sceneInfo) {
+  const view = sceneInfo.view || {};
+  if (!clientWorld) {
+    return;
+  }
+  if (view.block_x != null) inputX.value = view.block_x;
+  if (view.block_z != null) inputZ.value = view.block_z;
+  if (view.radius != null) inputRadius.value = view.radius;
+  if (view.min_y != null) inputMinY.value = view.min_y;
+}
+
+async function mountScene(sceneInfo, { retarget } = { retarget: true }) {
+  const bust = Date.now();
+  const [opaquePass, translucentPass] = await Promise.all([
+    loadBin(sceneInfo.opaque.file, sceneInfo.opaque, bust),
+    loadBin(sceneInfo.translucent.file, sceneInfo.translucent, bust),
+  ]);
+  await mountParsedScene(
+    sceneInfo,
+    opaquePass,
+    translucentPass,
+    `generated/${sceneInfo.atlas.file}?t=${bust}`,
+    { retarget }
+  );
 }
 
 function makeSky() {
@@ -1216,98 +1242,62 @@ async function fetchScene() {
   return response.json();
 }
 
-async function checkBakeApi() {
-  try {
-    const response = await fetch("api/health");
-    if (!response.ok) {
-      return null;
-    }
-    return response.json();
-  } catch {
-    return null;
+let bakeWorker = null;
+let clientWorld = null;
+
+function getBakeWorker() {
+  if (!bakeWorker) {
+    bakeWorker = new Worker(new URL("./client/bake-worker.js", import.meta.url), { type: "module" });
   }
+  return bakeWorker;
 }
 
-function applyWorldHealth(health) {
-  if (!health) {
-    return;
-  }
-  const hasWorld = Boolean(health.has_world);
-  rebakeBtn.disabled = !hasWorld;
-  if (health.world_name) {
-    worldNameEl.textContent = health.world_name;
-  } else if (!hasWorld) {
-    worldNameEl.textContent = "none yet";
-  }
-  if (health.spawn) {
-    if (health.spawn.x != null) inputX.value = health.spawn.x;
-    if (health.spawn.z != null) inputZ.value = health.spawn.z;
-  }
-  if (health.defaults) {
-    if (health.defaults.x != null) inputX.value = health.defaults.x;
-    if (health.defaults.z != null) inputZ.value = health.defaults.z;
-    if (health.defaults.radius != null) inputRadius.value = health.defaults.radius;
-    if (health.defaults.min_y != null) inputMinY.value = health.defaults.min_y;
-  }
+function workerRequest(payload) {
+  return new Promise((resolve, reject) => {
+    const worker = getBakeWorker();
+    const onMessage = (event) => {
+      const data = event.data || {};
+      if (data.type === "progress") {
+        setStatus(data.message, "baking");
+        return;
+      }
+      worker.removeEventListener("message", onMessage);
+      worker.removeEventListener("error", onError);
+      if (data.type === "error") {
+        reject(new Error(data.message || "bake worker failed"));
+        return;
+      }
+      resolve(data);
+    };
+    const onError = (event) => {
+      worker.removeEventListener("message", onMessage);
+      worker.removeEventListener("error", onError);
+      reject(new Error(event.message || "bake worker crashed"));
+    };
+    worker.addEventListener("message", onMessage);
+    worker.addEventListener("error", onError);
+    worker.postMessage(payload);
+  });
 }
 
-async function uploadWorld(file) {
-  const health = await checkBakeApi();
-  if (!health?.can_upload) {
-    setStatus("start tools/serve_viewer.py to upload a world", "error");
-    return;
-  }
-  const maxBytes = health.max_upload_bytes || 512 * 1024 * 1024;
-  if (file.size > maxBytes) {
-    setStatus(`world is too large (${file.size} bytes)`, "error");
-    return;
-  }
-  const chunkBytes = health.chunk_bytes || 4 * 1024 * 1024;
+async function openWorld(file) {
   rebakeBtn.disabled = true;
   worldFileInput.disabled = true;
-  setStatus(`uploading ${file.name}…`, "baking");
+  setStatus(`opening ${file.name}…`, "baking");
   try {
-    const start = await fetch("api/world/start", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name: file.name, size: file.size }),
-    });
-    const startPayload = await start.json();
-    if (!start.ok || !startPayload.ok) {
-      throw new Error(startPayload.error || "could not start upload");
-    }
-    let offset = 0;
-    while (offset < file.size) {
-      const end = Math.min(offset + chunkBytes, file.size);
-      const chunk = file.slice(offset, end);
-      const response = await fetch("api/world/chunk", {
-        method: "POST",
-        headers: { "Content-Type": "application/octet-stream" },
-        body: chunk,
-      });
-      const payload = await response.json();
-      if (!response.ok || !payload.ok) {
-        throw new Error(payload.error || "upload chunk failed");
-      }
-      offset = end;
-      const pct = Math.round((offset / file.size) * 100);
-      setStatus(`uploading ${file.name}… ${pct}%`, "baking");
-    }
-    const finish = await fetch("api/world/finish", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: "{}",
-    });
-    const done = await finish.json();
-    if (!finish.ok || !done.ok) {
-      throw new Error(done.error || "could not unpack world");
-    }
-    applyWorldHealth(done);
-    worldNameEl.textContent = done.world_name || file.name;
-    setStatus("world loaded — baking spawn…", "baking");
+    const ready = await workerRequest({ type: "open", file });
+    clientWorld = {
+      name: ready.name || file.name,
+      spawn: ready.spawn || null,
+    };
+    worldNameEl.textContent = clientWorld.name;
+    inputRadius.value = "0";
+    setStatus(`world loaded — baking ${inputX.value}, ${inputZ.value}…`, "baking");
     await rebake(new Event("submit"));
   } catch (error) {
+    clientWorld = null;
     setStatus(String(error.message || error), "error");
+    rebakeBtn.disabled = false;
   } finally {
     worldFileInput.disabled = false;
     worldFileInput.value = "";
@@ -1316,35 +1306,22 @@ async function uploadWorld(file) {
 
 async function rebake(event) {
   event.preventDefault();
-  const health = await checkBakeApi();
-  if (!health) {
-    setStatus("start tools/serve_viewer.py to rebake from here", "error");
+  if (!clientWorld) {
+    setStatus("pick a .mcworld first — it stays in this tab", "error");
     return;
   }
-  if (!health.has_world && !health.can_bake) {
-    setStatus("upload a .mcworld first", "error");
-    return;
-  }
-  const body = {
-    x: Number(inputX.value),
-    z: Number(inputZ.value),
-    radius: Number(inputRadius.value),
-    min_y: Number(inputMinY.value),
-  };
   rebakeBtn.disabled = true;
-  setStatus("baking… this can take a bit", "baking");
+  setStatus("baking in this tab… first time fetches java models", "baking");
   try {
-    const response = await fetch("api/bake", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(body),
+    const payload = await workerRequest({
+      type: "bake",
+      x: Number(inputX.value),
+      z: Number(inputZ.value),
+      radius: Number(inputRadius.value),
+      minY: Number(inputMinY.value),
     });
-    const payload = await response.json();
-    if (!response.ok || !payload.ok) {
-      throw new Error(payload.error || `bake failed (${response.status})`);
-    }
     ensureRenderer();
-    await mountScene(payload.scene, { retarget: true });
+    await mountBakedBuffers(payload, { retarget: true });
     setStatus("done", "done");
   } catch (error) {
     setStatus(String(error.message || error), "error");
@@ -1442,7 +1419,7 @@ async function main() {
   worldFileInput.addEventListener("change", () => {
     const file = worldFileInput.files && worldFileInput.files[0];
     if (file) {
-      uploadWorld(file);
+      openWorld(file);
     }
   });
   window.addEventListener("keydown", onKey);
@@ -1450,26 +1427,19 @@ async function main() {
   window.addEventListener("blur", () => walkKeys.clear());
   window.addEventListener("pagehide", flushPrefs);
 
-  const health = await checkBakeApi();
-  if (!health) {
-    placeForm.classList.add("offline");
-    setStatus("static demo — look around, time of day, and lighting all work here", "idle");
-  } else {
-    inputRadius.max = String(health.max_radius ?? 4);
-    applyWorldHealth(health);
-  }
+  worldNameEl.textContent = "none yet";
+  setStatus("pick a .mcworld — bake stays in this tab", "idle");
 
   try {
     const sceneInfo = await fetchScene();
     const restored = ensureRenderer(prefs);
     await mountScene(sceneInfo, { retarget: !restored });
+    if (!clientWorld) {
+      setStatus("demo mesh loaded. pick a .mcworld to bake your own", "idle");
+    }
   } catch (error) {
     const missing = /scene\.json/.test(String(error.message || error));
-    if (health && !health.has_world) {
-      setStatus("upload a .mcworld to start", "idle");
-    } else if (health && missing) {
-      setStatus("no bake yet — hit rebake", "idle");
-    } else {
+    if (!missing) {
       setStatus(String(error.message || error), "error");
     }
     setMenu(true);

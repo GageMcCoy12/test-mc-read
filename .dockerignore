@@ -10,5 +10,8 @@ docs
 probes
 reports
 tests
+mcread
+tools
+requirements.txt
 viewer/generated/debug.obj
 viewer/generated/debug.mtl
